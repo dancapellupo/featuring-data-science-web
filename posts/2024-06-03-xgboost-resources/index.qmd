@@ -1,0 +1,35 @@
+---
+title: "XGBoost Resources"
+date: "2020-03-02"
+date-modified: "2024-06-03"
+categories: [supervised learning, xgboost, content:video]
+image: "Screenshot-2024-06-03-video-cover-1.png"
+---
+
+**XGBoost Resources**
+<br>
+Authors: Josh Starmer (from StatQuest) <br>
+Published: Ranges from 2019-12-19 to 2020-03-02
+
+**My summary:**
+Josh Starmer at StatQuest has a great series of videos on XGBoost.
+
+This is a 4-part series, with all the videos linked to below: <br>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/OtD8wVaFm6E?si=wZbCJ5uZrueN4bla" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+This first video has over 600,000 views, as of 2024-06-03!
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8b1JEDvenQU?si=qBvXjDAGK9pIJRhc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZVFeW798-2I?si=q_9LJUojW08eMkXP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<br>
+
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oRrKeUCEbq8?si=hA-Oh4NI_PMD62TK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+

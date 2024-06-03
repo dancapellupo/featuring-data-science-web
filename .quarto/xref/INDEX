@@ -1,0 +1,32 @@
+{
+  "index.qmd": {
+    "index.html": "6f1f23a3"
+  },
+  "posts/post-with-code/index.qmd": {
+    "index.html": "8e6c78b3"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "0e7fc41b"
+  },
+  "about.qmd": {
+    "about.html": "cb70ce82"
+  },
+  "posts/2024-06-02-door-dash-time-series-holidays/index.qmd": {
+    "index.html": "c9b9711f"
+  },
+  "posts/2024-06-02-doordash-time-series-holidays/index.qmd": {
+    "index.html": "d2b0fd55"
+  },
+  "posts/2024-06-02-netflix-data-platform-autoremediation/index.qmd": {
+    "index.html": "512043a9"
+  },
+  "posts/2024-06-02-LinkedIn-pca-nonlinear/index.qmd": {
+    "index.html": "925b6a74"
+  },
+  "posts/regular-post-template/index.qmd": {
+    "index.html": "b7a3332d"
+  },
+  "posts/2024-06-02-xgboost-resources/index.qmd": {
+    "index.html": "f36e9506"
+  }
+}

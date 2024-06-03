@@ -1,0 +1,44 @@
+---
+title: "How DoorDash Improves Holiday Predictions via Cascade ML Approach"
+# author: "Harlow Malloc"
+date: "2023-08-31"
+date-modified: "2024-06-02"
+categories: [time series, real-life use cases]
+image: "image.jpg"
+---
+
+**Original Blog Post:**
+**[How DoorDash Improves Holiday Predictions via Cascade ML Approach](https://doordash.engineering/2023/08/31/how-doordash-improves-holiday-predictions-via-cascade-ml-approach/)** <br>
+Authors: [Chad Akkoyun](https://www.linkedin.com/in/cagri-chad-akkoyun/) and
+    [Zainab Danish](https://www.linkedin.com/in/zainab-danish1/) (from
+    DoorDash) <br>
+Published: 2023-08-31
+
+**My summary:**
+
+In fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?
+
+As this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.
+
+So, if you are training, say, a tree-based model, if you have a feature that says "is today a holiday?", that is not quite enough to get accurate results.
+
+DoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.
+
+But, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?
+
+And, the change in demand on holidays can also affect the model's predictions in the days after.
+
+The team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.
+
+They do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.
+
+Then, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.
+
+Their results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.
+
+Another challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.
+
+One last point is that the intuitiveness of this approach, training one model for "regular" days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.
+
+Here is the link again to their blog post for more details and some plots:
+[How DoorDash Improves Holiday Predictions via Cascade ML Approach](https://doordash.engineering/2023/08/31/how-doordash-improves-holiday-predictions-via-cascade-ml-approach/)
