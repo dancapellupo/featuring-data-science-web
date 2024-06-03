@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2022-09-01">
 
-<title>Featuring Data Science</title>
+<title>Featuring Data Science - What Data Scientists Need to Know about MLOps Principles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,77 +67,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Featuring Data Science</span>
     </a>
   </div>
@@ -149,7 +90,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -172,231 +113,66 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Featuring Data Science</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">What Data Scientists Need to Know about MLOps Principles</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">MLOps</div>
+                <div class="quarto-category">content:audio</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">September 1, 2022</p>
+      </div>
+    </div>
     
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">June 3, 2024</p>
+      </div>
+    </div>
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(5)</span></div><div class="category" data-category="MLOps">MLOps <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:audio">content:audio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:social">content:social <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:video">content:video <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dimensionality reduction">dimensionality reduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="feature selection">feature selection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="neural networks">neural networks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="real-life use cases">real-life use cases <span class="quarto-category-count">(2)</span></div><div class="category" data-category="rules-based algos">rules-based algos <span class="quarto-category-count">(1)</span></div><div class="category" data-category="supervised learning">supervised learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="time series">time series <span class="quarto-category-count">(1)</span></div><div class="category" data-category="xgboost">xgboost <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
-<section id="here-is-the-full-catalog-of-content-linked-to-here-on-featuring-data-science." class="level3">
-<h3 class="anchored" data-anchor-id="here-is-the-full-catalog-of-content-linked-to-here-on-featuring-data-science.">Here is the full catalog of content linked to here on Featuring Data Science.</h3>
-<p><br></p>
+<p><strong>Original Blog Post:</strong> <strong><a href="https://open.spotify.com/episode/0hD9mUmVOLl2vFxBxY9ggN?si=f70b9d2498d843f5">What Data Scientists Need to Know about MLOps Principles</a></strong> <br> Authors: Daliana Liu (host) and Mikiko Baseley (guest) <br> Published: 2023-08-31</p>
+<p><strong>My summary:</strong></p>
+<p>First, a definition: What is an MLOps engineer?</p>
+<p>In short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.</p>
+<p>Mikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.</p>
+<p>One point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:</p>
+<ol type="1">
+<li>Version control (i.e.&nbsp;git)</li>
+<li>Containerization and packaging strategies</li>
+<li>Basic web technology and deployment patterns</li>
+<li>Testing</li>
+</ol>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0hD9mUmVOLl2vFxBxY9ggN/video?utm_source=generator&amp;theme=0" width="496" height="279" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+</iframe>
+<p>Here is the link if the embed above doesn’t work: <a href="https://open.spotify.com/episode/0hD9mUmVOLl2vFxBxY9ggN?si=f70b9d2498d843f5">Link to Podcast on Spotify</a></p>
 
 
 
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="dimensionality reduction,feature selection,data visualization,content:social" data-listing-date-sort="1712030400000" data-listing-file-modified-sort="1717431689472" data-listing-date-modified-sort="1717300800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="24">
-<div class="thumbnail">
-<p><a href="./posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external"></a></p><a href="./posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external">
-<p><img src="./posts/2024-06-02-LinkedIn-pca-nonlinear/Screenshot-2024-06-02-Post.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external">LinkedIn Post on PCA on Non-Linear Data</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('dimensionality reduction'); return false;">
-dimensionality reduction
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('feature selection'); return false;">
-feature selection
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('data visualization'); return false;">
-data visualization
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('content:social'); return false;">
-content:social
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external"><strong>Original LinkedIn Post:</strong> <br> Authors: Shai Nisan, PhD <br> Published: ~2024-04-02</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external">
-<div class="listing-date">
-Apr 2, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="rules-based algos,neural networks,real-life use cases" data-listing-date-sort="1709528400000" data-listing-file-modified-sort="1717380005913" data-listing-date-modified-sort="1717300800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="449">
-<div class="thumbnail">
-<p><a href="./posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external"></a></p><a href="./posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external">
-<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2eENd1mhwyGpMWNccEwqlQ.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external">Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('rules-based algos'); return false;">
-rules-based algos
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('neural networks'); return false;">
-neural networks
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('real-life use cases'); return false;">
-real-life use cases
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external"><strong>Original Blog Post:</strong> <strong>Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform</strong> <br> Authors: Binbing Hou, Stephanie Vezich Tamayo…<br></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external">
-<div class="listing-date">
-Mar 4, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="time series,real-life use cases" data-listing-date-sort="1693454400000" data-listing-file-modified-sort="1717382164786" data-listing-date-modified-sort="1717300800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="402">
-<div class="thumbnail">
-<p><a href="./posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external"></a></p><a href="./posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external">
-<p><img src="./posts/2024-06-02-doordash-time-series-holidays/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external">How DoorDash Improves Holiday Predictions via Cascade ML Approach</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('time series'); return false;">
-time series
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('real-life use cases'); return false;">
-real-life use cases
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external"><strong>Original Blog Post:</strong> <strong>How DoorDash Improves Holiday Predictions via Cascade ML Approach</strong> <br> Authors: Chad Akkoyun and Zainab Danish (from DoorDash) <br> Published: 2023-08-31</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external">
-<div class="listing-date">
-Aug 31, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="MLOps,content:audio" data-listing-date-sort="1662004800000" data-listing-file-modified-sort="1717439590745" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="152">
-<div class="thumbnail">
-<p><a href="./posts/2024-06-03-data-scientist-show-mlops/index.html" class="no-external"></a></p><a href="./posts/2024-06-03-data-scientist-show-mlops/index.html" class="no-external">
-<p><img src="./posts/2024-06-03-data-scientist-show-mlops/Screenshot-2024-06-03-spotify-cover.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/2024-06-03-data-scientist-show-mlops/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024-06-03-data-scientist-show-mlops/index.html" class="no-external">What Data Scientists Need to Know about MLOps Principles</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024-06-03-data-scientist-show-mlops/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('MLOps'); return false;">
-MLOps
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('content:audio'); return false;">
-content:audio
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2024-06-03-data-scientist-show-mlops/index.html" class="no-external"><strong>Original Blog Post:</strong> <strong>What Data Scientists Need to Know about MLOps Principles</strong> <br> Authors: Daliana Liu (host) and Mikiko Baseley (guest) <br> Published: 2023-08-31</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2024-06-03-data-scientist-show-mlops/index.html" class="no-external">
-<div class="listing-date">
-Sep 1, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="supervised learning,xgboost,content:video" data-listing-date-sort="1583125200000" data-listing-file-modified-sort="1717421028455" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
-<div class="thumbnail">
-<p><a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a></p><a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external">
-<p><img src="./posts/2024-06-03-xgboost-resources/Screenshot-2024-06-03-video-cover-1.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external">XGBoost Resources</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('supervised learning'); return false;">
-supervised learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('xgboost'); return false;">
-xgboost
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('content:video'); return false;">
-content:video
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external"><strong>XGBoost Resources</strong> <br> Authors: Josh Starmer (from StatQuest) <br> Published: Ranges from 2019-12-19 to 2020-03-02</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external">
-<div class="listing-date">
-Mar 2, 2020
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,20 +1,36 @@
 ---
-title: "Title"
-date: "2024-03-04"
-date-modified: "2024-06-02"
-categories: []
-image: "image_file_or_link.png"
-draft: true
+title: "What Data Scientists Need to Know about MLOps Principles"
+date: "2022-09-01"
+date-modified: "2024-06-03"
+categories: [MLOps, content:audio]
+image: "Screenshot-2024-06-03-spotify-cover.png"
 ---
 
 **Original Blog Post:**
-**[Title](Link)** <br>
-Authors: NAMES (from COMPANY) <br>
+**[What Data Scientists Need to Know about MLOps Principles](https://open.spotify.com/episode/0hD9mUmVOLl2vFxBxY9ggN?si=f70b9d2498d843f5)** <br>
+Authors: Daliana Liu (host) and Mikiko Baseley (guest) <br>
 Published: 2023-08-31
 
 **My summary:**
 
+First, a definition: What is an MLOps engineer?
 
+In short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.
 
-Here is the link again to their blog post for more details:
-[Title](Link)
+Mikiko Baseley transitioned from data scientist to MLOps engineer, so I think
+her perspective is really useful for data scientists to hear, especially if we
+have models that we want to move into production.
+
+One point I want to highlight is from her point of view as an MLOps Engineer,
+Mikiko lists 4 things that all data scientists should try to know and
+understand [at 29:49]:
+
+1. Version control (i.e. git)
+2. Containerization and packaging strategies
+3. Basic web technology and deployment patterns
+4. Testing
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0hD9mUmVOLl2vFxBxY9ggN/video?utm_source=generator&theme=0" width="496" height="279" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+Here is the link if the embed above doesn't work:
+[Link to Podcast on Spotify](https://open.spotify.com/episode/0hD9mUmVOLl2vFxBxY9ggN?si=f70b9d2498d843f5)

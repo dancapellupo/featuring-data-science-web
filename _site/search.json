@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Featuring Data Science",
     "section": "",
-    "text": "Here is the full catalog of content linked to here on Featuring Data Science.\n\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLinkedIn Post on PCA on Non-Linear Data\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\n\n\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEvolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform\n\n\n\n\n\n\nrules-based algos\n\n\nneural networks\n\n\nreal-life use cases\n\n\n\n\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHow DoorDash Improves Holiday Predictions via Cascade ML Approach\n\n\n\n\n\n\ntime series\n\n\nreal-life use cases\n\n\n\n\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\n\nsupervised learning\n\n\nxgboost\n\n\ncontent:video\n\n\n\n\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items"
+    "text": "Here is the full catalog of content linked to here on Featuring Data Science.\n\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLinkedIn Post on PCA on Non-Linear Data\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\n\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEvolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform\n\n\n\n\n\n\nrules-based algos\n\n\nneural networks\n\n\nreal-life use cases\n\n\n\n\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHow DoorDash Improves Holiday Predictions via Cascade ML Approach\n\n\n\n\n\n\ntime series\n\n\nreal-life use cases\n\n\n\n\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Data Scientists Need to Know about MLOps Principles\n\n\n\n\n\n\nMLOps\n\n\ncontent:audio\n\n\n\n\n\n\n\n\n\nSep 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\n\nsupervised learning\n\n\nxgboost\n\n\ncontent:video\n\n\n\n\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -47,5 +47,19 @@
     "title": "XGBoost Resources",
     "section": "",
     "text": "XGBoost Resources  Authors: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
+  },
+  {
+    "objectID": "posts/2024-06-03-xgboost-resources/index.html",
+    "href": "posts/2024-06-03-xgboost-resources/index.html",
+    "title": "XGBoost Resources",
+    "section": "",
+    "text": "XGBoost Resources  Authors: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
+  },
+  {
+    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "title": "What Data Scientists Need to Know about MLOps Principles",
+    "section": "",
+    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
   }
 ]
