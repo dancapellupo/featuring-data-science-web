@@ -1,0 +1,35 @@
+---
+title: "Combining Rule Engines and Machine Learning"
+date: "2020-10-09"
+date-modified: "2024-06-03"
+categories: [rules-based algos]
+# image: "image_file_or_link.png"
+---
+
+**Original Blog Post:**
+**[Combining Rule Engines and Machine Learning](https://nlathia.github.io/2020/10/ML-and-rule-engines.html)** <br>
+Author: Neal Lathia <br>
+Published: 2020-10-09
+
+**My summary:**
+
+This blog post was written by Neal Lathia, who was Director of Machine Learning
+at Monzo at the time this was posted, and also has a PhD in recommender
+systems. He makes the point that instead of narrowly focusing on replacing all
+rules-based systems with ML, one needs to focus on how ML can "improve the outcomes of the entire system."
+
+> If you can write a rule set that captures everything you need, then you don’t
+> need machine learning!
+
+There are cases where ML can actually enhance, instead of fully replace, rules-based systems. First, ML can be used to help design the rules. For example, an ML algorithm can be trained to predict a particular outcome, using whichever features are available. Then, one can look at which features were given the most weight by the model and use this information to design a rule, or set of rules.
+
+> In these cases, you don’t need to ship a model–you ship the insight that you
+> got from that model, by writing rules.
+
+Alternatively, one can use ML in conjunction with rules as part of the same system. For example, if there is a case that does not fit any of the hard-coded rules, then this case can be sent to an ML algorithm that will make a decision instead.
+
+I recommend reading the whole post, but the main takeaway here is that while ML can be immensely useful in many cases, there are still times that hard-coded human decisions are needed and, perhaps more interestingly, there are really useful ways that ML and rules set by humans can be used together to achieve the best result for a given system.
+
+
+Here is the link again to their blog post for more details:
+[Combining Rule Engines and Machine Learning](https://nlathia.github.io/2020/10/ML-and-rule-engines.html)
