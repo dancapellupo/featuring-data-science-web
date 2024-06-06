@@ -37,5 +37,11 @@
   },
   "posts/2024-06-03-rules-and-ml/index.qmd": {
     "index.html": "8aada290"
+  },
+  "posts/2024-06-05-capital-one-rules-vs-ml/index.qmd": {
+    "index.html": "0a1dd302"
+  },
+  "posts/2024-06-05-beware-rf-feature-importance/index.qmd": {
+    "index.html": "dd154640"
   }
 }

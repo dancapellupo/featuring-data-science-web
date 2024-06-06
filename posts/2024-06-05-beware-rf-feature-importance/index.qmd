@@ -1,0 +1,37 @@
+---
+title: "Beware Default Random Forest Importances"
+date: "2018-10-20"
+date-modified: "2024-06-05"
+categories: ["explainability", "supervised learning", "random forest"]
+# image: "image_file_or_link.png"
+draft: true
+---
+
+**Original Blog Post:**
+**[Beware Default Random Forest Importances](https://explained.ai/rf-importance/)** <br>
+Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard <br>
+Published: 2023-08-31
+
+**My summary:**
+
+If there is one article on this website that I would recommend the most, it's
+this one.
+
+I don't know how common it is for people to use default feature importances, or
+coefficients from linear models, as proxies for the real impact of a feature on
+the target variable, but there are issues that need to be considered.
+
+This article goes through those issues, and I think explains well how the
+default feature importance computation works. There's also lots of helpful
+links sprinkled throughout the post.
+
+At the very end, they mention the following:
+
+> Extremely randomized trees, at least in theory, do not suffer from this
+> problem. Better still, they're generally faster to train that RFs, and more
+> accurate.
+
+I wonder if anyone has looked into this last point in more depth.
+
+Here is the link again to their blog post for more details:
+[Beware Default Random Forest Importances](https://explained.ai/rf-importance/)

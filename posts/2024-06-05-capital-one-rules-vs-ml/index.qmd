@@ -1,0 +1,35 @@
+---
+title: "A Modern Dilemma: When to Use Rules vs. Machine Learning"
+date: "2020-08-17"
+date-modified: "2024-06-05"
+categories: [rules-based algos]
+# image: "image_file_or_link.png"
+---
+
+**Original Blog Post:**
+**[A Modern Dilemma: When to Use Rules vs. Machine Learning](https://medium.com/capital-one-tech/a-modern-dilemma-when-to-use-rules-vs-machine-learning-61cc908769b0)** <br>
+Authors: Andrew Bonham (from Capital One) <br>
+Published: 2023-08-31
+
+**My summary:**
+
+The post begins with some discussion of the principles of business logic.
+
+About halfway down the page is a section entitled *Guidance for When to Use a
+Rules Engine vs. Machine Learning*, which gives some of the general points to
+consider for this question.
+
+The next section, *Patterns for Using Machine Learning and Rules Engines
+Together* gives some concrete ideas of how one might combine the two:
+
+> Pattern 1: Leverage machine learning outputs as an input into rules
+
+> Pattern 2: Leverage rule outputs as a feature input into machine learning
+> models
+
+> Pattern 3: Leverage both rule and machine learning outputs as inputs
+
+As of 2024-06-05, this post has 122 "claps" on Medium.
+
+Here is the link again to their blog post for more details:
+[A Modern Dilemma: When to Use Rules vs. Machine Learning](https://medium.com/capital-one-tech/a-modern-dilemma-when-to-use-rules-vs-machine-learning-61cc908769b0)
