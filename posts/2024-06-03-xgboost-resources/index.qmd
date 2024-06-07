@@ -1,15 +1,21 @@
 ---
 title: "XGBoost Resources"
+description: 'Series of four detailed videos about how XGBoost works from Josh Starmer at StatQuest'
+categories: ['supervised learning', 'xgboost', 'content:video']
 date: "2020-03-02"
 date-modified: "2024-06-03"
-categories: [supervised learning, xgboost, content:video]
 image: "Screenshot-2024-06-03-video-cover-1.png"
+title-block-banner: false
 ---
 
+::: {.hero-banner}
+::: {.hero-text}
 **XGBoost Resources**
 <br>
-Authors: Josh Starmer (from StatQuest) <br>
+Author: Josh Starmer (from StatQuest) <br>
 Published: Ranges from 2019-12-19 to 2020-03-02
+:::
+:::
 
 **My summary:**
 Josh Starmer at StatQuest has a great series of videos on XGBoost.

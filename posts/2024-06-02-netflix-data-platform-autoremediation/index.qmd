@@ -34,7 +34,10 @@ The rules-based engine however requires domain experts to create and test new ru
 
 Therefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:
 
-> "leverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job..."
+> leverage the merits of both: the rule-based classifier provides static,
+> deterministic classification results per error class, which is based on the
+> context of domain experts; the ML service provides performance- and
+> cost-aware recommendations per job...
 
 In practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.
 

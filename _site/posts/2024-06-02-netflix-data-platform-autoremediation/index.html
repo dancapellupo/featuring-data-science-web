@@ -182,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 <p>The rules-based engine however requires domain experts to create and test new rules as new errors and scenarios appear. Even with over 300 rules, half of all errors are still unclassified by this algorithm.</p>
 <p>Therefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:</p>
 <blockquote class="blockquote">
-<p>“leverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…”</p>
+<p>leverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…</p>
 </blockquote>
 <p>In practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.</p>
 <p>With about 600 memory configuration errors occurring every month in their system, manually corrected these errors can be quite time-consuming, especially since it is not always straightforward what the correct configuration should be. Too little memory causes a “Out-of-Memory” error, and too much memory is not an efficient usage of cluster resources.</p>
