@@ -1,15 +1,21 @@
 ---
 title: "What Data Scientists Need to Know about MLOps Principles"
+description: 'Podcast interview of MLOps engineer Mikiko Baseley hosted by Daliana Liu'
 date: "2022-09-01"
 date-modified: "2024-06-03"
 categories: [MLOps, content:audio]
 image: "Screenshot-2024-06-03-spotify-cover.png"
+title-block-banner: false
 ---
 
+::: {.hero-banner}
+::: {.hero-text}
 **Original Blog Post:**
 **[What Data Scientists Need to Know about MLOps Principles](https://open.spotify.com/episode/0hD9mUmVOLl2vFxBxY9ggN?si=f70b9d2498d843f5)** <br>
 Authors: Daliana Liu (host) and Mikiko Baseley (guest) <br>
 Published: 2023-08-31
+:::
+:::
 
 **My summary:**
 

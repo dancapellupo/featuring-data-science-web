@@ -10,4 +10,8 @@ title: "Statistics"
 page-layout: article
 ---
 
+## Something
+
+### Something More
+
 Some content about Stats.

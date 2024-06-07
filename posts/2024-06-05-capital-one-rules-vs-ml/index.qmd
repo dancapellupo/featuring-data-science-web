@@ -1,15 +1,21 @@
 ---
 title: "A Modern Dilemma: When to Use Rules vs. Machine Learning"
+description: 'Insights on using rules and ML together from Andrew Bonham at Capital One'
 date: "2020-08-17"
 date-modified: "2024-06-05"
-categories: [rules-based algos]
+categories: ['rules-based algos']
 # image: "image_file_or_link.png"
+title-block-banner: false
 ---
 
+::: {.hero-banner}
+::: {.hero-text}
 **Original Blog Post:**
 **[A Modern Dilemma: When to Use Rules vs. Machine Learning](https://medium.com/capital-one-tech/a-modern-dilemma-when-to-use-rules-vs-machine-learning-61cc908769b0)** <br>
 Authors: Andrew Bonham (from Capital One) <br>
 Published: 2023-08-31
+:::
+:::
 
 **My summary:**
 

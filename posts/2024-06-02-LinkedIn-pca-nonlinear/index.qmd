@@ -1,14 +1,20 @@
 ---
 title: "LinkedIn Post on PCA on Non-Linear Data"
+description: Some thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi
 date: "2024-04-02"
 date-modified: "2024-06-02"
-categories: [dimensionality reduction, feature selection, data visualization, content:social]
+categories: ['dimensionality reduction', 'feature selection', 'data visualization', 'content:social']
 image: "Screenshot-2024-06-02-Post.png"
+title-block-banner: false
 ---
 
+::: {.hero-banner}
+::: {.hero-text}
 **Original LinkedIn Post:** <br>
 Authors: [Shai Nisan, PhD](https://www.linkedin.com/in/shainis/) <br>
 Published: ~2024-04-02
+:::
+:::
 
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7175235785850249216" height="738" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 <br>

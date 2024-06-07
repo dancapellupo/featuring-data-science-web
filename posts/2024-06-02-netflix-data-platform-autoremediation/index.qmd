@@ -1,17 +1,23 @@
 ---
 title: "Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform"
+description: 'Combining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix'
 # author: "Harlow Malloc"
 date: "2024-03-04"
 date-modified: "2024-06-02"
 categories: [rules-based algos, neural networks, real-life use cases]
 image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2eENd1mhwyGpMWNccEwqlQ.png"
+title-block-banner: false
 ---
 
+::: {.hero-banner}
+::: {.hero-text}
 **Original Blog Post:**
 **[Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform](https://netflixtechblog.com/evolving-from-rule-based-classifier-machine-learning-powered-auto-remediation-in-netflix-data-039d5efd115b)** <br>
 Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Ristow, Haoyuan Wang, Snehal Chennuru, Pawan Dixit (from
     Netflix) <br>
 Published: 2023-08-31
+:::
+:::
 
 **My summary:**
 

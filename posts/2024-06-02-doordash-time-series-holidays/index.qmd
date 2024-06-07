@@ -1,19 +1,24 @@
 ---
 title: "How DoorDash Improves Holiday Predictions via Cascade ML Approach"
+description: 'A real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash'
 # author: "Harlow Malloc"
 date: "2023-08-31"
 date-modified: "2024-06-02"
-categories: [time series, real-life use cases]
-description: "A real example of time series forecasting from Chad Akkoyun and Zainab Danish of DoorDash"
+categories: ['time series', 'real-life use cases']
 image: "Screenshot-2024-06-03-figure5.png"
+title-block-banner: false
 ---
 
+::: {.hero-banner}
+::: {.hero-text}
 **Original Blog Post:**
 **[How DoorDash Improves Holiday Predictions via Cascade ML Approach](https://doordash.engineering/2023/08/31/how-doordash-improves-holiday-predictions-via-cascade-ml-approach/)** <br>
 Authors: [Chad Akkoyun](https://www.linkedin.com/in/cagri-chad-akkoyun/) and
     [Zainab Danish](https://www.linkedin.com/in/zainab-danish1/) (from
     DoorDash) <br>
 Published: 2023-08-31
+:::
+:::
 
 **My summary:**
 

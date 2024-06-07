@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -120,7 +120,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -165,7 +167,13 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<div class="hero-banner">
+<div class="hero-text">
 <p><strong>Original Blog Post:</strong> <strong><a href="https://explained.ai/rf-importance/">Beware Default Random Forest Importances</a></strong> <br> Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard <br> Published: 2018-10-20</p>
+</div>
+</div>
+<!-- ::: {.card}
+::: -->
 <p><strong>My summary:</strong></p>
 <p>If there is one article on this website that I would recommend the most, it’s this one.</p>
 <p>I don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.</p>

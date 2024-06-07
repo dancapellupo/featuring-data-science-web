@@ -1,15 +1,21 @@
 ---
 title: "Combining Rule Engines and Machine Learning"
+description: 'Thoughts about rules-based algorithms and ML from Neal Lathia'
 date: "2020-10-09"
 date-modified: "2024-06-03"
-categories: [rules-based algos]
+categories: ['rules-based algos']
 # image: "image_file_or_link.png"
+title-block-banner: false
 ---
 
+::: {.hero-banner}
+::: {.hero-text}
 **Original Blog Post:**
 **[Combining Rule Engines and Machine Learning](https://nlathia.github.io/2020/10/ML-and-rule-engines.html)** <br>
 Author: Neal Lathia <br>
 Published: 2020-10-09
+:::
+:::
 
 **My summary:**
 

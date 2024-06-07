@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Featuring Data Science - Statistics</title>
+<title>Featuring Data Science - Tree-Based ML Models</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../contents/supervised-general.html" rel="next">
-<link href="../contents/index.html" rel="prev">
+<link href="../contents/supervised-general.html" rel="prev">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,7 +69,93 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-random-forest .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-random-forest'] = new List('listing-random-forest', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-xgboost .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-xgboost'] = new List('listing-xgboost', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -120,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/statistics.html">Statistics</a></li><li class="breadcrumb-item"><a href="../contents/statistics.html">Statistics</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/supervised-general.html">Supervised Learning</a></li><li class="breadcrumb-item"><a href="../contents/supervised-tree-models.html">Tree-Based ML Models</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -143,16 +230,16 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
  <span class="menu-text">Statistics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contents/statistics.html" class="sidebar-item-text sidebar-link active">
+  <a href="../contents/statistics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics</span></a>
   </div>
 </li>
@@ -160,13 +247,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">Supervised Learning</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../contents/supervised-general.html" class="sidebar-item-text sidebar-link">
@@ -175,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contents/supervised-tree-models.html" class="sidebar-item-text sidebar-link">
+  <a href="../contents/supervised-tree-models.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Tree-Based ML Models</span></a>
   </div>
 </li>
@@ -193,9 +280,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#something" id="toc-something" class="nav-link active" data-scroll-target="#something">Something</a>
+  <li><a href="#random-forest-xgboost-and-more" id="toc-random-forest-xgboost-and-more" class="nav-link active" data-scroll-target="#random-forest-xgboost-and-more">Random Forest, XGBoost, and More</a>
   <ul class="collapse">
-  <li><a href="#something-more" id="toc-something-more" class="nav-link" data-scroll-target="#something-more">Something More</a></li>
+  <li><a href="#random-forest" id="toc-random-forest" class="nav-link" data-scroll-target="#random-forest">Random Forest</a></li>
+  <li><a href="#xgboost" id="toc-xgboost" class="nav-link" data-scroll-target="#xgboost">XGBoost</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -203,9 +291,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/statistics.html">Statistics</a></li><li class="breadcrumb-item"><a href="../contents/statistics.html">Statistics</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/supervised-general.html">Supervised Learning</a></li><li class="breadcrumb-item"><a href="../contents/supervised-tree-models.html">Tree-Based ML Models</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Statistics</h1>
+<h1 class="title">Tree-Based ML Models</h1>
 </div>
 
 
@@ -222,11 +310,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="something" class="level2">
-<h2 class="anchored" data-anchor-id="something">Something</h2>
-<section id="something-more" class="level3">
-<h3 class="anchored" data-anchor-id="something-more">Something More</h3>
-<p>Some content about Stats.</p>
+<section id="random-forest-xgboost-and-more" class="level2">
+<h2 class="anchored" data-anchor-id="random-forest-xgboost-and-more">Random Forest, XGBoost, and More</h2>
+<section id="random-forest" class="level3">
+<h3 class="anchored" data-anchor-id="random-forest">Random Forest</h3>
+<p>The random forest algorithm has been around since the 90s, and according to Kaggle surveys, … <br> <br></p>
+<div id="listing-random-forest" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="explainability,supervised learning,random forest" data-listing-date-sort="1540008000000" data-listing-file-modified-sort="1717780969340" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
+<div class="thumbnail">
+<p><a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a></p><a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">Beware Default Random Forest Importances</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">Important reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">
+<div class="listing-date">
+Oct 20, 2018
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="xgboost" class="level3">
+<h3 class="anchored" data-anchor-id="xgboost">XGBoost</h3>
+<p>The XGBoost algorithm is slightly more recent. <br> <br></p>
+<div id="listing-xgboost" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="supervised learning,xgboost,content:video" data-listing-date-sort="1583125200000" data-listing-file-modified-sort="1717421028455" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="109">
+<div class="thumbnail">
+<p><a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a></p><a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external">
+<p><img src="../posts/2024-06-03-xgboost-resources/Screenshot-2024-06-03-video-cover-1.png" class="thumbnail-image"></p>
+</a><p><a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external">XGBoost Resources</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external"><strong>XGBoost Resources</strong> <br> Authors: Josh Starmer (from StatQuest) <br> Published: Ranges from 2019-12-19 to 2020-03-02</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external">
+<div class="listing-date">
+Mar 2, 2020
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
 
 
 </section>
@@ -644,14 +801,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../contents/index.html" class="pagination-link" aria-label="Table of Contents">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Table of Contents</span>
+      <a href="../contents/supervised-general.html" class="pagination-link" aria-label="General Supervised Learning Topics">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">General Supervised Learning Topics</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../contents/supervised-general.html" class="pagination-link" aria-label="General Supervised Learning Topics">
-        <span class="nav-page-text">General Supervised Learning Topics</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

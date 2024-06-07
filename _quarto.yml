@@ -1,9 +1,11 @@
 project:
   type: website
+  output-dir: _site
 
 website:
   title: "Featuring Data Science"
   repo-url: https://github.com/dancapellupo/featuring-data-science-web
+  page-navigation: true
   navbar:
     left:
       - contents/index.qmd
@@ -28,11 +30,13 @@ website:
           - section: "Supervised Learning"
             contents:
               - contents/supervised-general.qmd
+              - contents/supervised-tree-models.qmd
 
 format:
   html:
     # theme: cosmo, litera, lux, minty, pulse, spacelab, united, yeti
     theme: litera
     css: styles.css
+    toc: true
 
 

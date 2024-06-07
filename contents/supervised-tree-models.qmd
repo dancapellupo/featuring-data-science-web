@@ -1,0 +1,41 @@
+---
+title: "Tree-Based ML Models"
+listing:
+  - id: random-forest
+    contents: "../posts/*/*.qmd"
+    type: default
+    sort: "date asc"
+    # categories: false
+    include:
+      categories: "{random forest}*"
+  - id: xgboost
+    contents: "../posts/*/*.qmd"
+    type: default
+    sort: "date asc"
+    # categories: false
+    include:
+      categories: "{xgboost}*"
+page-layout: article
+---
+
+## Random Forest, XGBoost, and More
+
+### Random Forest
+
+The random forest algorithm has been around since the 90s, and according to
+Kaggle surveys, ...
+<br>
+<br>
+
+:::{#random-forest}
+:::
+
+### XGBoost
+
+The XGBoost algorithm is slightly more recent.
+<br>
+<br>
+
+:::{#xgboost}
+:::
+

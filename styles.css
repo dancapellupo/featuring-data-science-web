@@ -64,3 +64,37 @@
     .card .source-code {
         margin-top: 3px;
     }
+
+@media (min-width: 576px) {
+    .blog-card .card {
+        margin-top: 20px;
+    }
+  }
+
+  .hero-banner {
+    position: relative;
+    left: -5px;
+    /* right: 5px; */
+    /* background-color: rgb(240,245,249); */
+    /* background-color: aliceblue; */
+    background-color: ghostwhite;
+    /* background-color: whitesmoke; */
+    border-radius: 10px;
+    margin-top: 25px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: left;
+  }
+
+  .hero-text {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+
+  .hero-text .p {
+    padding-bottom: 0px;
+  }
+

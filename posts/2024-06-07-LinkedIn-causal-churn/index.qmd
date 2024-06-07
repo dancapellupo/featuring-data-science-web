@@ -18,8 +18,9 @@ Published: 2023-08-31
 :::
 :::
 
-**My summary:**
+<!-- **My summary:** -->
 
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7204761471006711808" height="1187" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 
 Here is the link again to their blog post for more details:
