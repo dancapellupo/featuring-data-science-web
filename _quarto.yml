@@ -16,6 +16,7 @@ website:
       #   href: https://twitter.com
   sidebar:
     - id: contents
+      style: floating
       collapse-level: 1
       contents:
         - section: "Table of Contents"
@@ -26,13 +27,12 @@ website:
               - contents/statistics.qmd
           - section: "Supervised Learning"
             contents:
-              - contents/supervised.qmd
+              - contents/supervised-general.qmd
 
 format:
   html:
-    # theme: cosmo
+    # theme: cosmo, litera, lux, minty, pulse, spacelab, united, yeti
     theme: litera
     css: styles.css
-
 
 

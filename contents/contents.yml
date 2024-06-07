@@ -9,8 +9,15 @@
   subtitle: Predicting a Target Variable
   links:
     - text: General Supervised Learning Topics
-      href: supervised.qmd
+      href: supervised-general.qmd
     - text: Regression
+      href: supervised-regression.qmd
     - text: Classification
+      href: supervised-classification.qmd
 
+- title: MLOps
+  subtitle: Putting ML Models into Production
+  links:
+    - text: MLOps
+    - href: mlops-general
 

@@ -10,7 +10,8 @@ listing:
 image: /images/hero_right.png
 ---
 
-Table of Contents
+Here you can find all of the content I have collected on various topics in data
+science.
 
 ::: {#contents .column-screen-inset-right style="max-width: 850px;"}
 :::

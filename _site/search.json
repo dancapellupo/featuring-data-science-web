@@ -1,73 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Featuring Data Science",
-    "section": "",
-    "text": "This is a website.\nThere are two ways to navigate this site. At the top menu bar, there is the Table of Contents which organizes the content on this site like a book.\nThe other way is to go to the Full Catalog.\nThere is also a bonus third option, which is the search button at the top right, which gives a nice, convenient full-site search."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "This website was created by and is actively maintained by Dan Capellupo. I am a former PhD astronomer, and I have now been a data scientist for over 6 years.\nI will be happy to hear any feedback you have. If you have any comments on any of the articles I post about on this site, please let me know and I can add them to the articles.\nIf you know of any articles appropriate for an experienced DS audience, also please send those my way!"
-  },
-  {
-    "objectID": "posts/2024-06-02-door-dash-time-series-holidays/index.html",
-    "href": "posts/2024-06-02-door-dash-time-series-holidays/index.html",
-    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
-    "section": "",
-    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
-  },
-  {
-    "objectID": "posts/2024-06-02-doordash-time-series-holidays/index.html",
-    "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
-    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
-    "section": "",
-    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
-  },
-  {
-    "objectID": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
-    "href": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
-    "title": "Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform",
-    "section": "",
-    "text": "Original Blog Post: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform  Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Ristow, Haoyuan Wang, Snehal Chennuru, Pawan Dixit (from Netflix)  Published: 2023-08-31\nMy summary:\nThis blog post from Netflix, where they are using ML to supplement a rules-based approach to identifying errors as they occur in their data platforms and sometimes handle those errors automatically (“auto remediation”).\n\nAt Netflix, hundreds of thousands of workflows and millions of jobs are running per day across multiple layers of the big data platform.\n\nWith such a high level of activity in their data platform, even a small percentage of errors can increase costs and require considerable human effort to diagnosis and address errors.\nNetflix started addressing this already with a rules-based engine they call Pensive, which classifies errors, helps determine whether to retry the job, and provides insights to human engineers who might need to remediate the job failure.\nThe rules-based engine however requires domain experts to create and test new rules as new errors and scenarios appear. Even with over 300 rules, half of all errors are still unclassified by this algorithm.\nTherefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:\n\n“leverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…”\n\nIn practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.\nWith about 600 memory configuration errors occurring every month in their system, manually corrected these errors can be quite time-consuming, especially since it is not always straightforward what the correct configuration should be. Too little memory causes a “Out-of-Memory” error, and too much memory is not an efficient usage of cluster resources.\nTherefore, they train a standard neural network (in other words, a feedforward multilayer perceptron - MLP), with two heads. Two heads means that the model has two outputs, so that they can simultaneously predict both the probability of failure and computation cost of retrying the job with a certain memory configuration.\nFinally, they use a Bayesian optimization where the neural network is run multiple times with features based on the specific error and different options for the Spark run configuration, and the best combination of failure probability and computation cost is determined.\nSo far, this ML algorithm has automatically solved 56% of memory configuration errors and substantially reduced costs related to these errors.\nHere is the link again to their blog post for more details: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform"
-  },
-  {
-    "objectID": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
-    "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
-    "title": "LinkedIn Post on PCA on Non-Linear Data",
-    "section": "",
-    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment"
-  },
-  {
-    "objectID": "posts/2024-06-02-xgboost-resources/index.html",
-    "href": "posts/2024-06-02-xgboost-resources/index.html",
-    "title": "XGBoost Resources",
-    "section": "",
-    "text": "XGBoost Resources  Authors: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
-  },
-  {
-    "objectID": "posts/2024-06-03-xgboost-resources/index.html",
-    "href": "posts/2024-06-03-xgboost-resources/index.html",
-    "title": "XGBoost Resources",
-    "section": "",
-    "text": "XGBoost Resources  Authors: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
-  },
-  {
-    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
-    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
-    "title": "What Data Scientists Need to Know about MLOps Principles",
-    "section": "",
-    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
-  },
-  {
-    "objectID": "posts/2024-06-03-rules-and-ml/index.html",
-    "href": "posts/2024-06-03-rules-and-ml/index.html",
-    "title": "Combining Rule Engines and Machine Learning",
-    "section": "",
-    "text": "Original Blog Post: Combining Rule Engines and Machine Learning  Author: Neal Lathia  Published: 2020-10-09\nMy summary:\nThis blog post was written by Neal Lathia, who was Director of Machine Learning at Monzo at the time this was posted, and also has a PhD in recommender systems. He makes the point that instead of narrowly focusing on replacing all rules-based systems with ML, one needs to focus on how ML can “improve the outcomes of the entire system.”\n\nIf you can write a rule set that captures everything you need, then you don’t need machine learning!\n\nThere are cases where ML can actually enhance, instead of fully replace, rules-based systems. First, ML can be used to help design the rules. For example, an ML algorithm can be trained to predict a particular outcome, using whichever features are available. Then, one can look at which features were given the most weight by the model and use this information to design a rule, or set of rules.\n\nIn these cases, you don’t need to ship a model–you ship the insight that you got from that model, by writing rules.\n\nAlternatively, one can use ML in conjunction with rules as part of the same system. For example, if there is a case that does not fit any of the hard-coded rules, then this case can be sent to an ML algorithm that will make a decision instead.\nI recommend reading the whole post, but the main takeaway here is that while ML can be immensely useful in many cases, there are still times that hard-coded human decisions are needed and, perhaps more interestingly, there are really useful ways that ML and rules set by humans can be used together to achieve the best result for a given system.\nHere is the link again to their blog post for more details: Combining Rule Engines and Machine Learning"
   },
   {
     "objectID": "posts/2024-06-05-capital-one-rules-vs-ml/index.html",
@@ -77,23 +14,25 @@
     "text": "Original Blog Post: A Modern Dilemma: When to Use Rules vs. Machine Learning  Authors: Andrew Bonham (from Capital One)  Published: 2023-08-31\nMy summary:\nThe post begins with some discussion of the principles of business logic.\nAbout halfway down the page is a section entitled Guidance for When to Use a Rules Engine vs. Machine Learning, which gives some of the general points to consider for this question.\nThe next section, Patterns for Using Machine Learning and Rules Engines Together gives some concrete ideas of how one might combine the two:\n\nPattern 1: Leverage machine learning outputs as an input into rules\n\n\nPattern 2: Leverage rule outputs as a feature input into machine learning models\n\n\nPattern 3: Leverage both rule and machine learning outputs as inputs\n\nAs of 2024-06-05, this post has 122 “claps” on Medium.\nHere is the link again to their blog post for more details: A Modern Dilemma: When to Use Rules vs. Machine Learning"
   },
   {
-    "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
-    "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
-    "title": "Beware Default Random Forest Importances",
+    "objectID": "posts/2024-06-03-rules-and-ml/index.html",
+    "href": "posts/2024-06-03-rules-and-ml/index.html",
+    "title": "Combining Rule Engines and Machine Learning",
     "section": "",
-    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
+    "text": "Original Blog Post: Combining Rule Engines and Machine Learning  Author: Neal Lathia  Published: 2020-10-09\nMy summary:\nThis blog post was written by Neal Lathia, who was Director of Machine Learning at Monzo at the time this was posted, and also has a PhD in recommender systems. He makes the point that instead of narrowly focusing on replacing all rules-based systems with ML, one needs to focus on how ML can “improve the outcomes of the entire system.”\n\nIf you can write a rule set that captures everything you need, then you don’t need machine learning!\n\nThere are cases where ML can actually enhance, instead of fully replace, rules-based systems. First, ML can be used to help design the rules. For example, an ML algorithm can be trained to predict a particular outcome, using whichever features are available. Then, one can look at which features were given the most weight by the model and use this information to design a rule, or set of rules.\n\nIn these cases, you don’t need to ship a model–you ship the insight that you got from that model, by writing rules.\n\nAlternatively, one can use ML in conjunction with rules as part of the same system. For example, if there is a case that does not fit any of the hard-coded rules, then this case can be sent to an ML algorithm that will make a decision instead.\nI recommend reading the whole post, but the main takeaway here is that while ML can be immensely useful in many cases, there are still times that hard-coded human decisions are needed and, perhaps more interestingly, there are really useful ways that ML and rules set by humans can be used together to achieve the best result for a given system.\nHere is the link again to their blog post for more details: Combining Rule Engines and Machine Learning"
   },
   {
-    "objectID": "contents/supervised.html",
-    "href": "contents/supervised.html",
-    "title": "Supervised Learning",
+    "objectID": "posts/2024-06-03-xgboost-resources/index.html",
+    "href": "posts/2024-06-03-xgboost-resources/index.html",
+    "title": "XGBoost Resources",
     "section": "",
-    "text": "Some content about Supervised Learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeware Default Random Forest Importances\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\n\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Supervised Learning",
-      "Supervised Learning"
-    ]
+    "text": "XGBoost Resources  Authors: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
+  },
+  {
+    "objectID": "posts/2024-06-02-doordash-time-series-holidays/index.html",
+    "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
+    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
+    "section": "",
+    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
   },
   {
     "objectID": "contents/statistics.html",
@@ -106,5 +45,52 @@
       "Statistics",
       "Statistics"
     ]
+  },
+  {
+    "objectID": "contents/supervised-general.html",
+    "href": "contents/supervised-general.html",
+    "title": "General Supervised Learning Topics",
+    "section": "",
+    "text": "Some content about Supervised Learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeware Default Random Forest Importances\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\n\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Supervised Learning",
+      "General Supervised Learning Topics"
+    ]
+  },
+  {
+    "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
+    "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
+    "title": "Beware Default Random Forest Importances",
+    "section": "",
+    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
+  },
+  {
+    "objectID": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
+    "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
+    "title": "LinkedIn Post on PCA on Non-Linear Data",
+    "section": "",
+    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment"
+  },
+  {
+    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "title": "What Data Scientists Need to Know about MLOps Principles",
+    "section": "",
+    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
+  },
+  {
+    "objectID": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
+    "href": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
+    "title": "Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform",
+    "section": "",
+    "text": "Original Blog Post: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform  Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Ristow, Haoyuan Wang, Snehal Chennuru, Pawan Dixit (from Netflix)  Published: 2023-08-31\nMy summary:\nThis blog post from Netflix, where they are using ML to supplement a rules-based approach to identifying errors as they occur in their data platforms and sometimes handle those errors automatically (“auto remediation”).\n\nAt Netflix, hundreds of thousands of workflows and millions of jobs are running per day across multiple layers of the big data platform.\n\nWith such a high level of activity in their data platform, even a small percentage of errors can increase costs and require considerable human effort to diagnosis and address errors.\nNetflix started addressing this already with a rules-based engine they call Pensive, which classifies errors, helps determine whether to retry the job, and provides insights to human engineers who might need to remediate the job failure.\nThe rules-based engine however requires domain experts to create and test new rules as new errors and scenarios appear. Even with over 300 rules, half of all errors are still unclassified by this algorithm.\nTherefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:\n\n“leverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…”\n\nIn practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.\nWith about 600 memory configuration errors occurring every month in their system, manually corrected these errors can be quite time-consuming, especially since it is not always straightforward what the correct configuration should be. Too little memory causes a “Out-of-Memory” error, and too much memory is not an efficient usage of cluster resources.\nTherefore, they train a standard neural network (in other words, a feedforward multilayer perceptron - MLP), with two heads. Two heads means that the model has two outputs, so that they can simultaneously predict both the probability of failure and computation cost of retrying the job with a certain memory configuration.\nFinally, they use a Bayesian optimization where the neural network is run multiple times with features based on the specific error and different options for the Spark run configuration, and the best combination of failure probability and computation cost is determined.\nSo far, this ML algorithm has automatically solved 56% of memory configuration errors and substantially reduced costs related to these errors.\nHere is the link again to their blog post for more details: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Featuring Data Science",
+    "section": "",
+    "text": "This is a website.\nThere are two ways to navigate this site. At the top menu bar, there is the Table of Contents which organizes the content on this site like a book.\nThe other way is to go to the Full Catalog.\nThere is also a bonus third option, which is the search button at the top right, which gives a nice, convenient full-site search."
   }
 ]
