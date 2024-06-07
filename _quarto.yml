@@ -3,13 +3,31 @@ project:
 
 website:
   title: "Featuring Data Science"
+  repo-url: https://github.com/dancapellupo/featuring-data-science-web
   navbar:
+    left:
+      - contents/index.qmd
+      - catalog.qmd
     right:
       - about.qmd
       - icon: github
-        href: https://github.com/
-      - icon: twitter
-        href: https://twitter.com
+        href: https://github.com/dancapellupo/featuring-data-science-web
+      # - icon: twitter
+      #   href: https://twitter.com
+  sidebar:
+    - id: contents
+      collapse-level: 1
+      contents:
+        - section: "Table of Contents"
+          href: contents/index.qmd
+          contents:
+          - section: "Statistics"
+            contents:
+              - contents/statistics.qmd
+          - section: "Supervised Learning"
+            contents:
+              - contents/supervised.qmd
+
 format:
   html:
     # theme: cosmo

@@ -4,14 +4,14 @@
     "href": "index.html",
     "title": "Featuring Data Science",
     "section": "",
-    "text": "Here is the full catalog of content linked to here on Featuring Data Science.\n\n\n\n\n\n\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nLinkedIn Post on PCA on Non-Linear Data\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\n\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nEvolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform\n\n\n\n\n\n\nrules-based algos\n\n\nneural networks\n\n\nreal-life use cases\n\n\n\n\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nHow DoorDash Improves Holiday Predictions via Cascade ML Approach\n\n\n\n\n\n\ntime series\n\n\nreal-life use cases\n\n\n\n\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWhat Data Scientists Need to Know about MLOps Principles\n\n\n\n\n\n\nMLOps\n\n\ncontent:audio\n\n\n\n\n\n\n\n\n\nSep 1, 2022\n\n\n\n\n\n\n\n\n\n\n\n\nCombining Rule Engines and Machine Learning\n\n\n\n\n\n\nrules-based algos\n\n\n\n\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nA Modern Dilemma: When to Use Rules vs. Machine Learning\n\n\n\n\n\n\nrules-based algos\n\n\n\n\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\n\nsupervised learning\n\n\nxgboost\n\n\ncontent:video\n\n\n\n\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nBeware Default Random Forest Importances\n\n\n\n\n\n\nexplainability\n\n\nsupervised learning\n\n\nrandom forest\n\n\n\n\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items"
+    "text": "This is a website.\nThere are two ways to navigate this site. At the top menu bar, there is the Table of Contents which organizes the content on this site like a book.\nThe other way is to go to the Full Catalog.\nThere is also a bonus third option, which is the search button at the top right, which gives a nice, convenient full-site search."
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this blog"
+    "text": "This website was created by and is actively maintained by Dan Capellupo. I am a former PhD astronomer, and I have now been a data scientist for over 6 years.\nI will be happy to hear any feedback you have. If you have any comments on any of the articles I post about on this site, please let me know and I can add them to the articles.\nIf you know of any articles appropriate for an experienced DS audience, also please send those my way!"
   },
   {
     "objectID": "posts/2024-06-02-door-dash-time-series-holidays/index.html",
@@ -81,6 +81,30 @@
     "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
     "title": "Beware Default Random Forest Importances",
     "section": "",
-    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2023-08-31\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
+    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
+  },
+  {
+    "objectID": "contents/supervised.html",
+    "href": "contents/supervised.html",
+    "title": "Supervised Learning",
+    "section": "",
+    "text": "Some content about Supervised Learning.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeware Default Random Forest Importances\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\n\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Supervised Learning",
+      "Supervised Learning"
+    ]
+  },
+  {
+    "objectID": "contents/statistics.html",
+    "href": "contents/statistics.html",
+    "title": "Statistics",
+    "section": "",
+    "text": "Some content about Stats.",
+    "crumbs": [
+      "Table of Contents",
+      "Statistics",
+      "Statistics"
+    ]
   }
 ]

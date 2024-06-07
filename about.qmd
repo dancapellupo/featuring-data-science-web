@@ -1,19 +1,28 @@
 ---
 title: "About"
-image: profile.jpg
+# image: profile.jpg
 about:
-  template: jolla
+  template: trestles
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
+    # - icon: twitter
+    #   text: Twitter
+    #   href: https://twitter.com
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://www.linkedin.com/in/dcapellupo/
     - icon: github
       text: Github
       href: https://github.com
 
 ---
 
-About this blog
+This website was created by and is actively maintained by
+[Dan Capellupo](https://dancapellupo.com/). I am a former PhD astronomer, and I
+have now been a data scientist for over 6 years.
+
+I will be happy to hear any feedback you have. If you have any comments on any
+of the articles I post about on this site, please let me know and I can add
+them to the articles.
+
+If you know of any articles appropriate for an experienced DS audience, also
+please send those my way!

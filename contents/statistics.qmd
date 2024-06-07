@@ -1,0 +1,13 @@
+---
+title: "Statistics"
+# listing:
+#   contents: posts
+#   sort: "date asc"
+#   type: default
+#   categories: false
+#   sort-ui: false
+#   filter-ui: false
+page-layout: article
+---
+
+Some content about Stats.

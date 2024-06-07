@@ -1,16 +1,15 @@
 ---
 title: "Featuring Data Science"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: true
-page-layout: full
-title-block-banner: true
+
 ---
 
-### Here is the full catalog of content linked to here on Featuring Data Science.
-<br>
+This is a website.
+
+There are two ways to navigate this site. At the top menu bar, there is the
+[Table of Contents](contents/index.qmd) which organizes the content on this site like a book.
+
+The other way is to go to the [Full Catalog](catalog.qmd).
+
+There is also a bonus third option, which is the search button at the top
+right, which gives a nice, convenient full-site search.
 

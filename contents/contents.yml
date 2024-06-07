@@ -1,0 +1,16 @@
+
+- title: Statistics
+  subtitle: All Things Stats
+  links:
+    - text: Statistics Posts
+      href: statistics.qmd
+
+- title: Supervised Learning
+  subtitle: Predicting a Target Variable
+  links:
+    - text: General Supervised Learning Topics
+      href: supervised.qmd
+    - text: Regression
+    - text: Classification
+
+

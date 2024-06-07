@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2018-10-20">
+<meta name="description" content="Important reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.">
 
 <title>Featuring Data Science - Beware Default Random Forest Importances</title>
 <style>
@@ -75,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -88,18 +89,23 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../contents/index.html"> 
+<span class="menu-text">Table of Contents</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../catalog.html"> 
+<span class="menu-text">Full Catalog</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://github.com/dancapellupo/featuring-data-science-web"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -111,51 +117,55 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Beware Default Random Forest Importances</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">explainability</div>
-                <div class="quarto-category">supervised learning</div>
-                <div class="quarto-category">random forest</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">October 20, 2018</p>
-      </div>
-    </div>
-    
-      <div>
-      <div class="quarto-title-meta-heading">Modified</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date-modified">June 5, 2024</p>
-      </div>
-    </div>
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Beware Default Random Forest Importances</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">explainability</div>
+    <div class="quarto-category">supervised learning</div>
+    <div class="quarto-category">random forest</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Important reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 20, 2018</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 5, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
 
 
+</header>
 
-<p><strong>Original Blog Post:</strong> <strong><a href="https://explained.ai/rf-importance/">Beware Default Random Forest Importances</a></strong> <br> Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard <br> Published: 2023-08-31</p>
+
+<p><strong>Original Blog Post:</strong> <strong><a href="https://explained.ai/rf-importance/">Beware Default Random Forest Importances</a></strong> <br> Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard <br> Published: 2018-10-20</p>
 <p><strong>My summary:</strong></p>
 <p>If there is one article on this website that I would recommend the most, it’s this one.</p>
 <p>I don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.</p>

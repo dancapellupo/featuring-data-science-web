@@ -1,15 +1,17 @@
 ---
 title: "Beware Default Random Forest Importances"
+description: 'Important reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.'
+categories: ["explainability", "supervised learning", "random forest"]
 date: "2018-10-20"
 date-modified: "2024-06-05"
-categories: ["explainability", "supervised learning", "random forest"]
 # image: "image_file_or_link.png"
+title-block-banner: false
 ---
 
 **Original Blog Post:**
 **[Beware Default Random Forest Importances](https://explained.ai/rf-importance/)** <br>
 Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard <br>
-Published: 2023-08-31
+Published: 2018-10-20
 
 **My summary:**
 

@@ -1,0 +1,17 @@
+---
+title: "Table of Contents"
+page-layout: article
+anchor-sections: false
+search: false
+listing:
+  id: contents
+  template: ../ejs/links.ejs
+  contents: contents.yml
+image: /images/hero_right.png
+---
+
+Table of Contents
+
+::: {#contents .column-screen-inset-right style="max-width: 850px;"}
+:::
+
