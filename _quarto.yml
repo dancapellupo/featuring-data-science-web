@@ -27,9 +27,12 @@ website:
           - section: "Statistics"
             contents:
               - contents/statistics.qmd
+          - section: "Feature Selection and Feature Engineering"
+            contents:
+              - contents/dimensionality-reduction.qmd
           - section: "Supervised Learning"
             contents:
-              - contents/supervised-general.qmd
+              - contents/supervised.qmd
               - contents/supervised-tree-models.qmd
 
 format:

@@ -5,21 +5,51 @@
     - text: Statistics Posts
       href: statistics.qmd
 
+- title: Feature Selection and Feature Engineering
+  subtitle: Selecting Features and Creating New Ones
+  links:
+    - text: Dimensionality Reduction (PCA, etc)
+    - href: dimensionality-reduction.qmd
+
+- title: Data Visualization
+  subtitle: Strategies to Improve Presentation of Data
+  links:
+    - text: General Insights into Data Visualization
+    - href: data-visualization.qmd
+    - text: Data Visualization Code and Packages
+    - href: data-visualization-code.qmd
+
 - title: Supervised Learning
   subtitle: Predicting a Target Variable
   links:
     - text: General Supervised Learning Topics
-      href: supervised-general.qmd
+      href: supervised.qmd
     - text: Regression
       href: supervised-regression.qmd
     - text: Classification
       href: supervised-classification.qmd
-    - text: Tree-Based Models
+    - text: Tree-Based ML Models
       href: supervised-tree-models.qmd
+
+- title: Unsupervised Learning
+  subtitle: Clustering
+  links:
+    - text: Clustering Metrics
+    - href: cluster-metrics.qmd
+    - text: Beyond k-Means - DBSCAN, HDBSCAN
+    - href: cluster-dbscan-hdbscan.qmd
 
 - title: MLOps
   subtitle: Putting ML Models into Production
   links:
     - text: MLOps
-    - href: mlops-general
+    - href: mlops.qmd
+
+# - title: Data Governance
+#   subtitle: Policies around Responsible Use of Data
+
+# - title: Responsible AI and Explainability
+#   subtitle: Considerations for Fairness in Models
+
+
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Featuring Data Science - General Supervised Learning Topics</title>
+<title>Featuring Data Science - Dimensionality Reduction</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../contents/supervised-tree-models.html" rel="next">
+<link href="../contents/supervised.html" rel="next">
 <link href="../contents/statistics.html" rel="prev">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
@@ -73,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-random-forest .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -86,7 +86,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-random-forest'] = new List('listing-random-forest', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -180,7 +180,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/supervised-general.html">Supervised Learning</a></li><li class="breadcrumb-item"><a href="../contents/supervised-general.html">General Supervised Learning Topics</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/dimensionality-reduction.html">Feature Selection and Feature Engineering</a></li><li class="breadcrumb-item"><a href="../contents/dimensionality-reduction.html">Dimensionality Reduction</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -221,7 +221,7 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
- <span class="menu-text">Supervised Learning</span></a>
+ <span class="menu-text">Feature Selection and Feature Engineering</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -229,7 +229,24 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contents/supervised-general.html" class="sidebar-item-text sidebar-link active">
+  <a href="../contents/dimensionality-reduction.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Dimensionality Reduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Supervised Learning</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/supervised.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">General Supervised Learning Topics</span></a>
   </div>
 </li>
@@ -249,14 +266,23 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#dimensionality-reduction-algorithms-pca-and-others" id="toc-dimensionality-reduction-algorithms-pca-and-others" class="nav-link active" data-scroll-target="#dimensionality-reduction-algorithms-pca-and-others">Dimensionality Reduction Algorithms: PCA and Others</a>
+  <ul class="collapse">
+  <li><a href="#pca" id="toc-pca" class="nav-link" data-scroll-target="#pca">PCA</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/supervised-general.html">Supervised Learning</a></li><li class="breadcrumb-item"><a href="../contents/supervised-general.html">General Supervised Learning Topics</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/dimensionality-reduction.html">Feature Selection and Feature Engineering</a></li><li class="breadcrumb-item"><a href="../contents/dimensionality-reduction.html">Dimensionality Reduction</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">General Supervised Learning Topics</h1>
+<h1 class="title">Dimensionality Reduction</h1>
 </div>
 
 
@@ -273,59 +299,34 @@ window.Quarto = {
 </header>
 
 
-<p>Some content about Supervised Learning. <br> <br></p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<section id="dimensionality-reduction-algorithms-pca-and-others" class="level2">
+<h2 class="anchored" data-anchor-id="dimensionality-reduction-algorithms-pca-and-others">Dimensionality Reduction Algorithms: PCA and Others</h2>
+<section id="pca" class="level3">
+<h3 class="anchored" data-anchor-id="pca">PCA</h3>
+<p>The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed. <br> <br></p>
+<div id="listing-random-forest" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="explainability,supervised learning,random forest" data-listing-date-sort="1540008000000" data-listing-file-modified-sort="1717780969340" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
+<div class="quarto-post image-right" data-index="0" data-categories="dimensionality reduction,feature selection,data visualization,content:social" data-listing-date-sort="1712030400000" data-listing-file-modified-sort="1717781357627" data-listing-date-modified-sort="1717300800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="26">
 <div class="thumbnail">
-<p><a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a></p><a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a></p>
+<p><a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external"></a></p><a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external">
+<p><img src="../posts/2024-06-02-LinkedIn-pca-nonlinear/Screenshot-2024-06-02-Post.png" class="thumbnail-image"></p>
+</a><p><a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external"></a></p>
 </div>
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">Beware Default Random Forest Importances</a>
+<a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external">LinkedIn Post on PCA on Non-Linear Data</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a>
+<a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">Important reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.</a>
+<a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external">Some thoughts about PCA from Shai Nisan, PhD and Prof.&nbsp;Hamid Karimi</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">
+<a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external">
 <div class="listing-date">
-Oct 20, 2018
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="supervised learning,xgboost,content:video" data-listing-date-sort="1583125200000" data-listing-file-modified-sort="1717794800373" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="111">
-<div class="thumbnail">
-<p><a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a></p><a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external">
-<p><img src="../posts/2024-06-03-xgboost-resources/Screenshot-2024-06-03-video-cover-1.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external">XGBoost Resources</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external">Series of four detailed videos about how XGBoost works from Josh Starmer at StatQuest</a>
-</div>
-</div>
-<div class="metadata">
-<a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external">
-<div class="listing-date">
-Mar 2, 2020
+Apr 2, 2024
 </div>
 </a>
 </div>
@@ -334,7 +335,14 @@ Mar 2, 2020
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -751,8 +759,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../contents/supervised-tree-models.html" class="pagination-link" aria-label="Tree-Based ML Models">
-        <span class="nav-page-text">Tree-Based ML Models</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../contents/supervised.html" class="pagination-link" aria-label="General Supervised Learning Topics">
+        <span class="nav-page-text">General Supervised Learning Topics</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

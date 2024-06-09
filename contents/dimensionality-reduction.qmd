@@ -1,0 +1,22 @@
+---
+title: "Dimensionality Reduction"
+listing:
+  - id: random-forest
+    contents:
+      - '../posts/2024-06-02-LinkedIn-pca-nonlinear/index.qmd'
+    # sort: "date asc"
+page-layout: article
+---
+
+## Dimensionality Reduction Algorithms: PCA and Others
+
+### PCA
+
+The PCA algorithm is discussed perhaps the most often in the context of
+dimensionality reduction. As we'll see below [to be updated], there are other
+options, which are perhaps less commonly discussed.
+<br>
+<br>
+
+:::{#random-forest}
+:::

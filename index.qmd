@@ -1,12 +1,41 @@
 ---
 title: "Featuring Data Science"
-
+toc: false
 ---
 
-This is a website.
+::: {.hero-banner}
+::: {.hero-text}
+### A Curated Catalog of Data Science Content
+:::
+:::
+
+### Purpose of this Website
+
+There are many data science newsletters, courses, podcasts, videos,
+conferences, etc. There's discussions on social media. It's hard to keep up
+with it all.
+
+This website is intended to showcase content across a range of data science
+topics, that provides insight beyond or goes deeper into topics than what is
+typically found in online courses.
+
+### Intended Audience
+
+The goal is that anyone who has at least taken an introductory course in data
+science, as well as those with years of experience, will find this website
+useful.
+
+### How to use this Website
+
+This website is made up of links to curated content from across the internet. A
+short summary of each piece of content appears here that outlines the main
+points of the content and what insights this content brings to the table.
 
 There are two ways to navigate this site. At the top menu bar, there is the
-[Table of Contents](contents/index.qmd) which organizes the content on this site like a book.
+[Table of Contents](contents/index.qmd) which organizes the content on this
+site like a book. It is organized by different topics/categories. Of course,
+there is some content that crosses categories, so some content may be linked to
+in different categories.
 
 The other way is to go to the [Full Catalog](catalog.qmd).
 

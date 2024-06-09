@@ -66,8 +66,32 @@
     ]
   },
   {
-    "objectID": "contents/supervised-general.html",
-    "href": "contents/supervised-general.html",
+    "objectID": "contents/dimensionality-reduction.html",
+    "href": "contents/dimensionality-reduction.html",
+    "title": "Dimensionality Reduction",
+    "section": "",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
+    ]
+  },
+  {
+    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "title": "Dimensionality Reduction",
+    "section": "",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
+    ]
+  },
+  {
+    "objectID": "contents/supervised.html",
+    "href": "contents/supervised.html",
     "title": "General Supervised Learning Topics",
     "section": "",
     "text": "Some content about Supervised Learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeware Default Random Forest Importances\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items",
@@ -127,6 +151,6 @@
     "href": "index.html",
     "title": "Featuring Data Science",
     "section": "",
-    "text": "This is a website.\nThere are two ways to navigate this site. At the top menu bar, there is the Table of Contents which organizes the content on this site like a book.\nThe other way is to go to the Full Catalog.\nThere is also a bonus third option, which is the search button at the top right, which gives a nice, convenient full-site search."
+    "text": "A Curated Catalog of Data Science Content\n\n\n\nPurpose of this Website\nThere are many data science newsletters, courses, podcasts, videos, conferences, etc. There’s discussions on social media. It’s hard to keep up with it all.\nThis website is intended to showcase content across a range of data science topics, that provides insight beyond or goes deeper into topics than what is typically found in online courses.\n\n\nIntended Audience\nThe goal is that anyone who has at least taken an introductory course in data science, as well as those with years of experience, will find this website useful.\n\n\nHow to use this Website\nThis website is made up of links to curated content from across the internet. A short summary of each piece of content appears here that outlines the main points of the content and what insights this content brings to the table.\nThere are two ways to navigate this site. At the top menu bar, there is the Table of Contents which organizes the content on this site like a book. It is organized by different topics/categories. Of course, there is some content that crosses categories, so some content may be linked to in different categories.\nThe other way is to go to the Full Catalog.\nThere is also a bonus third option, which is the search button at the top right, which gives a nice, convenient full-site search."
   }
 ]
