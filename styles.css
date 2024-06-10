@@ -92,9 +92,19 @@
   .hero-text {
     padding-bottom: 0px;
     margin-bottom: 0px;
+    /* width: 65%; */
   }
 
   .hero-text .p {
     padding-bottom: 0px;
+  }
+
+  .hero-banner .hero-image {
+    margin-left: 5px;
+    /* margin-top: 45px; */
+    margin-right: 5px;
+    width: 300px;
+    /* height: 455px; */
+    /* max-height: 100px; */
   }
 

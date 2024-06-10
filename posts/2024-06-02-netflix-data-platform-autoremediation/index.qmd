@@ -17,6 +17,9 @@ Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Risto
     Netflix) <br>
 Published: 2023-08-31
 :::
+::: {.hero-image}
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2eENd1mhwyGpMWNccEwqlQ.png)
+:::
 :::
 
 **My summary:**

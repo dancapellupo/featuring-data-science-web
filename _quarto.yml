@@ -34,6 +34,7 @@ website:
           - section: "Supervised Learning"
             contents:
               - contents/supervised.qmd
+              - contents/supervised-classification.qmd
               - contents/supervised-tree-models.qmd
               - contents/supervised-neural-networks.qmd
           - section: "MLOps"
@@ -46,5 +47,6 @@ format:
     theme: litera
     css: styles.css
     toc: true
+    lightbox: true
 
 

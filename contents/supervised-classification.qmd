@@ -1,0 +1,25 @@
+---
+title: "Supervised Learning: Classification"
+listing:
+  - id: metrics
+    contents:
+    - '../posts/2024-06-10-classification-metrics/index.qmd'
+    type: default
+    fields: [date, title, categories, description, image]
+page-layout: article
+---
+
+### [Work in Progress]
+
+[Some content about Supervised Learning.]
+<br>
+<br>
+
+### Metrics
+
+<br>
+<br>
+
+:::{#metrics}
+:::
+

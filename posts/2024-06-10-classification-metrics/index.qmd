@@ -15,6 +15,9 @@ title-block-banner: false
 Authors: Margherita Grandini, Enrico Bagli, Giorgio Visani (from CRIF) <br>
 Published: 2020-08-14
 :::
+::: {.hero-image}
+![](Screenshot 2024-06-10-confusion-matrix.png)
+:::
 :::
 
 **My summary:**

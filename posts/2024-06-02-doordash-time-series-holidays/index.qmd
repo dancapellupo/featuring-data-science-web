@@ -18,6 +18,9 @@ Authors: [Chad Akkoyun](https://www.linkedin.com/in/cagri-chad-akkoyun/) and
     DoorDash) <br>
 Published: 2023-08-31
 :::
+::: {.hero-image}
+![](Screenshot-2024-06-03-figure5.png)
+:::
 :::
 
 **My summary:**

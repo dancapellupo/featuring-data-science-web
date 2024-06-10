@@ -18,14 +18,14 @@
     "href": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
     "title": "Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform",
     "section": "",
-    "text": "Original Blog Post: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform  Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Ristow, Haoyuan Wang, Snehal Chennuru, Pawan Dixit (from Netflix)  Published: 2023-08-31\n\n\nMy summary:\nThis blog post from Netflix, where they are using ML to supplement a rules-based approach to identifying errors as they occur in their data platforms and sometimes handle those errors automatically (“auto remediation”).\n\nAt Netflix, hundreds of thousands of workflows and millions of jobs are running per day across multiple layers of the big data platform.\n\nWith such a high level of activity in their data platform, even a small percentage of errors can increase costs and require considerable human effort to diagnosis and address errors.\nNetflix started addressing this already with a rules-based engine they call Pensive, which classifies errors, helps determine whether to retry the job, and provides insights to human engineers who might need to remediate the job failure.\nThe rules-based engine however requires domain experts to create and test new rules as new errors and scenarios appear. Even with over 300 rules, half of all errors are still unclassified by this algorithm.\nTherefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:\n\nleverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…\n\nIn practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.\nWith about 600 memory configuration errors occurring every month in their system, manually corrected these errors can be quite time-consuming, especially since it is not always straightforward what the correct configuration should be. Too little memory causes a “Out-of-Memory” error, and too much memory is not an efficient usage of cluster resources.\nTherefore, they train a standard neural network (in other words, a feedforward multilayer perceptron - MLP), with two heads. Two heads means that the model has two outputs, so that they can simultaneously predict both the probability of failure and computation cost of retrying the job with a certain memory configuration.\nFinally, they use a Bayesian optimization where the neural network is run multiple times with features based on the specific error and different options for the Spark run configuration, and the best combination of failure probability and computation cost is determined.\nSo far, this ML algorithm has automatically solved 56% of memory configuration errors and substantially reduced costs related to these errors.\nHere is the link again to their blog post for more details: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform"
+    "text": "Original Blog Post: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform  Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Ristow, Haoyuan Wang, Snehal Chennuru, Pawan Dixit (from Netflix)  Published: 2023-08-31\n\n\n\n\n\nMy summary:\nThis blog post from Netflix, where they are using ML to supplement a rules-based approach to identifying errors as they occur in their data platforms and sometimes handle those errors automatically (“auto remediation”).\n\nAt Netflix, hundreds of thousands of workflows and millions of jobs are running per day across multiple layers of the big data platform.\n\nWith such a high level of activity in their data platform, even a small percentage of errors can increase costs and require considerable human effort to diagnosis and address errors.\nNetflix started addressing this already with a rules-based engine they call Pensive, which classifies errors, helps determine whether to retry the job, and provides insights to human engineers who might need to remediate the job failure.\nThe rules-based engine however requires domain experts to create and test new rules as new errors and scenarios appear. Even with over 300 rules, half of all errors are still unclassified by this algorithm.\nTherefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:\n\nleverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…\n\nIn practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.\nWith about 600 memory configuration errors occurring every month in their system, manually corrected these errors can be quite time-consuming, especially since it is not always straightforward what the correct configuration should be. Too little memory causes a “Out-of-Memory” error, and too much memory is not an efficient usage of cluster resources.\nTherefore, they train a standard neural network (in other words, a feedforward multilayer perceptron - MLP), with two heads. Two heads means that the model has two outputs, so that they can simultaneously predict both the probability of failure and computation cost of retrying the job with a certain memory configuration.\nFinally, they use a Bayesian optimization where the neural network is run multiple times with features based on the specific error and different options for the Spark run configuration, and the best combination of failure probability and computation cost is determined.\nSo far, this ML algorithm has automatically solved 56% of memory configuration errors and substantially reduced costs related to these errors.\nHere is the link again to their blog post for more details: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform"
   },
   {
     "objectID": "posts/2024-06-10-classification-metrics/index.html",
     "href": "posts/2024-06-10-classification-metrics/index.html",
     "title": "Metrics for Multi-Class Classification: an Overview",
     "section": "",
-    "text": "Original Blog Post: Metrics for Multi-Class Classification: an Overview  Authors: Margherita Grandini, Enrico Bagli, Giorgio Visani (from CRIF)  Published: 2020-08-14\n\n\nMy summary:\nThis paper is a must for anyone working on supervised, classification machine learning problems.\nThe paper goes into detail on classification metrics. The title specifies multi-class classification, but the text is relevant to binary classification as well.\nMany data scientists are likely aware of the F1-score and the confusion matrix, but probably fewer are familiar with the Cohen-Kappa score. This paper goes through many classification metrics and discusses the pros and cons of each, with concrete examples.\nHere is the link again to their paper for more details: Metrics for Multi-Class Classification: an Overview"
+    "text": "Original Blog Post: Metrics for Multi-Class Classification: an Overview  Authors: Margherita Grandini, Enrico Bagli, Giorgio Visani (from CRIF)  Published: 2020-08-14\n\n\n\n\n\nMy summary:\nThis paper is a must for anyone working on supervised, classification machine learning problems.\nThe paper goes into detail on classification metrics. The title specifies multi-class classification, but the text is relevant to binary classification as well.\nMany data scientists are likely aware of the F1-score and the confusion matrix, but probably fewer are familiar with the Cohen-Kappa score. This paper goes through many classification metrics and discusses the pros and cons of each, with concrete examples.\nHere is the link again to their paper for more details: Metrics for Multi-Class Classification: an Overview"
   },
   {
     "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
@@ -39,7 +39,7 @@
     "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
     "title": "LinkedIn Post on PCA on Non-Linear Data",
     "section": "",
-    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment"
+    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n\n\n\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment\n\n\n\n\n\nLinkedIn Comment"
   },
   {
     "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
@@ -85,27 +85,39 @@
     ]
   },
   {
-    "objectID": "contents/data-science-statistics.html",
-    "href": "contents/data-science-statistics.html",
-    "title": "Statistics",
+    "objectID": "contents/supervised-classification.html",
+    "href": "contents/supervised-classification.html",
+    "title": "Supervised Learning: Classification",
     "section": "",
-    "text": "[Some content about Stats.]",
+    "text": "[Work in Progress]\n[Some content about Supervised Learning.]  \n\n\nMetrics\n \n\n\n\n\n\n\n\n\n\n\nMetrics for Multi-Class Classification: an Overview\n\n\n\n\n\n\nsupervised learning\n\n\nclassification\n\n\nstatistics\n\n\narXiv\n\n\n\nFrom accuracy to Cohen-Kappa from Margherita Grandini et al. at CRIF\n\n\n\n\n\nAug 14, 2020\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
-      "General Data Science",
-      "Statistics"
+      "Supervised Learning",
+      "Supervised Learning: Classification"
     ]
   },
   {
-    "objectID": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
-    "href": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
-    "title": "Statistics",
+    "objectID": "contents/dimensionality-reduction.html",
+    "href": "contents/dimensionality-reduction.html",
+    "title": "Dimensionality Reduction",
     "section": "",
-    "text": "[Some content about Stats.]",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
-      "General Data Science",
-      "Statistics"
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
+    ]
+  },
+  {
+    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "title": "Dimensionality Reduction",
+    "section": "",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
     ]
   },
   {
@@ -133,27 +145,27 @@
     ]
   },
   {
-    "objectID": "contents/dimensionality-reduction.html",
-    "href": "contents/dimensionality-reduction.html",
-    "title": "Dimensionality Reduction",
+    "objectID": "contents/data-science-statistics.html",
+    "href": "contents/data-science-statistics.html",
+    "title": "Statistics",
     "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "[Some content about Stats.]",
     "crumbs": [
       "Table of Contents",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
+      "General Data Science",
+      "Statistics"
     ]
   },
   {
-    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "title": "Dimensionality Reduction",
+    "objectID": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
+    "href": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
+    "title": "Statistics",
     "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "[Some content about Stats.]",
     "crumbs": [
       "Table of Contents",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
+      "General Data Science",
+      "Statistics"
     ]
   },
   {
@@ -209,7 +221,7 @@
     "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
     "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
     "section": "",
-    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\n\n\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
+    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\n\n\n\n\n\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
   },
   {
     "objectID": "posts/2024-06-10-history-data-science/index.html",

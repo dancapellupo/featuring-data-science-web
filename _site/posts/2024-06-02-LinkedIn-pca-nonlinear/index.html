@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -172,18 +175,24 @@ ul.task-list li input[type="checkbox"] {
 <div class="hero-text">
 <p><strong>Original LinkedIn Post:</strong> <br> Authors: <a href="https://www.linkedin.com/in/shainis/">Shai Nisan, PhD</a> <br> Published: ~2024-04-02</p>
 </div>
+<div class="hero-image">
+<p><a href="Screenshot-2024-06-02-Post.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Screenshot-2024-06-02-Post.png" class="img-fluid"></a></p>
+</div>
 </div>
 <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7175235785850249216" height="738" width="504" frameborder="0" allowfullscreen="" title="Embedded post">
 </iframe>
 <p><br> <strong>There are some interesting comments, including this one:</strong></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="Screenshot-2024-06-02-Top-Comment.png" class="img-fluid figure-img"></p>
+<p><a href="Screenshot-2024-06-02-Top-Comment.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="LinkedIn Comment"><img src="Screenshot-2024-06-02-Top-Comment.png" class="img-fluid figure-img" alt="LinkedIn Comment"></a></p>
 <figcaption>LinkedIn Comment</figcaption>
 </figure>
 </div>
 
 
+<div class="hidden" aria-hidden="true">
+<span class="glightbox-desc lightbox-desc-2">LinkedIn Comment</span>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -596,6 +605,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
