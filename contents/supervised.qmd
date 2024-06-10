@@ -1,18 +1,21 @@
 ---
 title: "General Supervised Learning Topics"
-listing:
-  contents:
-    - '../posts/2024-06-05-beware-rf-feature-importance/index.qmd'
-    - '../posts/2024-06-03-xgboost-resources/index.qmd'
-#   sort: "date asc"
-#   type: default
-#   categories: false
-#   sort-ui: false
-#   filter-ui: false
+# listing:
+#   contents:
+#     - '../posts/2024-06-05-beware-rf-feature-importance/index.qmd'
+#     - '../posts/2024-06-03-xgboost-resources/index.qmd'
+#   # sort: "date asc"
+#   # type: default
+#   # categories: false
+#   # sort-ui: false
+#   # filter-ui: false
+#   fields: [date, title, categories, description, image]
 page-layout: article
 ---
 
-Some content about Supervised Learning.
+### [Work in Progress]
+
+[Some content about Supervised Learning.]
 <br>
 <br>
 

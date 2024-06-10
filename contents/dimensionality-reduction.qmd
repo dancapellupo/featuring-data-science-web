@@ -5,6 +5,7 @@ listing:
     contents:
       - '../posts/2024-06-02-LinkedIn-pca-nonlinear/index.qmd'
     # sort: "date asc"
+    fields: [date, title, categories, description, image]
 page-layout: article
 ---
 

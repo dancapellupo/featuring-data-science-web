@@ -10,7 +10,7 @@ title: "Statistics"
 page-layout: article
 ---
 
-## Statistics Topics and Articles for Data Scientists
+## Statistics Topics for Data Scientists
 
 ### [Work in Progress]
 

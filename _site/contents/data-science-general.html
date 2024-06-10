@@ -73,6 +73,34 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-history .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-history'] = new List('listing-history', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-rules .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -299,7 +327,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#history-of-data-science-how-to-approach-data-science-problems-and-other-general-topics" id="toc-history-of-data-science-how-to-approach-data-science-problems-and-other-general-topics" class="nav-link active" data-scroll-target="#history-of-data-science-how-to-approach-data-science-problems-and-other-general-topics">History of Data Science, How to Approach Data Science Problems, and Other General Topics</a>
+  <li><a href="#history-approaching-data-science-problems-and-other-general-topics" id="toc-history-approaching-data-science-problems-and-other-general-topics" class="nav-link active" data-scroll-target="#history-approaching-data-science-problems-and-other-general-topics">History, Approaching Data Science Problems, and Other General Topics</a>
   <ul class="collapse">
   <li><a href="#history-of-data-science" id="toc-history-of-data-science" class="nav-link" data-scroll-target="#history-of-data-science">History of Data Science</a></li>
   <li><a href="#rules-based-engines-to-machine-learning" id="toc-rules-based-engines-to-machine-learning" class="nav-link" data-scroll-target="#rules-based-engines-to-machine-learning">Rules-Based Engines to Machine Learning</a></li>
@@ -329,17 +357,48 @@ window.Quarto = {
 </header>
 
 
-<section id="history-of-data-science-how-to-approach-data-science-problems-and-other-general-topics" class="level2">
-<h2 class="anchored" data-anchor-id="history-of-data-science-how-to-approach-data-science-problems-and-other-general-topics">History of Data Science, How to Approach Data Science Problems, and Other General Topics</h2>
+<section id="history-approaching-data-science-problems-and-other-general-topics" class="level2">
+<h2 class="anchored" data-anchor-id="history-approaching-data-science-problems-and-other-general-topics">History, Approaching Data Science Problems, and Other General Topics</h2>
 <section id="history-of-data-science" class="level3">
 <h3 class="anchored" data-anchor-id="history-of-data-science">History of Data Science</h3>
-<p>The random forest algorithm has been around since the 90s, and according to Kaggle surveys, … <br> <br></p>
-<!-- :::{#history}
-::: -->
+<p>While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.</p>
+<p>This first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.</p>
+<p><em>As a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post by myself.</em> <br> <br></p>
+<div id="listing-history" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="general data science" data-listing-date-sort="1605589200000" data-listing-file-modified-sort="1718035060554" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
+<div class="thumbnail">
+<p><a href="../posts/2024-06-10-history-data-science/index.html" class="no-external"></a></p><a href="../posts/2024-06-10-history-data-science/index.html" class="no-external">
+<p><img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa42d4d7c-a6c9-43fe-9c6f-b526929930c0_1920x1280.jpeg" class="thumbnail-image"></p>
+</a><p><a href="../posts/2024-06-10-history-data-science/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-06-10-history-data-science/index.html" class="no-external">A Brief History of Data Science</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-06-10-history-data-science/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-06-10-history-data-science/index.html" class="no-external">“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2024-06-10-history-data-science/index.html" class="no-external">
+<div class="listing-date">
+Nov 17, 2020
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 </section>
 <section id="rules-based-engines-to-machine-learning" class="level3">
 <h3 class="anchored" data-anchor-id="rules-based-engines-to-machine-learning">Rules-Based Engines to Machine Learning</h3>
-<p>Other models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.</p>
 <p>Two articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two. <br> <br></p>
 <div id="listing-rules" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">

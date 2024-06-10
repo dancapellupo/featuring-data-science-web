@@ -1,10 +1,10 @@
 ---
 title: "General Topics in Data Science"
 listing:
-  # - id: history
-  #   contents:
-  #   - '../post/.qmd'
-  #   type: default
+  - id: history
+    contents:
+    - '../posts/2024-06-10-history-data-science/index.qmd'
+    type: default
   - id: rules
     contents: 
     - '../posts/2024-06-05-capital-one-rules-vs-ml/index.qmd'
@@ -14,23 +14,28 @@ listing:
 page-layout: article
 ---
 
-## History of Data Science, How to Approach Data Science Problems, and Other General Topics
+## History, Approaching Data Science Problems, and Other General Topics
 
 ### History of Data Science
 
-The random forest algorithm has been around since the 90s, and according to
-Kaggle surveys, ...
+While many of the elements of data science have been around for a long time
+(even the idea of machine learning, AI, and the perceptron date back to the
+1950s), the profession of data science / data scientist seems to have emerged
+around 2008.
+
+This first article below goes through the history of data science, including
+its consituent parts - statistics, data analysis, machine learning, data
+science tools.
+
+*As a disclaimer, while most of the posts on this website are not connected to
+the curator of this site, this is one post by myself.*
 <br>
 <br>
 
-<!-- :::{#history}
-::: -->
+:::{#history}
+:::
 
 ### Rules-Based Engines to Machine Learning
-
-Other models that use an ensemble of decision trees include gradient boosting.
-This article below uses a gradient boosting machine (GBM) for time series
-prediction.
 
 Two articles below describe considerations when considering whether to
 transition completely from a more traditional rules-based approach to machine

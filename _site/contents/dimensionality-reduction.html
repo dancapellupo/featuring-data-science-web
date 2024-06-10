@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-categories','listing-description','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
@@ -347,6 +347,20 @@ window.Quarto = {
 </h3>
 <div class="listing-subtitle">
 <a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('dimensionality reduction'); return false;">
+dimensionality reduction
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('feature selection'); return false;">
+feature selection
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('data visualization'); return false;">
+data visualization
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('content:social'); return false;">
+content:social
+</div>
 </div>
 <div class="listing-description">
 <a href="../posts/2024-06-02-LinkedIn-pca-nonlinear/index.html" class="no-external">Some thoughts about PCA from Shai Nisan, PhD and Prof.&nbsp;Hamid Karimi</a>

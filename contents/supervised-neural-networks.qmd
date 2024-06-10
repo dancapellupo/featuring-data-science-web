@@ -14,6 +14,7 @@ listing:
     type: default
     # sort: "date asc"
     # categories: false
+    # fields: [date, title, categories, description, image]
 page-layout: article
 ---
 

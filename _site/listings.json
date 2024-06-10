@@ -6,6 +6,7 @@
       "/posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
       "/posts/2024-06-02-doordash-time-series-holidays/index.html",
       "/posts/2024-06-03-data-scientist-show-mlops/index.html",
+      "/posts/2024-06-10-history-data-science/index.html",
       "/posts/2024-06-03-rules-and-ml/index.html",
       "/posts/2024-06-05-capital-one-rules-vs-ml/index.html",
       "/posts/2024-06-03-xgboost-resources/index.html",
@@ -13,34 +14,10 @@
     ]
   },
   {
-    "listing": "/contents/supervised-neural-networks.html",
+    "listing": "/contents/mlops.html",
     "items": [
-      "/posts/2024-06-02-netflix-data-platform-autoremediation/index.html"
+      "/posts/2024-06-03-data-scientist-show-mlops/index.html"
     ]
-  },
-  {
-    "listing": "/contents/supervised.html",
-    "items": [
-      "/posts/2024-06-05-beware-rf-feature-importance/index.html",
-      "/posts/2024-06-03-xgboost-resources/index.html"
-    ]
-  },
-  {
-    "listing": "/contents/data-science-general.html",
-    "items": [
-      "/posts/2024-06-05-capital-one-rules-vs-ml/index.html",
-      "/posts/2024-06-03-rules-and-ml/index.html"
-    ]
-  },
-  {
-    "listing": "/contents/dimensionality-reduction.html",
-    "items": [
-      "/posts/2024-06-02-LinkedIn-pca-nonlinear/index.html"
-    ]
-  },
-  {
-    "listing": "/contents/index.html",
-    "items": []
   },
   {
     "listing": "/contents/supervised-tree-models.html",
@@ -51,9 +28,27 @@
     ]
   },
   {
-    "listing": "/contents/mlops.html",
+    "listing": "/contents/index.html",
+    "items": []
+  },
+  {
+    "listing": "/contents/dimensionality-reduction.html",
     "items": [
-      "/posts/2024-06-03-data-scientist-show-mlops/index.html"
+      "/posts/2024-06-02-LinkedIn-pca-nonlinear/index.html"
+    ]
+  },
+  {
+    "listing": "/contents/data-science-general.html",
+    "items": [
+      "/posts/2024-06-10-history-data-science/index.html",
+      "/posts/2024-06-05-capital-one-rules-vs-ml/index.html",
+      "/posts/2024-06-03-rules-and-ml/index.html"
+    ]
+  },
+  {
+    "listing": "/contents/supervised-neural-networks.html",
+    "items": [
+      "/posts/2024-06-02-netflix-data-platform-autoremediation/index.html"
     ]
   }
 ]
