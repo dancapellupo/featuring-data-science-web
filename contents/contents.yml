@@ -1,23 +1,35 @@
 
-- title: Statistics
-  subtitle: All Things Stats
+- title: General Data Science
+  # subtitle: 
   links:
-    - text: Statistics Posts
-      href: statistics.qmd
-
-- title: Feature Selection and Feature Engineering
-  subtitle: Selecting Features and Creating New Ones
-  links:
-    - text: Dimensionality Reduction (PCA, etc)
-    - href: dimensionality-reduction.qmd
+    - text: General Topics and History
+      href: data-science-general.qmd
+    - text: Statistics for Data Scientists
+      href: data-science-statistics.qmd
 
 - title: Data Visualization
   subtitle: Strategies to Improve Presentation of Data
   links:
     - text: General Insights into Data Visualization
-    - href: data-visualization.qmd
+      href: data-visualization.qmd
     - text: Data Visualization Code and Packages
-    - href: data-visualization-code.qmd
+      href: data-visualization-code.qmd
+
+- title: Coding
+  subtitle: Coding in Python and R for Data Science
+  links:
+    - text: General Coding Advice
+      href: coding.qmd
+    - text: Python
+      href: coding-python.qmd
+    - text: R
+      href: coding-r.qmd
+
+- title: Feature Selection and Feature Engineering
+  subtitle: Selecting Features and Creating New Ones
+  links:
+    - text: Dimensionality Reduction (PCA, etc)
+      href: dimensionality-reduction.qmd
 
 - title: Supervised Learning
   subtitle: Predicting a Target Variable
@@ -30,14 +42,23 @@
       href: supervised-classification.qmd
     - text: Tree-Based ML Models
       href: supervised-tree-models.qmd
+    - text: Neural Networks
+      href: supervised-neural-networks.qmd
 
 - title: Unsupervised Learning
   subtitle: Clustering
   links:
     - text: Clustering Metrics
-    - href: cluster-metrics.qmd
+      href: cluster-metrics.qmd
     - text: Beyond k-Means - DBSCAN, HDBSCAN
-    - href: cluster-dbscan-hdbscan.qmd
+      href: cluster-dbscan-hdbscan.qmd
+
+- title: Special Topics
+  links:
+    - text: Time Series
+      href: special-topics-time-series.qmd
+    # - text: Outlier Detection
+    #   href: special-topics-outlier-detection.qmd
 
 - title: MLOps
   subtitle: Putting ML Models into Production

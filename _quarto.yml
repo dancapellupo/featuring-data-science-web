@@ -24,9 +24,10 @@ website:
         - section: "Table of Contents"
           href: contents/index.qmd
           contents:
-          - section: "Statistics"
+          - section: "General Data Science"
             contents:
-              - contents/statistics.qmd
+              - contents/data-science-general.qmd
+              - contents/data-science-statistics.qmd
           - section: "Feature Selection and Feature Engineering"
             contents:
               - contents/dimensionality-reduction.qmd
@@ -34,6 +35,10 @@ website:
             contents:
               - contents/supervised.qmd
               - contents/supervised-tree-models.qmd
+              - contents/supervised-neural-networks.qmd
+          - section: "MLOps"
+            contents:
+              - contents/mlops.qmd
 
 format:
   html:

@@ -1,0 +1,46 @@
+---
+title: "General Topics in Data Science"
+listing:
+  # - id: history
+  #   contents:
+  #   - '../post/.qmd'
+  #   type: default
+  - id: rules
+    contents: 
+    - '../posts/2024-06-05-capital-one-rules-vs-ml/index.qmd'
+    - '../posts/2024-06-03-rules-and-ml/index.qmd'
+    type: default
+    fields: [date, title, description]
+page-layout: article
+---
+
+## History of Data Science, How to Approach Data Science Problems, and Other General Topics
+
+### History of Data Science
+
+The random forest algorithm has been around since the 90s, and according to
+Kaggle surveys, ...
+<br>
+<br>
+
+<!-- :::{#history}
+::: -->
+
+### Rules-Based Engines to Machine Learning
+
+Other models that use an ensemble of decision trees include gradient boosting.
+This article below uses a gradient boosting machine (GBM) for time series
+prediction.
+
+Two articles below describe considerations when considering whether to
+transition completely from a more traditional rules-based approach to machine
+learning, or a combination of the two.
+<br>
+<br>
+
+:::{#rules}
+:::
+
+You can read about a recent, real-life use case from Netflix in the
+[section on neural networks](supervised-neural-networks.qmd#real-life-use-cases-of-neural-networks).
+

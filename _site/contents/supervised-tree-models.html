@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../contents/supervised-neural-networks.html" rel="next">
 <link href="../contents/supervised.html" rel="prev">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
@@ -114,6 +115,34 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-xgboost'] = new List('listing-xgboost', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-other-algos .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-other-algos'] = new List('listing-other-algos', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -231,7 +260,7 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
- <span class="menu-text">Statistics</span></a>
+ <span class="menu-text">General Data Science</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -239,7 +268,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contents/statistics.html" class="sidebar-item-text sidebar-link">
+  <a href="../contents/data-science-general.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">General Topics in Data Science</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/data-science-statistics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Statistics</span></a>
   </div>
 </li>
@@ -283,6 +318,29 @@ window.Quarto = {
  <span class="menu-text">Tree-Based ML Models</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/supervised-neural-networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neural Networks</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">MLOps</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/mlops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MLOps</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -301,6 +359,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#random-forest" id="toc-random-forest" class="nav-link" data-scroll-target="#random-forest">Random Forest</a></li>
   <li><a href="#xgboost" id="toc-xgboost" class="nav-link" data-scroll-target="#xgboost">XGBoost</a></li>
+  <li><a href="#other-tree-based-models" id="toc-other-tree-based-models" class="nav-link" data-scroll-target="#other-tree-based-models">Other Tree-Based Models</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -391,6 +450,43 @@ No matching items
 <a href="../posts/2024-06-03-xgboost-resources/index.html" class="no-external">
 <div class="listing-date">
 Mar 2, 2020
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="other-tree-based-models" class="level3">
+<h3 class="anchored" data-anchor-id="other-tree-based-models">Other Tree-Based Models</h3>
+<p>Other models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.</p>
+<p><br> <br></p>
+<div id="listing-other-algos" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="time series,real-life use cases" data-listing-date-sort="1693454400000" data-listing-file-modified-sort="1717781477173" data-listing-date-modified-sort="1717300800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="404">
+<div class="thumbnail">
+<p><a href="../posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external"></a></p><a href="../posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external">
+<p><img src="../posts/2024-06-02-doordash-time-series-holidays/Screenshot-2024-06-03-figure5.png" class="thumbnail-image"></p>
+</a><p><a href="../posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external">How DoorDash Improves Holiday Predictions via Cascade ML Approach</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external">A real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2024-06-02-doordash-time-series-holidays/index.html" class="no-external">
+<div class="listing-date">
+Aug 31, 2023
 </div>
 </a>
 </div>
@@ -823,6 +919,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../contents/supervised-neural-networks.html" class="pagination-link" aria-label="Neural Networks">
+        <span class="nav-page-text">Neural Networks</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

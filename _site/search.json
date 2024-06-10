@@ -42,27 +42,87 @@
     "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\n\n\n\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
   },
   {
-    "objectID": "contents/supervised-tree-models.html",
-    "href": "contents/supervised-tree-models.html",
-    "title": "Tree-Based ML Models",
+    "objectID": "contents/supervised-neural-networks.html",
+    "href": "contents/supervised-neural-networks.html",
+    "title": "Neural Networks",
     "section": "",
-    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items",
+    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Supervised Learning",
-      "Tree-Based ML Models"
+      "Neural Networks"
     ]
   },
   {
-    "objectID": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
-    "href": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
-    "title": "Tree-Based ML Models",
+    "objectID": "contents/supervised-neural-networks.html#neural-networks",
+    "href": "contents/supervised-neural-networks.html#neural-networks",
+    "title": "Neural Networks",
     "section": "",
-    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items",
+    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Supervised Learning",
-      "Tree-Based ML Models"
+      "Neural Networks"
+    ]
+  },
+  {
+    "objectID": "contents/supervised.html",
+    "href": "contents/supervised.html",
+    "title": "General Supervised Learning Topics",
+    "section": "",
+    "text": "Some content about Supervised Learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeware Default Random Forest Importances\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Supervised Learning",
+      "General Supervised Learning Topics"
+    ]
+  },
+  {
+    "objectID": "contents/data-science-statistics.html",
+    "href": "contents/data-science-statistics.html",
+    "title": "Statistics",
+    "section": "",
+    "text": "[Some content about Stats.]",
+    "crumbs": [
+      "Table of Contents",
+      "General Data Science",
+      "Statistics"
+    ]
+  },
+  {
+    "objectID": "contents/data-science-statistics.html#statistics-topics-and-articles-for-data-scientists",
+    "href": "contents/data-science-statistics.html#statistics-topics-and-articles-for-data-scientists",
+    "title": "Statistics",
+    "section": "",
+    "text": "[Some content about Stats.]",
+    "crumbs": [
+      "Table of Contents",
+      "General Data Science",
+      "Statistics"
+    ]
+  },
+  {
+    "objectID": "contents/data-science-general.html",
+    "href": "contents/data-science-general.html",
+    "title": "General Topics in Data Science",
+    "section": "",
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case from Netflix in the section on neural networks.",
+    "crumbs": [
+      "Table of Contents",
+      "General Data Science",
+      "General Topics in Data Science"
+    ]
+  },
+  {
+    "objectID": "contents/data-science-general.html#history-of-data-science-how-to-approach-data-science-problems-and-other-general-topics",
+    "href": "contents/data-science-general.html#history-of-data-science-how-to-approach-data-science-problems-and-other-general-topics",
+    "title": "General Topics in Data Science",
+    "section": "",
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case from Netflix in the section on neural networks.",
+    "crumbs": [
+      "Table of Contents",
+      "General Data Science",
+      "General Topics in Data Science"
     ]
   },
   {
@@ -90,39 +150,51 @@
     ]
   },
   {
-    "objectID": "contents/supervised.html",
-    "href": "contents/supervised.html",
-    "title": "General Supervised Learning Topics",
+    "objectID": "contents/supervised-tree-models.html",
+    "href": "contents/supervised-tree-models.html",
+    "title": "Tree-Based ML Models",
     "section": "",
-    "text": "Some content about Supervised Learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBeware Default Random Forest Importances\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nXGBoost Resources\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items",
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Supervised Learning",
-      "General Supervised Learning Topics"
+      "Tree-Based ML Models"
     ]
   },
   {
-    "objectID": "contents/statistics.html",
-    "href": "contents/statistics.html",
-    "title": "Statistics",
+    "objectID": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
+    "href": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
+    "title": "Tree-Based ML Models",
     "section": "",
-    "text": "Some content about Stats.",
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
-      "Statistics",
-      "Statistics"
+      "Supervised Learning",
+      "Tree-Based ML Models"
     ]
   },
   {
-    "objectID": "contents/statistics.html#something",
-    "href": "contents/statistics.html#something",
-    "title": "Statistics",
+    "objectID": "contents/mlops.html",
+    "href": "contents/mlops.html",
+    "title": "MLOps",
     "section": "",
-    "text": "Some content about Stats.",
+    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
     "crumbs": [
       "Table of Contents",
-      "Statistics",
-      "Statistics"
+      "MLOps",
+      "MLOps"
+    ]
+  },
+  {
+    "objectID": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
+    "href": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
+    "title": "MLOps",
+    "section": "",
+    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
+    "crumbs": [
+      "Table of Contents",
+      "MLOps",
+      "MLOps"
     ]
   },
   {

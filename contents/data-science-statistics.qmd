@@ -10,8 +10,8 @@ title: "Statistics"
 page-layout: article
 ---
 
-## Something
+## Statistics Topics and Articles for Data Scientists
 
-### Something More
+### [Work in Progress]
 
-Some content about Stats.
+[Some content about Stats.]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Featuring Data Science - Table of Contents</title>
+<title>Featuring Data Science - Neural Networks</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,12 +30,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../contents/data-science-general.html" rel="next">
+<link href="../contents/mlops.html" rel="next">
+<link href="../contents/supervised-tree-models.html" rel="prev">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
@@ -71,20 +73,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-contents .list');
+    const listingTargetEl = window.document.querySelector('#listing-real-life-use-cases .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-links','listing-subtitle',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-links","listing-subtitle"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-contents'] = new List('listing-contents', options);
+    window['quarto-listings']['listing-real-life-use-cases'] = new List('listing-real-life-use-cases', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -178,7 +180,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/supervised.html">Supervised Learning</a></li><li class="breadcrumb-item"><a href="../contents/supervised-neural-networks.html">Neural Networks</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -192,7 +194,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../contents/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../contents/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Table of Contents</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -241,13 +243,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
  <span class="menu-text">Supervised Learning</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../contents/supervised.html" class="sidebar-item-text sidebar-link">
@@ -262,7 +264,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contents/supervised-neural-networks.html" class="sidebar-item-text sidebar-link">
+  <a href="../contents/supervised-neural-networks.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Neural Networks</span></a>
   </div>
 </li>
@@ -293,14 +295,23 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#neural-networks" id="toc-neural-networks" class="nav-link active" data-scroll-target="#neural-networks">Neural Networks</a>
+  <ul class="collapse">
+  <li><a href="#real-life-use-cases-of-neural-networks" id="toc-real-life-use-cases-of-neural-networks" class="nav-link" data-scroll-target="#real-life-use-cases-of-neural-networks">Real-Life Use Cases of Neural Networks</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/index.html">Table of Contents</a></li><li class="breadcrumb-item"><a href="../contents/supervised.html">Supervised Learning</a></li><li class="breadcrumb-item"><a href="../contents/supervised-neural-networks.html">Neural Networks</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Table of Contents</h1>
+<h1 class="title">Neural Networks</h1>
 </div>
 
 
@@ -317,115 +328,45 @@ window.Quarto = {
 </header>
 
 
-<p>Here you can find all of the content I have collected on various topics in data science.</p>
-<div id="listing-contents" class="column-screen-inset-right quarto-listing quarto-listing-container-custom" style="max-width: 850px;">
-<div class="link-cards">
-<div class="card">
-<div class="card-body">
-<section id="general-data-science" class="level4 card-title">
-<h4 data-anchor-id="general-data-science">General Data Science</h4>
-</section>
-<ul>
-<li><a href="../contents/data-science-general.html">General Topics and History</a></li>
-<li><a href="../contents/data-science-statistics.html">Statistics for Data Scientists</a></li>
-</ul>
+<section id="neural-networks" class="level2">
+<h2 class="anchored" data-anchor-id="neural-networks">Neural Networks</h2>
+<!-- ### Random Forest
+
+The random forest algorithm has been around since the 90s, and according to
+Kaggle surveys, ...
+<br>
+<br>
+
+:::{#random-forest}
+::: -->
+<section id="real-life-use-cases-of-neural-networks" class="level3">
+<h3 class="anchored" data-anchor-id="real-life-use-cases-of-neural-networks">Real-Life Use Cases of Neural Networks</h3>
+<p>Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings. <br> <br></p>
+<div id="listing-real-life-use-cases" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="rules-based algos,neural networks,real-life use cases" data-listing-date-sort="1709528400000" data-listing-file-modified-sort="1717794540067" data-listing-date-modified-sort="1717300800000" data-listing-reading-time-sort="3" data-listing-word-count-sort="451">
+<div class="thumbnail">
+<p><a href="../posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external"></a></p><a href="../posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external">
+<p><img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*2eENd1mhwyGpMWNccEwqlQ.png" class="thumbnail-image"></p>
+</a><p><a href="../posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external">Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external">Combining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al.&nbsp;at Netflix</a>
 </div>
 </div>
-<div class="card">
-<div class="card-body">
-<section id="data-visualization" class="level4 card-title">
-<h4 data-anchor-id="data-visualization">Data Visualization</h4>
-<section id="strategies-to-improve-presentation-of-data" class="level6 card-subtitle text-muted">
-<h6 data-anchor-id="strategies-to-improve-presentation-of-data">Strategies to Improve Presentation of Data</h6>
-</section>
-</section>
-<ul>
-<li><a href="data-visualization.qmd">General Insights into Data Visualization</a></li>
-<li><a href="data-visualization-code.qmd">Data Visualization Code and Packages</a></li>
-</ul>
+<div class="metadata">
+<a href="../posts/2024-06-02-netflix-data-platform-autoremediation/index.html" class="no-external">
+<div class="listing-date">
+Mar 4, 2024
 </div>
-</div>
-<div class="card">
-<div class="card-body">
-<section id="coding" class="level4 card-title">
-<h4 data-anchor-id="coding">Coding</h4>
-<section id="coding-in-python-and-r-for-data-science" class="level6 card-subtitle text-muted">
-<h6 data-anchor-id="coding-in-python-and-r-for-data-science">Coding in Python and R for Data Science</h6>
-</section>
-</section>
-<ul>
-<li><a href="coding.qmd">General Coding Advice</a></li>
-<li><a href="coding-python.qmd">Python</a></li>
-<li><a href="coding-r.qmd">R</a></li>
-</ul>
-</div>
-</div>
-<div class="card">
-<div class="card-body">
-<section id="feature-selection-and-feature-engineering" class="level4 card-title">
-<h4 data-anchor-id="feature-selection-and-feature-engineering">Feature Selection and Feature Engineering</h4>
-<section id="selecting-features-and-creating-new-ones" class="level6 card-subtitle text-muted">
-<h6 data-anchor-id="selecting-features-and-creating-new-ones">Selecting Features and Creating New Ones</h6>
-</section>
-</section>
-<ul>
-<li><a href="../contents/dimensionality-reduction.html">Dimensionality Reduction (PCA, etc)</a></li>
-</ul>
-</div>
-</div>
-<div class="card">
-<div class="card-body">
-<section id="supervised-learning" class="level4 card-title">
-<h4 data-anchor-id="supervised-learning">Supervised Learning</h4>
-<section id="predicting-a-target-variable" class="level6 card-subtitle text-muted">
-<h6 data-anchor-id="predicting-a-target-variable">Predicting a Target Variable</h6>
-</section>
-</section>
-<ul>
-<li><a href="../contents/supervised.html">General Supervised Learning Topics</a></li>
-<li><a href="supervised-regression.qmd">Regression</a></li>
-<li><a href="supervised-classification.qmd">Classification</a></li>
-<li><a href="../contents/supervised-tree-models.html">Tree-Based ML Models</a></li>
-<li><a href="../contents/supervised-neural-networks.html">Neural Networks</a></li>
-</ul>
-</div>
-</div>
-<div class="card">
-<div class="card-body">
-<section id="unsupervised-learning" class="level4 card-title">
-<h4 data-anchor-id="unsupervised-learning">Unsupervised Learning</h4>
-<section id="clustering" class="level6 card-subtitle text-muted">
-<h6 data-anchor-id="clustering">Clustering</h6>
-</section>
-</section>
-<ul>
-<li><a href="cluster-metrics.qmd">Clustering Metrics</a></li>
-<li><a href="cluster-dbscan-hdbscan.qmd">Beyond k-Means - DBSCAN, HDBSCAN</a></li>
-</ul>
-</div>
-</div>
-<div class="card">
-<div class="card-body">
-<section id="special-topics" class="level4 card-title">
-<h4 data-anchor-id="special-topics">Special Topics</h4>
-</section>
-<ul>
-<li><a href="special-topics-time-series.qmd">Time Series</a></li>
-</ul>
-</div>
-</div>
-<div class="card">
-<div class="card-body">
-<section id="mlops" class="level4 card-title">
-<h4 data-anchor-id="mlops">MLOps</h4>
-<section id="putting-ml-models-into-production" class="level6 card-subtitle text-muted">
-<h6 data-anchor-id="putting-ml-models-into-production">Putting ML Models into Production</h6>
-</section>
-</section>
-<ul>
-<li><a href="">MLOps</a></li>
-<li><a href="../contents/mlops.html"></a></li>
-</ul>
+</a>
 </div>
 </div>
 </div>
@@ -436,6 +377,8 @@ No matching items
 
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -458,6 +401,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
@@ -842,10 +792,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../contents/supervised-tree-models.html" class="pagination-link" aria-label="Tree-Based ML Models">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tree-Based ML Models</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../contents/data-science-general.html" class="pagination-link" aria-label="General Topics in Data Science">
-        <span class="nav-page-text">General Topics in Data Science</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../contents/mlops.html" class="pagination-link" aria-label="MLOps">
+        <span class="nav-page-text">MLOps</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

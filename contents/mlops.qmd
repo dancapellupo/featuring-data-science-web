@@ -1,0 +1,25 @@
+---
+title: "MLOps"
+listing:
+    contents: "../posts/*/*.qmd"
+    type: default
+    sort: "date asc"
+    # categories: false
+    include:
+      categories: "{MLOps}*"
+page-layout: article
+---
+
+## MLOps Fundamentals for Data Scientists
+
+MLOps is the practice of putting machine learning models into production. At
+some companies, especially at small startups, this responsibility falls onto
+the data scientist who created the model. In other, larger companies, there
+are dedicated engineers who are responsible for this.
+
+Either way, data scientists who are creating models that will end up in
+production should be aware of some fundamentals of MLOps, and that is the focus
+of this section.
+<br>
+<br>
+

@@ -1,0 +1,40 @@
+---
+title: "Neural Networks"
+listing:
+  # - id: random-forest
+  #   contents: "../posts/*/*.qmd"
+  #   type: default
+  #   sort: "date asc"
+  #   # categories: false
+  #   include:
+  #     categories: "{random forest}*"
+  - id: real-life-use-cases
+    contents:
+      - '../posts/2024-06-02-netflix-data-platform-autoremediation/index.qmd'
+    type: default
+    # sort: "date asc"
+    # categories: false
+page-layout: article
+---
+
+## Neural Networks
+
+<!-- ### Random Forest
+
+The random forest algorithm has been around since the 90s, and according to
+Kaggle surveys, ...
+<br>
+<br>
+
+:::{#random-forest}
+::: -->
+
+### Real-Life Use Cases of Neural Networks
+
+Mostly drawn from blogs from various tech companies, here are some
+examples of neural networks used in real-life settings.
+<br>
+<br>
+
+:::{#real-life-use-cases}
+:::

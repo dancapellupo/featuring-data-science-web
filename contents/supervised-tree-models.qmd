@@ -15,6 +15,10 @@ listing:
     # categories: false
     include:
       categories: "{xgboost}*"
+  - id: other-algos
+    contents: 
+    - '../posts/2024-06-02-doordash-time-series-holidays/index.qmd'
+    type: default
 page-layout: article
 ---
 
@@ -37,5 +41,17 @@ The XGBoost algorithm is slightly more recent.
 <br>
 
 :::{#xgboost}
+:::
+
+### Other Tree-Based Models
+
+Other models that use an ensemble of decision trees include gradient boosting.
+This article below uses a gradient boosting machine (GBM) for time series
+prediction.
+
+<br>
+<br>
+
+:::{#other-algos}
 :::
 
