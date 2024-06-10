@@ -21,113 +21,67 @@
     "text": "Original Blog Post: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform  Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Ristow, Haoyuan Wang, Snehal Chennuru, Pawan Dixit (from Netflix)  Published: 2023-08-31\n\n\nMy summary:\nThis blog post from Netflix, where they are using ML to supplement a rules-based approach to identifying errors as they occur in their data platforms and sometimes handle those errors automatically (“auto remediation”).\n\nAt Netflix, hundreds of thousands of workflows and millions of jobs are running per day across multiple layers of the big data platform.\n\nWith such a high level of activity in their data platform, even a small percentage of errors can increase costs and require considerable human effort to diagnosis and address errors.\nNetflix started addressing this already with a rules-based engine they call Pensive, which classifies errors, helps determine whether to retry the job, and provides insights to human engineers who might need to remediate the job failure.\nThe rules-based engine however requires domain experts to create and test new rules as new errors and scenarios appear. Even with over 300 rules, half of all errors are still unclassified by this algorithm.\nTherefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:\n\nleverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…\n\nIn practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.\nWith about 600 memory configuration errors occurring every month in their system, manually corrected these errors can be quite time-consuming, especially since it is not always straightforward what the correct configuration should be. Too little memory causes a “Out-of-Memory” error, and too much memory is not an efficient usage of cluster resources.\nTherefore, they train a standard neural network (in other words, a feedforward multilayer perceptron - MLP), with two heads. Two heads means that the model has two outputs, so that they can simultaneously predict both the probability of failure and computation cost of retrying the job with a certain memory configuration.\nFinally, they use a Bayesian optimization where the neural network is run multiple times with features based on the specific error and different options for the Spark run configuration, and the best combination of failure probability and computation cost is determined.\nSo far, this ML algorithm has automatically solved 56% of memory configuration errors and substantially reduced costs related to these errors.\nHere is the link again to their blog post for more details: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform"
   },
   {
-    "objectID": "posts/2024-06-10-history-data-science/index.html",
-    "href": "posts/2024-06-10-history-data-science/index.html",
-    "title": "A Brief History of Data Science",
+    "objectID": "posts/2024-06-10-classification-metrics/index.html",
+    "href": "posts/2024-06-10-classification-metrics/index.html",
+    "title": "Metrics for Multi-Class Classification: an Overview",
     "section": "",
-    "text": "Original Blog Post: A Brief History of Data Science  Authors: Daniel Capellupo, PhD  Published: 2020-11-17\n\n\nMy summary:\nThis is one of the few posts on this website that is from myself, the head curator.\nThis post goes through the history of data science, from the beginnings of statistics centuries ago, through today, where:\n\nStatistics, Data Analysis, and Coding converge to form a new career for the 21st century\n\nWhile many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nHere is the link again to their blog post for more details: A Brief History of Data Science"
+    "text": "Original Blog Post: Metrics for Multi-Class Classification: an Overview  Authors: Margherita Grandini, Enrico Bagli, Giorgio Visani (from CRIF)  Published: 2020-08-14\n\n\nMy summary:\nThis paper is a must for anyone working on supervised, classification machine learning problems.\nThe paper goes into detail on classification metrics. The title specifies multi-class classification, but the text is relevant to binary classification as well.\nMany data scientists are likely aware of the F1-score and the confusion matrix, but probably fewer are familiar with the Cohen-Kappa score. This paper goes through many classification metrics and discusses the pros and cons of each, with concrete examples.\nHere is the link again to their paper for more details: Metrics for Multi-Class Classification: an Overview"
   },
   {
-    "objectID": "posts/2024-06-02-doordash-time-series-holidays/index.html",
-    "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
-    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
+    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "title": "What Data Scientists Need to Know about MLOps Principles",
     "section": "",
-    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\n\n\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
+    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\n\n\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
   },
   {
-    "objectID": "contents/mlops.html",
-    "href": "contents/mlops.html",
-    "title": "MLOps",
+    "objectID": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
+    "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
+    "title": "LinkedIn Post on PCA on Non-Linear Data",
     "section": "",
-    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
-    "crumbs": [
-      "Table of Contents",
-      "MLOps",
-      "MLOps"
-    ]
+    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment"
   },
   {
-    "objectID": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
-    "href": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
-    "title": "MLOps",
+    "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
+    "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
+    "title": "Beware Default Random Forest Importances",
     "section": "",
-    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
-    "crumbs": [
-      "Table of Contents",
-      "MLOps",
-      "MLOps"
-    ]
+    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\n\n\n\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
   },
   {
-    "objectID": "contents/supervised-tree-models.html",
-    "href": "contents/supervised-tree-models.html",
-    "title": "Tree-Based ML Models",
+    "objectID": "contents/supervised-neural-networks.html",
+    "href": "contents/supervised-neural-networks.html",
+    "title": "Neural Networks",
     "section": "",
-    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
+    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Supervised Learning",
-      "Tree-Based ML Models"
+      "Neural Networks"
     ]
   },
   {
-    "objectID": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
-    "href": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
-    "title": "Tree-Based ML Models",
+    "objectID": "contents/supervised-neural-networks.html#neural-networks",
+    "href": "contents/supervised-neural-networks.html#neural-networks",
+    "title": "Neural Networks",
     "section": "",
-    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
+    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Supervised Learning",
-      "Tree-Based ML Models"
+      "Neural Networks"
     ]
   },
   {
-    "objectID": "contents/dimensionality-reduction.html",
-    "href": "contents/dimensionality-reduction.html",
-    "title": "Dimensionality Reduction",
+    "objectID": "contents/supervised.html",
+    "href": "contents/supervised.html",
+    "title": "General Supervised Learning Topics",
     "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "[Work in Progress]\n[Some content about Supervised Learning.]",
     "crumbs": [
       "Table of Contents",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
-    ]
-  },
-  {
-    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "title": "Dimensionality Reduction",
-    "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
-    ]
-  },
-  {
-    "objectID": "contents/data-science-general.html",
-    "href": "contents/data-science-general.html",
-    "title": "General Topics in Data Science",
-    "section": "",
-    "text": "While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nThis first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.\nAs a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD\n\n\n\n\n\nNov 17, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case from Netflix in the section on neural networks.",
-    "crumbs": [
-      "Table of Contents",
-      "General Data Science",
-      "General Topics in Data Science"
-    ]
-  },
-  {
-    "objectID": "contents/data-science-general.html#history-approaching-data-science-problems-and-other-general-topics",
-    "href": "contents/data-science-general.html#history-approaching-data-science-problems-and-other-general-topics",
-    "title": "General Topics in Data Science",
-    "section": "",
-    "text": "While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nThis first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.\nAs a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD\n\n\n\n\n\nNov 17, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case from Netflix in the section on neural networks.",
-    "crumbs": [
-      "Table of Contents",
-      "General Data Science",
-      "General Topics in Data Science"
+      "Supervised Learning",
+      "General Supervised Learning Topics"
     ]
   },
   {
@@ -155,61 +109,114 @@
     ]
   },
   {
-    "objectID": "contents/supervised.html",
-    "href": "contents/supervised.html",
-    "title": "General Supervised Learning Topics",
+    "objectID": "contents/data-science-general.html",
+    "href": "contents/data-science-general.html",
+    "title": "General Topics in Data Science",
     "section": "",
-    "text": "[Work in Progress]\n[Some content about Supervised Learning.]",
+    "text": "While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nThis first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.\nAs a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD\n\n\n\n\n\nNov 17, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case from Netflix in the section on neural networks.",
     "crumbs": [
       "Table of Contents",
-      "Supervised Learning",
-      "General Supervised Learning Topics"
+      "General Data Science",
+      "General Topics in Data Science"
     ]
   },
   {
-    "objectID": "contents/supervised-neural-networks.html",
-    "href": "contents/supervised-neural-networks.html",
-    "title": "Neural Networks",
+    "objectID": "contents/data-science-general.html#history-approaching-data-science-problems-and-other-general-topics",
+    "href": "contents/data-science-general.html#history-approaching-data-science-problems-and-other-general-topics",
+    "title": "General Topics in Data Science",
     "section": "",
-    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nThis first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.\nAs a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD\n\n\n\n\n\nNov 17, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case from Netflix in the section on neural networks.",
     "crumbs": [
       "Table of Contents",
-      "Supervised Learning",
-      "Neural Networks"
+      "General Data Science",
+      "General Topics in Data Science"
     ]
   },
   {
-    "objectID": "contents/supervised-neural-networks.html#neural-networks",
-    "href": "contents/supervised-neural-networks.html#neural-networks",
-    "title": "Neural Networks",
+    "objectID": "contents/dimensionality-reduction.html",
+    "href": "contents/dimensionality-reduction.html",
+    "title": "Dimensionality Reduction",
     "section": "",
-    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
-      "Supervised Learning",
-      "Neural Networks"
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
     ]
   },
   {
-    "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
-    "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
-    "title": "Beware Default Random Forest Importances",
+    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "title": "Dimensionality Reduction",
     "section": "",
-    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\n\n\n\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
+    ]
   },
   {
-    "objectID": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
-    "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
-    "title": "LinkedIn Post on PCA on Non-Linear Data",
+    "objectID": "contents/supervised-tree-models.html",
+    "href": "contents/supervised-tree-models.html",
+    "title": "Tree-Based ML Models",
     "section": "",
-    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment"
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Supervised Learning",
+      "Tree-Based ML Models"
+    ]
   },
   {
-    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
-    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
-    "title": "What Data Scientists Need to Know about MLOps Principles",
+    "objectID": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
+    "href": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
+    "title": "Tree-Based ML Models",
     "section": "",
-    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\n\n\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Supervised Learning",
+      "Tree-Based ML Models"
+    ]
+  },
+  {
+    "objectID": "contents/mlops.html",
+    "href": "contents/mlops.html",
+    "title": "MLOps",
+    "section": "",
+    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
+    "crumbs": [
+      "Table of Contents",
+      "MLOps",
+      "MLOps"
+    ]
+  },
+  {
+    "objectID": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
+    "href": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
+    "title": "MLOps",
+    "section": "",
+    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
+    "crumbs": [
+      "Table of Contents",
+      "MLOps",
+      "MLOps"
+    ]
+  },
+  {
+    "objectID": "posts/2024-06-02-doordash-time-series-holidays/index.html",
+    "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
+    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
+    "section": "",
+    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\n\n\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
+  },
+  {
+    "objectID": "posts/2024-06-10-history-data-science/index.html",
+    "href": "posts/2024-06-10-history-data-science/index.html",
+    "title": "A Brief History of Data Science",
+    "section": "",
+    "text": "Original Blog Post: A Brief History of Data Science  Authors: Daniel Capellupo, PhD  Published: 2020-11-17\n\n\nMy summary:\nThis is one of the few posts on this website that is from myself, the head curator.\nThis post goes through the history of data science, from the beginnings of statistics centuries ago, through today, where:\n\nStatistics, Data Analysis, and Coding converge to form a new career for the 21st century\n\nWhile many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nHere is the link again to their blog post for more details: A Brief History of Data Science"
   },
   {
     "objectID": "posts/2024-06-03-xgboost-resources/index.html",

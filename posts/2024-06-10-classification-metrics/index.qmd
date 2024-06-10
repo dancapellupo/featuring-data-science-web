@@ -1,0 +1,35 @@
+---
+title: "Metrics for Multi-Class Classification: an Overview"
+description: 'From accuracy to Cohen-Kappa from Margherita Grandini et al. at CRIF'
+categories: ['supervised learning', 'classification', 'statistics', 'arXiv']
+date: "2020-08-14"
+date-modified: "2024-06-10"
+image: "Screenshot 2024-06-10-confusion-matrix.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[Metrics for Multi-Class Classification: an Overview](https://arxiv.org/abs/2008.05756)** <br>
+Authors: Margherita Grandini, Enrico Bagli, Giorgio Visani (from CRIF) <br>
+Published: 2020-08-14
+:::
+:::
+
+**My summary:**
+
+This paper is a must for anyone working on supervised, classification machine
+learning problems.
+
+The paper goes into detail on classification metrics. The title specifies
+multi-class classification, but the text is relevant to binary classification
+as well.
+
+Many data scientists are likely aware of the F1-score and the confusion matrix,
+but probably fewer are familiar with the Cohen-Kappa score. This paper goes
+through many classification metrics and discusses the pros and cons of each,
+with concrete examples.
+
+Here is the link again to their paper for more details:
+[Metrics for Multi-Class Classification: an Overview](https://arxiv.org/abs/2008.05756)
