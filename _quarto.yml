@@ -21,9 +21,13 @@ website:
       style: floating
       collapse-level: 1
       contents:
-        - section: "Table of Contents"
-          href: contents/index.qmd
+        - section: "Featuring Data Science"
+          href: index.qmd
           contents:
+          # - section: "Table of Contents"
+          #   href: contents/index.qmd
+          - contents/index.qmd
+            # contents:
           - section: "General Data Science"
             contents:
               - contents/data-science-general.qmd
@@ -40,6 +44,9 @@ website:
           - section: "MLOps"
             contents:
               - contents/mlops.qmd
+          # - section: "Index"
+          #   href: catalog.qmd
+          - catalog.qmd
 
 format:
   html:

@@ -1,0 +1,85 @@
+---
+title: "What are the most important statistical ideas of the past 50 years?"
+description: 'Counterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari'
+categories: ['statistics']
+date: "2021-06-03"
+date-modified: "2024-06-11"
+# image: "image_file_or_link.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Paper:**
+**[What are the most important statistical ideas of the past 50 years?](https://arxiv.org/abs/2012.00174)** <br>
+Authors: Andrew Gelman and Aki Vehtari <br>
+Published: 2021-06-03
+:::
+<!-- ::: {.hero-image}
+![](image_file_or_link.png)
+::: -->
+:::
+
+**My summary:**
+
+A statistics professor, Andrew Gelman, from Columbia University, and a computer
+science professor, Aki Vehtari, from Aalto University, look at the top
+statistical ideas of the past half-century.
+
+Here is their list:
+
+1. Counterfactual Causal Inference
+2. Bootstrapping and Simulation-Based Inference
+3. Overparameterized Models and Regularization
+4. Multilevel, or Hierarchical, Models
+5. Generic Computation Algorithms
+6. Adaptive Decision Analysis
+7. Robust Inference
+8. Exploratory Data Analysis
+
+**Connection to Machine Learning and Deep Learning**
+
+One common thread among many of these ideas is how they take advantage of the
+advances in computing over the past 50 years. Iterative algorithms, like
+bootstrapping, become practical when a computer can relatively quickly run
+multiple iterations of the same experiment.
+
+A lot of the statistics ideas here have found applications in machine learning.
+Number 3 on the list above, overparameterized models and regularization, is
+central to machine learning and deep learning. According to Gelman and Vehtari,
+"a major change in statistics since the 1970s, coming from many different
+directions, is the idea of fitting a model with a large number of parameters —
+sometimes more parameters than data points — using some regularization
+procedure to get stable estimates and good predictions." One of the biggest
+challenges in machine learning and deep learning is overfitting, where we train
+a model that performs amazingly well on our training dataset, but performs
+poorly on our unseen holdout dataset. Regularization, of different varieties,
+is used widely by data scientists to address overfitting.
+
+Furthermore, bootstrapping, which is number 2 on Gelman and Vehtari's list, is
+an important component of random forest models. In random forest, an ensemble
+of trees is built, where each tree uses a bootstrap sample from the original
+training set. This helps to control overfitting, as each tree in the ensemble
+is trained on a slightly different version of the original dataset.
+
+In terms of number 6 on the list, a relatively famous example of adaptive
+decision analysis these days is reinforcement learning.
+
+Interesting to see exploratory data analysis on Gelman and Vehtari's list
+(coming in at number 8), but it certainly falls within the realm of statistics,
+and again, advances in computing, and the proliferation of personal computers,
+allows the average researcher or analyst to generate a range of plots, much
+more easily than if one is creating plots with pen and paper. The ease with
+which plots can be made with various tools means there is little excuse not to
+perform a rigorous EDA on your dataset before going to the modeling phase.
+
+**Other Statistical Methods**
+
+The first item on Gelman and Vehtari's list is counterfactual causal inference.
+According to the [Stanford Encyclopedia of Philosophy](https://plato.stanford.edu/entries/causation-counterfactual/),
+"the basic idea of counterfactual theories of causation is that the meaning of
+causal claims can be explained in terms of counterfactual conditionals of the
+form 'If A had not occurred, C would not have occurred'".
+
+Here is the link again to their paper for more details:
+[What are the most important statistical ideas of the past 50 years?](https://arxiv.org/abs/2012.00174)

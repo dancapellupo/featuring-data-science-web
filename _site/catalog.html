@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./contents/mlops.html" rel="prev">
 <script src="site_libs/quarto-listing/list.min.js"></script>
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
@@ -131,10 +132,10 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -149,11 +150,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./contents/index.html"> 
+    <a class="nav-link active" href="./contents/index.html" aria-current="page"> 
 <span class="menu-text">Table of Contents</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./catalog.html" aria-current="page"> 
+    <a class="nav-link" href="./catalog.html"> 
 <span class="menu-text">Full Catalog</span></a>
   </li>  
 </ul>
@@ -173,34 +174,165 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Featuring Data Science</a></li><li class="breadcrumb-item"><a href="./catalog.html">Full Catalog</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">Full Catalog</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta column-page-left">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Featuring Data Science</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Table of Contents</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+ <span class="menu-text">General Data Science</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/data-science-general.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">General Topics in Data Science</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/data-science-statistics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statistics</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+ <span class="menu-text">Feature Selection and Feature Engineering</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/dimensionality-reduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Dimensionality Reduction</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+ <span class="menu-text">Supervised Learning</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/supervised.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">General Supervised Learning Topics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/supervised-classification.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Supervised Learning: Classification</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/supervised-tree-models.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tree-Based ML Models</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/supervised-neural-networks.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neural Networks</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
+ <span class="menu-text">MLOps</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/mlops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MLOps</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./catalog.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Full Catalog</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(11)</span></div><div class="category" data-category="MLOps">MLOps <span class="quarto-category-count">(1)</span></div><div class="category" data-category="arXiv">arXiv <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classification">classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:audio">content:audio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:social">content:social <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:video">content:video <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data science:general">data science:general <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dimensionality reduction">dimensionality reduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="explainability">explainability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="feature selection">feature selection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="neural networks">neural networks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="random forest">random forest <span class="quarto-category-count">(1)</span></div><div class="category" data-category="real-life use cases">real-life use cases <span class="quarto-category-count">(2)</span></div><div class="category" data-category="rules-based algos">rules-based algos <span class="quarto-category-count">(3)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="supervised learning">supervised learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="time series">time series <span class="quarto-category-count">(1)</span></div><div class="category" data-category="xgboost">xgboost <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="MLOps">MLOps <span class="quarto-category-count">(1)</span></div><div class="category" data-category="arXiv">arXiv <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classification">classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:audio">content:audio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:social">content:social <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:video">content:video <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data science:general">data science:general <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dimensionality reduction">dimensionality reduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="explainability">explainability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="feature selection">feature selection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="neural networks">neural networks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="random forest">random forest <span class="quarto-category-count">(1)</span></div><div class="category" data-category="real-life use cases">real-life use cases <span class="quarto-category-count">(2)</span></div><div class="category" data-category="rules-based algos">rules-based algos <span class="quarto-category-count">(3)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(3)</span></div><div class="category" data-category="supervised learning">supervised learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="time series">time series <span class="quarto-category-count">(1)</span></div><div class="category" data-category="xgboost">xgboost <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content column-body" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Featuring Data Science</a></li><li class="breadcrumb-item"><a href="./catalog.html">Full Catalog</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Full Catalog</h1>
+</div>
 
 
 
+<div class="quarto-title-meta column-body">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
 
 
 <section id="here-is-the-full-catalog-of-content-linked-to-here-on-featuring-data-science." class="level3">
@@ -360,7 +492,37 @@ Sep 1, 2022
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="data science:general" data-listing-date-sort="1605589200000" data-listing-file-modified-sort="1718065741632" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
+<div class="quarto-post image-right" data-index="4" data-categories="statistics" data-listing-date-sort="1622692800000" data-listing-file-modified-sort="1718111141249" data-listing-date-modified-sort="1718078400000" data-listing-reading-time-sort="3" data-listing-word-count-sort="476">
+<div class="thumbnail">
+<p><a href="./posts/2024-06-11-most-important-statistics-50-years/index.html" class="no-external"></a></p><a href="./posts/2024-06-11-most-important-statistics-50-years/index.html" class="no-external">
+<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
+</a><p><a href="./posts/2024-06-11-most-important-statistics-50-years/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2024-06-11-most-important-statistics-50-years/index.html" class="no-external">What are the most important statistical ideas of the past 50 years?</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/2024-06-11-most-important-statistics-50-years/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
+statistics
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/2024-06-11-most-important-statistics-50-years/index.html" class="no-external">Counterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/2024-06-11-most-important-statistics-50-years/index.html" class="no-external">
+<div class="listing-date">
+Jun 3, 2021
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="data science:general" data-listing-date-sort="1605589200000" data-listing-file-modified-sort="1718065741632" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-10-history-data-science/index.html" class="no-external"></a></p><a href="./posts/2024-06-10-history-data-science/index.html" class="no-external">
 <p><img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa42d4d7c-a6c9-43fe-9c6f-b526929930c0_1920x1280.jpeg" class="thumbnail-image"></p>
@@ -390,7 +552,7 @@ Nov 17, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="rules-based algos" data-listing-date-sort="1602216000000" data-listing-file-modified-sort="1717782119230" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="303">
+<div class="quarto-post image-right" data-index="6" data-categories="rules-based algos" data-listing-date-sort="1602216000000" data-listing-file-modified-sort="1717782119230" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="303">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-03-rules-and-ml/index.html" class="no-external"></a></p><a href="./posts/2024-06-03-rules-and-ml/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -420,7 +582,7 @@ Oct 9, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="rules-based algos" data-listing-date-sort="1597636800000" data-listing-file-modified-sort="1717781725256" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
+<div class="quarto-post image-right" data-index="7" data-categories="rules-based algos" data-listing-date-sort="1597636800000" data-listing-file-modified-sort="1717781725256" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-05-capital-one-rules-vs-ml/index.html" class="no-external"></a></p><a href="./posts/2024-06-05-capital-one-rules-vs-ml/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -450,7 +612,7 @@ Aug 17, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="supervised learning,classification,statistics,arXiv" data-listing-date-sort="1597377600000" data-listing-file-modified-sort="1718044165002" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="quarto-post image-right" data-index="8" data-categories="supervised learning,classification,statistics,arXiv" data-listing-date-sort="1597377600000" data-listing-file-modified-sort="1718044165002" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-10-classification-metrics/index.html" class="no-external"></a></p><a href="./posts/2024-06-10-classification-metrics/index.html" class="no-external">
 <p><img src="./posts/2024-06-10-classification-metrics/Screenshot 2024-06-10-confusion-matrix.png" class="thumbnail-image"></p>
@@ -489,7 +651,7 @@ Aug 14, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="supervised learning,xgboost,content:video" data-listing-date-sort="1583125200000" data-listing-file-modified-sort="1717794800373" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="111">
+<div class="quarto-post image-right" data-index="9" data-categories="supervised learning,xgboost,content:video" data-listing-date-sort="1583125200000" data-listing-file-modified-sort="1717794800373" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="111">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a></p><a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external">
 <p><img src="./posts/2024-06-03-xgboost-resources/Screenshot-2024-06-03-video-cover-1.png" class="thumbnail-image"></p>
@@ -525,7 +687,7 @@ Mar 2, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="explainability,supervised learning,random forest" data-listing-date-sort="1540008000000" data-listing-file-modified-sort="1717780969340" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
+<div class="quarto-post image-right" data-index="10" data-categories="explainability,supervised learning,random forest" data-listing-date-sort="1540008000000" data-listing-file-modified-sort="1717780969340" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a></p><a href="./posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -561,7 +723,7 @@ Oct 20, 2018
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="data science:general,statistics" data-listing-date-sort="1517806800000" data-listing-file-modified-sort="1718068992108" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="210">
+<div class="quarto-post image-right" data-index="11" data-categories="data science:general,statistics" data-listing-date-sort="1517806800000" data-listing-file-modified-sort="1718072408027" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="210">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-10-ml-versus-statistics/index.html" class="no-external"></a></p><a href="./posts/2024-06-10-ml-versus-statistics/index.html" class="no-external">
 <p><img src="https://opendatascience.com/wp-content/uploads/2018/04/WWE-640x300.jpg" class="thumbnail-image"></p>
@@ -1008,6 +1170,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation column-body">
+  <div class="nav-page nav-page-previous">
+      <a href="./contents/mlops.html" class="pagination-link" aria-label="MLOps">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">MLOps</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 

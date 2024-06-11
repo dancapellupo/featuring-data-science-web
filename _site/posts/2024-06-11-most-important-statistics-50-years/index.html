@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2020-08-14">
-<meta name="description" content="From accuracy to Cohen-Kappa from Margherita Grandini et al.&nbsp;at CRIF">
+<meta name="dcterms.date" content="2021-06-03">
+<meta name="description" content="Counterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari">
 
-<title>Featuring Data Science - Metrics for Multi-Class Classification: an Overview</title>
+<title>Featuring Data Science - What are the most important statistical ideas of the past 50 years?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,9 +41,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -131,18 +128,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Metrics for Multi-Class Classification: an Overview</h1>
+<h1 class="title">What are the most important statistical ideas of the past 50 years?</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">supervised learning</div>
-    <div class="quarto-category">classification</div>
     <div class="quarto-category">statistics</div>
-    <div class="quarto-category">arXiv</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    From accuracy to Cohen-Kappa from Margherita Grandini et al.&nbsp;at CRIF
+    Counterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari
   </div>
 </div>
 
@@ -153,14 +147,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 14, 2020</p>
+      <p class="date">June 3, 2021</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 10, 2024</p>
+      <p class="date-modified">June 11, 2024</p>
     </div>
   </div>
     
@@ -173,17 +167,34 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="hero-banner">
 <div class="hero-text">
-<p><strong>Original Blog Post:</strong> <strong><a href="https://arxiv.org/abs/2008.05756">Metrics for Multi-Class Classification: an Overview</a></strong> <br> Authors: Margherita Grandini, Enrico Bagli, Giorgio Visani (from CRIF) <br> Published: 2020-08-14</p>
+<p><strong>Original Paper:</strong> <strong><a href="https://arxiv.org/abs/2012.00174">What are the most important statistical ideas of the past 50 years?</a></strong> <br> Authors: Andrew Gelman and Aki Vehtari <br> Published: 2021-06-03</p>
 </div>
-<div class="hero-image">
-<p><a href="Screenshot 2024-06-10-confusion-matrix.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Screenshot 2024-06-10-confusion-matrix.png" class="img-fluid"></a></p>
-</div>
+<!-- ::: {.hero-image}
+![](image_file_or_link.png)
+::: -->
 </div>
 <p><strong>My summary:</strong></p>
-<p>This paper is a must for anyone working on supervised, classification machine learning problems.</p>
-<p>The paper goes into detail on classification metrics. The title specifies multi-class classification, but the text is relevant to binary classification as well.</p>
-<p>Many data scientists are likely aware of the F1-score and the confusion matrix, but probably fewer are familiar with the Cohen-Kappa score. This paper goes through many classification metrics and discusses the pros and cons of each, with concrete examples.</p>
-<p>Here is the link again to their paper for more details: <a href="https://arxiv.org/abs/2008.05756">Metrics for Multi-Class Classification: an Overview</a></p>
+<p>A statistics professor, Andrew Gelman, from Columbia University, and a computer science professor, Aki Vehtari, from Aalto University, look at the top statistical ideas of the past half-century.</p>
+<p>Here is their list:</p>
+<ol type="1">
+<li>Counterfactual Causal Inference</li>
+<li>Bootstrapping and Simulation-Based Inference</li>
+<li>Overparameterized Models and Regularization</li>
+<li>Multilevel, or Hierarchical, Models</li>
+<li>Generic Computation Algorithms</li>
+<li>Adaptive Decision Analysis</li>
+<li>Robust Inference</li>
+<li>Exploratory Data Analysis</li>
+</ol>
+<p><strong>Connection to Machine Learning and Deep Learning</strong></p>
+<p>One common thread among many of these ideas is how they take advantage of the advances in computing over the past 50 years. Iterative algorithms, like bootstrapping, become practical when a computer can relatively quickly run multiple iterations of the same experiment.</p>
+<p>A lot of the statistics ideas here have found applications in machine learning. Number 3 on the list above, overparameterized models and regularization, is central to machine learning and deep learning. According to Gelman and Vehtari, “a major change in statistics since the 1970s, coming from many different directions, is the idea of fitting a model with a large number of parameters — sometimes more parameters than data points — using some regularization procedure to get stable estimates and good predictions.” One of the biggest challenges in machine learning and deep learning is overfitting, where we train a model that performs amazingly well on our training dataset, but performs poorly on our unseen holdout dataset. Regularization, of different varieties, is used widely by data scientists to address overfitting.</p>
+<p>Furthermore, bootstrapping, which is number 2 on Gelman and Vehtari’s list, is an important component of random forest models. In random forest, an ensemble of trees is built, where each tree uses a bootstrap sample from the original training set. This helps to control overfitting, as each tree in the ensemble is trained on a slightly different version of the original dataset.</p>
+<p>In terms of number 6 on the list, a relatively famous example of adaptive decision analysis these days is reinforcement learning.</p>
+<p>Interesting to see exploratory data analysis on Gelman and Vehtari’s list (coming in at number 8), but it certainly falls within the realm of statistics, and again, advances in computing, and the proliferation of personal computers, allows the average researcher or analyst to generate a range of plots, much more easily than if one is creating plots with pen and paper. The ease with which plots can be made with various tools means there is little excuse not to perform a rigorous EDA on your dataset before going to the modeling phase.</p>
+<p><strong>Other Statistical Methods</strong></p>
+<p>The first item on Gelman and Vehtari’s list is counterfactual causal inference. According to the <a href="https://plato.stanford.edu/entries/causation-counterfactual/">Stanford Encyclopedia of Philosophy</a>, “the basic idea of counterfactual theories of causation is that the meaning of causal claims can be explained in terms of counterfactual conditionals of the form ‘If A had not occurred, C would not have occurred’”.</p>
+<p>Here is the link again to their paper for more details: <a href="https://arxiv.org/abs/2012.00174">What are the most important statistical ideas of the past 50 years?</a></p>
 
 
 
@@ -598,31 +609,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 

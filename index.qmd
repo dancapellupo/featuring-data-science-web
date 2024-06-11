@@ -1,12 +1,14 @@
 ---
 # title: "Featuring Data Science"
 toc: false
+page-layout: full
 ---
 
 ::: {.hero-banner}
 ::: {.hero-text}
 # Featuring Data Science
 ### A Curated Catalog of Data Science Content
+<br>
 :::
 :::
 

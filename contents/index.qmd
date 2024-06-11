@@ -1,6 +1,5 @@
 ---
 title: "Table of Contents"
-page-layout: article
 anchor-sections: false
 search: false
 listing:
@@ -8,6 +7,8 @@ listing:
   template: ../ejs/links.ejs
   contents: contents.yml
 image: /images/hero_right.png
+toc: false
+page-layout: full
 ---
 
 Here you can find all of the content I have collected on various topics in data

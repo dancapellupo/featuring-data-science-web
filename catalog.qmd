@@ -9,7 +9,7 @@ listing:
   filter-ui: true
 search: false
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 toc: false
 ---
 

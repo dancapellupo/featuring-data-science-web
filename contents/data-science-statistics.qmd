@@ -1,17 +1,25 @@
 ---
 title: "Statistics"
-# listing:
-#   contents: posts
-#   sort: "date asc"
-#   type: default
-#   categories: false
-#   sort-ui: false
-#   filter-ui: false
+listing:
+  - id: top-8
+    contents:
+    - '../posts/2024-06-11-most-important-statistics-50-years/index.qmd'
+    type: default
 page-layout: article
 ---
 
 ## Statistics Topics for Data Scientists
 
-### [Work in Progress]
+### General Topics
 
-[Some content about Stats.]
+This first article is a paper by a statistics professor and a computer science
+professor about what they consider to be the most important ideas in statistics
+from the past half-century. Some of these topics will look familiar to data
+scientists, like regularization. This follows nicely from the previous page,
+continuing to look at the connections between statistics and machine learning.
+<br>
+<br>
+
+:::{#top-8}
+:::
+
