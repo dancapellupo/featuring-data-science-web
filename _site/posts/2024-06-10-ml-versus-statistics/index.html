@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Tristan O’Malley">
-<meta name="dcterms.date" content="2024-05-30">
+<meta name="dcterms.date" content="2018-02-05">
+<meta name="description" content="Different approaches to similar problems from Tom Fawcett and Drew Hardin">
 
-<title>Featuring Data Science - Welcome To My Blog</title>
+<title>Featuring Data Science - Machine Learning vs.&nbsp;Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,9 +41,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -120,53 +117,84 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Welcome To My Blog</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Tristan O’Malley </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">May 30, 2024</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Machine Learning vs.&nbsp;Statistics</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">data science:general</div>
+    <div class="quarto-category">statistics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Different approaches to similar problems from Tom Fawcett and Drew Hardin
+  </div>
+</div>
 
 
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 5, 2018</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">June 10, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
 
 
+</header>
 
-<p>This is the first post in a Quarto blog. Welcome!</p>
-<p><a href="thumbnail.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="thumbnail.jpg" class="img-fluid"></a></p>
-<p>Since this post doesn’t specify an explicit <code>image</code>, the first image in the post will be used in the listing page of posts.</p>
+
+<div class="hero-banner">
+<div class="hero-text">
+<p><strong>Original Blog Post:</strong> <strong><a href="https://opendatascience.com/machine-learning-vs-statistics/">Machine Learning vs.&nbsp;Statistics</a></strong> <br> Authors: Tom Fawcett and Drew Hardin <br> Published: 2018-02-05</p>
+</div>
+<div class="hero-image">
+<p><img src="https://opendatascience.com/wp-content/uploads/2018/04/WWE-640x300.jpg" class="img-fluid"></p>
+</div>
+</div>
+<p><strong>My summary:</strong></p>
+<p>This post is authored by a machine learning practitioner (Tom Fawcett) and a statistician (Drew Hardin), so they bring their unique perspectives and draw parallels and highlight differences between how ML practitioners and statisticians approach problems.</p>
+<p>Here are some highlights.</p>
+<p><strong>Statistics</strong></p>
+<blockquote class="blockquote">
+<p>In statistics, the goal of modeling is <strong>approximating</strong> and then <strong>understanding</strong> the data-generating process, with the goal of answering the question you actually care about.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[T]he Statistician is concerned primarily with model validity, accurate estimation of model parameters, and inference from the model. However, prediction of unseen data points, a major concern of Machine Learning, is less of a concern to the statistician. Statisticians have the techniques to do prediction, but these are just special cases of inference in general.</p>
+</blockquote>
+<p><strong>Machine Learning</strong></p>
+<blockquote class="blockquote">
+<p>In Machine Learning, the predominant task is <strong>predictive modeling</strong>: the creation of models for the purpose of predicting labels of new examples.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>The model does not represent a belief about or a commitment to the data generation process. Its purpose is purely functional.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>ML practitioners are freed from worrying about difficult cases where assumptions are violated, yet the model may work anyway.</p>
+</blockquote>
+<p>Here is the link again to their blog post for more details: <a href="https://opendatascience.com/machine-learning-vs-statistics/">Machine Learning vs.&nbsp;Statistics</a></p>
 
 
 
@@ -581,31 +609,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
-window.onload = () => {
-  lightboxQuarto.on('slide_before_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    const href = trigger.getAttribute('href');
-    if (href !== null) {
-      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-      if (imgEl !== null) {
-        const srcAttr = imgEl.getAttribute("src");
-        if (srcAttr && srcAttr.startsWith("data:")) {
-          slideConfig.href = srcAttr;
-        }
-      }
-    } 
-  });
-
-  lightboxQuarto.on('slide_after_load', (data) => {
-    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-    if (window.Quarto?.typesetMath) {
-      window.Quarto.typesetMath(slideNode);
-    }
-  });
-
-};
-          </script>
 
 
 

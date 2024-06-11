@@ -1,0 +1,51 @@
+---
+title: "Machine Learning vs. Statistics"
+description: 'Different approaches to similar problems from Tom Fawcett and Drew Hardin'
+categories: ['data science:general', 'statistics']
+date: "2018-02-05"
+date-modified: "2024-06-10"
+image: "https://opendatascience.com/wp-content/uploads/2018/04/WWE-640x300.jpg"
+title-block-banner: false
+lightbox: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[Machine Learning vs. Statistics](https://opendatascience.com/machine-learning-vs-statistics/)** <br>
+Authors: Tom Fawcett and Drew Hardin <br>
+Published: 2018-02-05
+:::
+::: {.hero-image}
+![](https://opendatascience.com/wp-content/uploads/2018/04/WWE-640x300.jpg)
+:::
+:::
+
+**My summary:**
+
+This post is authored by a machine learning practitioner (Tom Fawcett) and a
+statistician (Drew Hardin), so they bring their unique perspectives and draw
+parallels and highlight differences between how ML practitioners and
+statisticians approach problems.
+
+Here are some highlights.
+
+**Statistics**
+
+> In statistics, the goal of modeling is **approximating** and then
+> **understanding** the data-generating process, with the goal of answering the
+> question you actually care about.
+
+> [T]he Statistician is concerned primarily with model validity, accurate estimation of model parameters, and inference from the model. However, prediction of unseen data points, a major concern of Machine Learning, is less of a concern to the statistician. Statisticians have the techniques to do prediction, but these are just special cases of inference in general.
+
+**Machine Learning**
+
+> In Machine Learning, the predominant task is **predictive modeling**: the creation of models for the purpose of predicting labels of new examples.
+
+> The model does not represent a belief about or a commitment to the data generation process. Its purpose is purely functional.
+
+> ML practitioners are freed from worrying about difficult cases where assumptions are violated, yet the model may work anyway.
+
+
+Here is the link again to their blog post for more details:
+[Machine Learning vs. Statistics](https://opendatascience.com/machine-learning-vs-statistics/)

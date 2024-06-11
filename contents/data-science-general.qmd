@@ -4,6 +4,7 @@ listing:
   - id: history
     contents:
     - '../posts/2024-06-10-history-data-science/index.qmd'
+    - '../posts/2024-06-10-ml-versus-statistics/index.qmd'
     type: default
   - id: rules
     contents: 
@@ -28,7 +29,13 @@ its consituent parts - statistics, data analysis, machine learning, data
 science tools.
 
 *As a disclaimer, while most of the posts on this website are not connected to
-the curator of this site, this is one post by myself.*
+the curator of this site, this is one post authored by myself.*
+
+With two big components of modern data science being statistics and machine
+learning, it is useful to think about the differences between the two,
+especially to understand different peoples’ approach to a problem. The way a
+statistician-by-training might approach a problem will likely be different than
+the way a machine learning practitioner will approach that same problem.
 <br>
 <br>
 

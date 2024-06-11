@@ -16,6 +16,9 @@ draft: true
 Authors: NAMES (from COMPANY) <br>
 Published: 2023-08-31
 :::
+::: {.hero-image}
+![](image_file_or_link.png)
+:::
 :::
 
 **My summary:**
