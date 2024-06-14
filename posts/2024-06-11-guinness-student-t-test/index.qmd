@@ -56,4 +56,4 @@ a look at the article.
 the t-test is often referred to as the Student's t-test, even today.
 
 Here is the link again to the article for more details:
-[Title](Link)
+[How the Guinness Brewery Invented the Most Important Statistical Method in Science](https://www.scientificamerican.com/article/how-the-guinness-brewery-invented-the-most-important-statistical-method-in/)
