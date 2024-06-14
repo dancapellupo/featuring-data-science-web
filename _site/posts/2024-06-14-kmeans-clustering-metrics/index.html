@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2021-02-10">
+<meta name="description" content="Comparing 4 clustering metrics from Daniel Capellupo, PhD">
 
-<title>Featuring Data Science - Title</title>
+<title>Featuring Data Science - Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -129,9 +131,18 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Title</h1>
-</div>
+<h1 class="title">Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">unsupervised learning</div>
+    <div class="quarto-category">clustering</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    Comparing 4 clustering metrics from Daniel Capellupo, PhD
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -140,14 +151,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">Invalid Date</p>
+      <p class="date">February 10, 2021</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">Invalid Date</p>
+      <p class="date-modified">June 14, 2024</p>
     </div>
   </div>
     
@@ -160,14 +171,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="hero-banner">
 <div class="hero-text">
-<p><strong>Original Blog Post:</strong> <strong><a href="Link">Title</a></strong> <br> Authors: NAMES (from COMPANY) <br> Published: 202X-00-00</p>
+<p><strong>Original Blog Post:</strong> <strong><a href="https://featuringdata.substack.com/p/11-clustering-deep-dive-part-1">Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters</a></strong> <br> Authors: Daniel Capellupo, PhD <br> Published: 2021-02-10</p>
 </div>
 <div class="hero-image">
-<p><a href="image_file_or_link.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="image_file_or_link.png" class="img-fluid"></a></p>
+<p><a href="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5973ad89-dca3-4716-ba1e-803f7f47392f_1606x606.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5973ad89-dca3-4716-ba1e-803f7f47392f_1606x606.png" class="img-fluid"></a></p>
 </div>
 </div>
 <p><strong>My summary:</strong></p>
-<p>Here is the link again to their blog post for more details: <a href="Link">Title</a></p>
+<p>This post goes through several examples of using k-Means clustering, and four different clustering metrics / techniques that can aide in choosing the best / ideal number of clusters.</p>
+<p>There is also <a href="https://github.com/dancapellupo/featuring_data_blog/blob/master/clustering/clustering_part1_kmeans.ipynb">a Jupyter notebook</a> available with all the code used for generating the examples in this blog post.</p>
+<p>Here is the link again to their blog post for more details: <a href="https://featuringdata.substack.com/p/11-clustering-deep-dive-part-1">Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters</a></p>
 
 
 
@@ -582,7 +595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

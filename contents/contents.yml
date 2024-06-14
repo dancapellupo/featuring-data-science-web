@@ -24,6 +24,8 @@
       href: coding-python.qmd
     - text: R
       href: coding-r.qmd
+    # - text: Julia and Others
+    #   href:
 
 - title: Feature Selection and Feature Engineering
   subtitle: Selecting Features and Creating New Ones
@@ -48,10 +50,10 @@
 - title: Unsupervised Learning
   subtitle: Clustering
   links:
-    - text: Clustering Metrics
-      href: cluster-metrics.qmd
+    - text: K-Means and Clustering Metrics
+      href: unsupervised-cluster-metrics.qmd
     - text: Beyond k-Means - DBSCAN, HDBSCAN
-      href: cluster-dbscan-hdbscan.qmd
+      href: unsupervised-cluster-dbscan-hdbscan.qmd
 
 - title: Special Topics
   links:

@@ -1,0 +1,33 @@
+---
+title: "Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters"
+description: 'Comparing 4 clustering metrics from Daniel Capellupo, PhD'
+categories: ['unsupervised learning', 'clustering']
+date: "2021-02-10"
+date-modified: "2024-06-14"
+image: "https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5973ad89-dca3-4716-ba1e-803f7f47392f_1606x606.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters](https://featuringdata.substack.com/p/11-clustering-deep-dive-part-1)** <br>
+Authors: Daniel Capellupo, PhD <br>
+Published: 2021-02-10
+:::
+::: {.hero-image}
+![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5973ad89-dca3-4716-ba1e-803f7f47392f_1606x606.png)
+:::
+:::
+
+**My summary:**
+
+This post goes through several examples of using k-Means clustering, and four
+different clustering metrics / techniques that can aide in choosing the best /
+ideal number of clusters.
+
+There is also [a Jupyter notebook](https://github.com/dancapellupo/featuring_data_blog/blob/master/clustering/clustering_part1_kmeans.ipynb)
+available with all the code used for generating the examples in this blog post.
+
+Here is the link again to their blog post for more details:
+[Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters](https://featuringdata.substack.com/p/11-clustering-deep-dive-part-1)

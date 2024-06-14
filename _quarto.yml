@@ -41,6 +41,9 @@ website:
               - contents/supervised-classification.qmd
               - contents/supervised-tree-models.qmd
               - contents/supervised-neural-networks.qmd
+          - section: "Unsupervised Learning"
+            contents:
+              - contents/unsupervised-cluster-metrics.qmd
           - section: "MLOps"
             contents:
               - contents/mlops.qmd

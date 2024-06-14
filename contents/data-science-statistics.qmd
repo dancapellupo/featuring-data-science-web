@@ -15,7 +15,7 @@ page-layout: article
 
 ### Statistical Significance
 
-As data scientists, sometimes are analysis requires assessing statistical
+As data scientists, sometimes our analysis requires assessing statistical
 significance. Maybe it is an A/B test, and we need to determine if one option
 is actually better at achieving whatever KPI we might be after.
 

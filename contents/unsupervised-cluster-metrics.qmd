@@ -1,0 +1,31 @@
+---
+title: "K-Means and Cluster Metrics"
+listing:
+  - id: cluster-metrics
+    contents: '../posts/2024-06-14-kmeans-clustering-metrics/index.qmd'
+    type: default
+page-layout: article
+---
+
+## K-Means and Cluster Metrics
+
+### Cluster Metrics
+
+K-Means is probably the first algorithm that comes to mind when someone
+mentions unsupervised learning or clustering.
+
+One of the downsides of k-Means is that you need to determine how many clusters
+there should be. One way to do this is to run k-Mean multiple times, with
+different numbers of clusters, and use one of several metrics to determine
+which is the best clustering.
+
+This post goes through 4 different techniques / metrics for determining the
+number of clusters.
+
+*Again, this is one of just a few posts on this site that is authored by
+myself.*
+<br>
+<br>
+
+:::{#cluster-metrics}
+:::
