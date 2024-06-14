@@ -119,7 +119,7 @@
     "href": "contents/unsupervised-cluster-dbscan-hdbscan.html",
     "title": "Density-Based Clustering",
     "section": "",
-    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to HDBSCAN with examples and code from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 25, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
@@ -132,7 +132,7 @@
     "href": "contents/unsupervised-cluster-dbscan-hdbscan.html#density-based-clustering-dbscan-hdbscan",
     "title": "Density-Based Clustering",
     "section": "",
-    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to HDBSCAN with examples and code from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 25, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",

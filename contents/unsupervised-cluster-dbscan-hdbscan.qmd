@@ -2,7 +2,7 @@
 title: "Density-Based Clustering"
 listing:
   - id: kmeans-hdbscan
-    contents: '../posts/2024-06-14-kmeans-clustering-metrics/index.qmd'
+    contents: '../posts/2024-06-14-hdbscan-clustering/index.qmd'
     type: default
 page-layout: article
 ---
