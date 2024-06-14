@@ -1,0 +1,29 @@
+---
+title: "Data Visualization Code and Packages"
+listing:
+  - id: code-examples
+    contents:
+    - '../posts/2024-06-14-beautiful-data-visualization-matplotlib/index.qmd'
+    type: default
+page-layout: article
+---
+
+## Data Visualization Code and Packages
+
+### Code Examples to Improve Data Visualizations
+
+What makes a good plot is certainly subjective, but there are considerations
+that can make plots look more professional, as well as making them easier to
+read. All posts in this section include real code examples.
+
+The first post here promotes the idea of "less is more" in creating
+visualizations, and even includes a gif that illustrates the effect of
+simplifying a standard bar chart. This post has Python/matplotlib code.
+<br>
+<br>
+
+:::{#code-examples}
+:::
+
+
+

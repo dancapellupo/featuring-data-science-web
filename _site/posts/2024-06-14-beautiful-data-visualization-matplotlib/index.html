@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2021-02-25">
-<meta name="description" content="Introduction to HDBSCAN with examples and code from Daniel Capellupo, PhD">
+<meta name="dcterms.date" content="2014-06-28">
+<meta name="description" content="Some examples, with code, of color schemes and simplifying the plot display from Dr.&nbsp;Randal Olson">
 
-<title>Featuring Data Science - Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison</title>
+<title>Featuring Data Science - How to make beautiful data visualizations in Python with matplotlib</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,17 +131,16 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison</h1>
+<h1 class="title">How to make beautiful data visualizations in Python with matplotlib</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">unsupervised learning</div>
-    <div class="quarto-category">clustering</div>
+    <div class="quarto-category">data visualization</div>
     <div class="quarto-category">code</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Introduction to HDBSCAN with examples and code from Daniel Capellupo, PhD
+    Some examples, with code, of color schemes and simplifying the plot display from Dr.&nbsp;Randal Olson
   </div>
 </div>
 
@@ -152,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 25, 2021</p>
+      <p class="date">June 28, 2014</p>
     </div>
   </div>
   
@@ -172,16 +171,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="hero-banner">
 <div class="hero-text">
-<p><strong>Original Blog Post:</strong> <strong><a href="https://featuringdata.substack.com/p/12-clustering-deep-dive-part-2">Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison</a></strong> <br> Authors: Daniel Capellupo, PhD <br> Published: 2021-02-10</p>
+<p><strong>Original Blog Post:</strong> <strong><a href="https://randalolson.com/2014/06/28/how-to-make-beautiful-data-visualizations-in-python-with-matplotlib/">How to make beautiful data visualizations in Python with matplotlib</a></strong> <br> Authors: Dr.&nbsp;Randal Olson <br> Published: 2014-06-28</p>
 </div>
 <div class="hero-image">
-<p><a href="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa511b156-94c5-4434-8e24-7331943a1fa4_1792x1344.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa511b156-94c5-4434-8e24-7331943a1fa4_1792x1344.png" class="img-fluid"></a></p>
+<p><a href="https://randalolson.com/assets/2014/06/chess-number-ply-over-time.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://randalolson.com/assets/2014/06/chess-number-ply-over-time.png" class="img-fluid"></a></p>
 </div>
 </div>
 <p><strong>My summary:</strong></p>
-<p>This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.</p>
-<p>There is also <a href="https://github.com/dancapellupo/featuring_data_blog/blob/master/clustering/clustering_part2_kmeans_hdbscan.ipynb">a Jupyter notebook</a> available with all the code used for generating the examples in this blog post.</p>
-<p>Here is the link again to their blog post for more details: <a href="https://featuringdata.substack.com/p/12-clustering-deep-dive-part-2">Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison</a></p>
+<p>What qualifies as a “beautiful” data visualization is certainly subjective. And, some may disagree with certain decisions made by the author of this post, like avoiding grid lines that could help guide the eye.</p>
+<p>But, it is always helpful to have real coding examples of different plotting styles to use as inspiration or to incorporate into one’s own visualization code.</p>
+<p>Here is the link again to their blog post for more details: <a href="https://randalolson.com/2014/06/28/how-to-make-beautiful-data-visualizations-in-python-with-matplotlib/">How to make beautiful data visualizations in Python with matplotlib</a></p>
 
 
 
@@ -596,7 +595,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

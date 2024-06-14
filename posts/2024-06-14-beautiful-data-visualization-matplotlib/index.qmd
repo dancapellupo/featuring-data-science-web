@@ -1,0 +1,34 @@
+---
+title: "How to make beautiful data visualizations in Python with matplotlib"
+description: 'Some examples, with code, of color schemes and simplifying the plot display from Dr. Randal Olson'
+categories: ['data visualization', 'code']
+date: "2014-06-28"
+date-modified: "2024-06-14"
+image: "https://randalolson.com/assets/2014/06/chess-number-ply-over-time.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[How to make beautiful data visualizations in Python with matplotlib](https://randalolson.com/2014/06/28/how-to-make-beautiful-data-visualizations-in-python-with-matplotlib/)** <br>
+Authors: Dr. Randal Olson <br>
+Published: 2014-06-28
+:::
+::: {.hero-image}
+![](https://randalolson.com/assets/2014/06/chess-number-ply-over-time.png)
+:::
+:::
+
+**My summary:**
+
+What qualifies as a "beautiful" data visualization is certainly subjective.
+And, some may disagree with certain decisions made by the author of this post,
+like avoiding grid lines that could help guide the eye.
+
+But, it is always helpful to have real coding examples of different plotting
+styles to use as inspiration or to incorporate into one's own visualization
+code.
+
+Here is the link again to their blog post for more details:
+[How to make beautiful data visualizations in Python with matplotlib](https://randalolson.com/2014/06/28/how-to-make-beautiful-data-visualizations-in-python-with-matplotlib/)
