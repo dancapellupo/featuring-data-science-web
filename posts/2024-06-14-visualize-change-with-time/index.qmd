@@ -12,7 +12,7 @@ title-block-banner: false
 ::: {.hero-text}
 **Original Blog Post:**
 **[Awesome Strategies to Visualize Change with Time](https://medium.com/@yuanbo.faith/awesome-strategies-to-visualize-change-with-time-f8a7fa8362f2)** <br>
-Authors: NAMES (from COMPANY) <br>
+Authors: Bo Yuan, PhD <br>
 Published: 2024-05-07
 :::
 ::: {.hero-image}
