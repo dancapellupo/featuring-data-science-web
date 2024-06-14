@@ -1,9 +1,13 @@
 ---
 title: "Data Visualization Code and Packages"
 listing:
-  - id: code-examples
+  - id: code-examples-1
     contents:
     - '../posts/2024-06-14-beautiful-data-visualization-matplotlib/index.qmd'
+    type: default
+  - id: code-examples-2
+    contents:
+    - '../posts/2024-06-14-visualize-change-with-time/index.qmd'
     type: default
 page-layout: article
 ---
@@ -22,8 +26,15 @@ simplifying a standard bar chart. This post has Python/matplotlib code.
 <br>
 <br>
 
-:::{#code-examples}
+:::{#code-examples-1}
 :::
 
+This next example uses R code to produce visualizations of data that changes
+with time. Some compare some metrics between two different time periods, while
+there is also an example of a traditional time series line graph.
+<br>
+<br>
 
+:::{#code-examples-2}
+:::
 

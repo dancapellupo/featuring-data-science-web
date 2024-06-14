@@ -1,0 +1,34 @@
+---
+title: "Awesome Strategies to Visualize Change with Time"
+description: 'Professional plots with links to R code from Bo Yuan, PhD'
+categories: ['data visualization', 'time series']
+date: "2024-05-07"
+date-modified: "2024-06-14"
+image: "https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZY7HldizPRJikF0SAuFYKg.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[Awesome Strategies to Visualize Change with Time](https://medium.com/@yuanbo.faith/awesome-strategies-to-visualize-change-with-time-f8a7fa8362f2)** <br>
+Authors: NAMES (from COMPANY) <br>
+Published: 2024-05-07
+:::
+::: {.hero-image}
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*ZY7HldizPRJikF0SAuFYKg.png)
+:::
+:::
+
+**My summary:**
+
+In this blog post, the author presents some professional-looking plots, created
+in R, some of them inspired by sources like the Wall Street Journal. The author
+includes links to the R code for each plot.
+
+While this post is on Medium, the author also points to their website,
+[DataBrewer.co](https://www.databrewer.co/R/visualization/introduction), with
+even more code and examples.
+
+Here is the link again to their blog post for more details:
+[Awesome Strategies to Visualize Change with Time](https://medium.com/@yuanbo.faith/awesome-strategies-to-visualize-change-with-time-f8a7fa8362f2)
