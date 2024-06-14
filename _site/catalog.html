@@ -296,6 +296,12 @@ window.Quarto = {
  <span class="menu-text">K-Means and Cluster Metrics</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./contents/unsupervised-cluster-dbscan-hdbscan.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Density-Based Clustering</span></a>
+  </div>
+</li>
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -329,7 +335,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(14)</span></div><div class="category" data-category="MLOps">MLOps <span class="quarto-category-count">(1)</span></div><div class="category" data-category="arXiv">arXiv <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classification">classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="clustering">clustering <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:audio">content:audio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:social">content:social <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:video">content:video <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data science:general">data science:general <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dimensionality reduction">dimensionality reduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="explainability">explainability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="feature selection">feature selection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="neural networks">neural networks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="random forest">random forest <span class="quarto-category-count">(1)</span></div><div class="category" data-category="real-life use cases">real-life use cases <span class="quarto-category-count">(2)</span></div><div class="category" data-category="rules-based algos">rules-based algos <span class="quarto-category-count">(3)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(4)</span></div><div class="category" data-category="supervised learning">supervised learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="time series">time series <span class="quarto-category-count">(1)</span></div><div class="category" data-category="unsupervised learning">unsupervised learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="xgboost">xgboost <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(15)</span></div><div class="category" data-category="MLOps">MLOps <span class="quarto-category-count">(1)</span></div><div class="category" data-category="arXiv">arXiv <span class="quarto-category-count">(1)</span></div><div class="category" data-category="classification">classification <span class="quarto-category-count">(1)</span></div><div class="category" data-category="clustering">clustering <span class="quarto-category-count">(2)</span></div><div class="category" data-category="content:audio">content:audio <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:social">content:social <span class="quarto-category-count">(1)</span></div><div class="category" data-category="content:video">content:video <span class="quarto-category-count">(1)</span></div><div class="category" data-category="data science:general">data science:general <span class="quarto-category-count">(2)</span></div><div class="category" data-category="data visualization">data visualization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dimensionality reduction">dimensionality reduction <span class="quarto-category-count">(1)</span></div><div class="category" data-category="explainability">explainability <span class="quarto-category-count">(1)</span></div><div class="category" data-category="feature selection">feature selection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="neural networks">neural networks <span class="quarto-category-count">(1)</span></div><div class="category" data-category="random forest">random forest <span class="quarto-category-count">(1)</span></div><div class="category" data-category="real-life use cases">real-life use cases <span class="quarto-category-count">(2)</span></div><div class="category" data-category="rules-based algos">rules-based algos <span class="quarto-category-count">(3)</span></div><div class="category" data-category="statistics">statistics <span class="quarto-category-count">(4)</span></div><div class="category" data-category="supervised learning">supervised learning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="time series">time series <span class="quarto-category-count">(1)</span></div><div class="category" data-category="unsupervised learning">unsupervised learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="xgboost">xgboost <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content column-body" id="quarto-document-content">
 
@@ -569,7 +575,40 @@ Jun 3, 2021
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="unsupervised learning,clustering" data-listing-date-sort="1612933200000" data-listing-file-modified-sort="1718338760292" data-listing-date-modified-sort="1718337600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="92">
+<div class="quarto-post image-right" data-index="6" data-categories="unsupervised learning,clustering" data-listing-date-sort="1614229200000" data-listing-file-modified-sort="1718379296388" data-listing-date-modified-sort="1718337600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="94">
+<div class="thumbnail">
+<p><a href="./posts/2024-06-14-hdbscan-clustering/index.html" class="no-external"></a></p><a href="./posts/2024-06-14-hdbscan-clustering/index.html" class="no-external">
+<p><img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa511b156-94c5-4434-8e24-7331943a1fa4_1792x1344.png" class="thumbnail-image"></p>
+</a><p><a href="./posts/2024-06-14-hdbscan-clustering/index.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./posts/2024-06-14-hdbscan-clustering/index.html" class="no-external">Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./posts/2024-06-14-hdbscan-clustering/index.html" class="no-external"></a>
+</div>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('unsupervised learning'); return false;">
+unsupervised learning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('clustering'); return false;">
+clustering
+</div>
+</div>
+<div class="listing-description">
+<a href="./posts/2024-06-14-hdbscan-clustering/index.html" class="no-external">Introduction to HDBSCAN with examples and code from Daniel Capellupo, PhD</a>
+</div>
+</div>
+<div class="metadata">
+<a href="./posts/2024-06-14-hdbscan-clustering/index.html" class="no-external">
+<div class="listing-date">
+Feb 25, 2021
+</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="unsupervised learning,clustering" data-listing-date-sort="1612933200000" data-listing-file-modified-sort="1718338760292" data-listing-date-modified-sort="1718337600000" data-listing-reading-time-sort="1" data-listing-word-count-sort="92">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-14-kmeans-clustering-metrics/index.html" class="no-external"></a></p><a href="./posts/2024-06-14-kmeans-clustering-metrics/index.html" class="no-external">
 <p><img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F5973ad89-dca3-4716-ba1e-803f7f47392f_1606x606.png" class="thumbnail-image"></p>
@@ -602,7 +641,7 @@ Feb 10, 2021
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="data science:general" data-listing-date-sort="1605589200000" data-listing-file-modified-sort="1718065741632" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
+<div class="quarto-post image-right" data-index="8" data-categories="data science:general" data-listing-date-sort="1605589200000" data-listing-file-modified-sort="1718065741632" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="120">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-10-history-data-science/index.html" class="no-external"></a></p><a href="./posts/2024-06-10-history-data-science/index.html" class="no-external">
 <p><img src="https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa42d4d7c-a6c9-43fe-9c6f-b526929930c0_1920x1280.jpeg" class="thumbnail-image"></p>
@@ -632,7 +671,7 @@ Nov 17, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="rules-based algos" data-listing-date-sort="1602216000000" data-listing-file-modified-sort="1717782119230" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="303">
+<div class="quarto-post image-right" data-index="9" data-categories="rules-based algos" data-listing-date-sort="1602216000000" data-listing-file-modified-sort="1717782119230" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="2" data-listing-word-count-sort="303">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-03-rules-and-ml/index.html" class="no-external"></a></p><a href="./posts/2024-06-03-rules-and-ml/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -662,7 +701,7 @@ Oct 9, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="rules-based algos" data-listing-date-sort="1597636800000" data-listing-file-modified-sort="1717781725256" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
+<div class="quarto-post image-right" data-index="10" data-categories="rules-based algos" data-listing-date-sort="1597636800000" data-listing-file-modified-sort="1717781725256" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="148">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-05-capital-one-rules-vs-ml/index.html" class="no-external"></a></p><a href="./posts/2024-06-05-capital-one-rules-vs-ml/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -692,7 +731,7 @@ Aug 17, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="supervised learning,classification,statistics,arXiv" data-listing-date-sort="1597377600000" data-listing-file-modified-sort="1718044165002" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
+<div class="quarto-post image-right" data-index="11" data-categories="supervised learning,classification,statistics,arXiv" data-listing-date-sort="1597377600000" data-listing-file-modified-sort="1718044165002" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-10-classification-metrics/index.html" class="no-external"></a></p><a href="./posts/2024-06-10-classification-metrics/index.html" class="no-external">
 <p><img src="./posts/2024-06-10-classification-metrics/Screenshot 2024-06-10-confusion-matrix.png" class="thumbnail-image"></p>
@@ -731,7 +770,7 @@ Aug 14, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="supervised learning,xgboost,content:video" data-listing-date-sort="1583125200000" data-listing-file-modified-sort="1717794800373" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="111">
+<div class="quarto-post image-right" data-index="12" data-categories="supervised learning,xgboost,content:video" data-listing-date-sort="1583125200000" data-listing-file-modified-sort="1717794800373" data-listing-date-modified-sort="1717387200000" data-listing-reading-time-sort="1" data-listing-word-count-sort="111">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external"></a></p><a href="./posts/2024-06-03-xgboost-resources/index.html" class="no-external">
 <p><img src="./posts/2024-06-03-xgboost-resources/Screenshot-2024-06-03-video-cover-1.png" class="thumbnail-image"></p>
@@ -767,7 +806,7 @@ Mar 2, 2020
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="explainability,supervised learning,random forest" data-listing-date-sort="1540008000000" data-listing-file-modified-sort="1717780969340" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
+<div class="quarto-post image-right" data-index="13" data-categories="explainability,supervised learning,random forest" data-listing-date-sort="1540008000000" data-listing-file-modified-sort="1717780969340" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a></p><a href="./posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">
 <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
@@ -803,7 +842,7 @@ Oct 20, 2018
 </a>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="data science:general,statistics" data-listing-date-sort="1517806800000" data-listing-file-modified-sort="1718072408027" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="210">
+<div class="quarto-post image-right" data-index="14" data-categories="data science:general,statistics" data-listing-date-sort="1517806800000" data-listing-file-modified-sort="1718072408027" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="210">
 <div class="thumbnail">
 <p><a href="./posts/2024-06-10-ml-versus-statistics/index.html" class="no-external"></a></p><a href="./posts/2024-06-10-ml-versus-statistics/index.html" class="no-external">
 <p><img src="https://opendatascience.com/wp-content/uploads/2018/04/WWE-640x300.jpg" class="thumbnail-image"></p>

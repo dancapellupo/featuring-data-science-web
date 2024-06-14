@@ -1,5 +1,9 @@
 /* css styles */
 
+a:link {
+  text-decoration: none;
+}
+
 @media (max-width: 575px) {
 
     .link-cards .card {

@@ -42,83 +42,102 @@
     "text": "XGBoost Resources  Author: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\n\n\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
   },
   {
-    "objectID": "posts/2024-06-10-history-data-science/index.html",
-    "href": "posts/2024-06-10-history-data-science/index.html",
-    "title": "A Brief History of Data Science",
+    "objectID": "posts/2024-06-14-hdbscan-clustering/index.html",
+    "href": "posts/2024-06-14-hdbscan-clustering/index.html",
+    "title": "Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison",
     "section": "",
-    "text": "Original Blog Post: A Brief History of Data Science  Authors: Daniel Capellupo, PhD  Published: 2020-11-17\n\n\nMy summary:\nThis is one of the few posts on this website that is from myself, the head curator.\nThis post goes through the history of data science, from the beginnings of statistics centuries ago, through today, where:\n\nStatistics, Data Analysis, and Coding converge to form a new career for the 21st century\n\nWhile many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nHere is the link again to their blog post for more details: A Brief History of Data Science"
+    "text": "Original Blog Post: Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison  Authors: Daniel Capellupo, PhD  Published: 2021-02-10\n\n\n\n\n\nMy summary:\nThis post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nThere is also a Jupyter notebook available with all the code used for generating the examples in this blog post.\nHere is the link again to their blog post for more details: Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison"
   },
   {
-    "objectID": "posts/2024-06-02-doordash-time-series-holidays/index.html",
-    "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
-    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
+    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "title": "What Data Scientists Need to Know about MLOps Principles",
     "section": "",
-    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\n\n\n\n\n\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
+    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\n\n\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
   },
   {
-    "objectID": "posts/2024-06-11-guinness-student-t-test/index.html",
-    "href": "posts/2024-06-11-guinness-student-t-test/index.html",
-    "title": "How the Guinness Brewery Invented the Most Important Statistical Method in Science",
+    "objectID": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
+    "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
+    "title": "LinkedIn Post on PCA on Non-Linear Data",
     "section": "",
-    "text": "Original Blog Post: How the Guinness Brewery Invented the Most Important Statistical Method in Science  Authors: Jack Murtagh (from Scientific American)  Published: 2024-05-25\n\n\n\n\n\nMy summary:\nWhat does beer have to do with statistical significance?\nIn this article from Scientific American, Jack Murtagh discusses the origins of one of the most common tests of statistical significance, the t-test.\nAround the start of the 20th century, Guinness wanted to improve the consistency of their products as they continued to expand worldwide. So, they hired a team to experiment and research how to improve their products.\nOne issue that kept coming up was small sample sizes. In other words, if they are assessing the quality of hops, instead of testing every flower in a crop, they wanted to test a small, random sample.\n\n\nTherefore, the head experimental brewer at Guinness, William Sealy Gosset, invented the t-test.\n\n\nIf you need a review of the t-test and P-values, with some illustrations, take a look at the article.\nFun fact: Gosset published under the pseudonym “Student”, and therefore, the t-test is often referred to as the Student’s t-test, even today.\nHere is the link again to the article for more details: How the Guinness Brewery Invented the Most Important Statistical Method in Science"
+    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n\n\n\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment\n\n\n\n\n\nLinkedIn Comment"
   },
   {
-    "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
-    "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
-    "title": "Beware Default Random Forest Importances",
+    "objectID": "contents/unsupervised-cluster-metrics.html",
+    "href": "contents/unsupervised-cluster-metrics.html",
+    "title": "K-Means and Cluster Metrics",
     "section": "",
-    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\n\n\n\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
-  },
-  {
-    "objectID": "contents/mlops.html",
-    "href": "contents/mlops.html",
-    "title": "MLOps",
-    "section": "",
-    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
+    "text": "K-Means is probably the first algorithm that comes to mind when someone mentions unsupervised learning or clustering.\nOne of the downsides of k-Means is that you need to determine how many clusters there should be. One way to do this is to run k-Mean multiple times, with different numbers of clusters, and use one of several metrics to determine which is the best clustering.\nThis post goes through 4 different techniques / metrics for determining the number of clusters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "MLOps",
-      "MLOps"
+      "Unsupervised Learning",
+      "K-Means and Cluster Metrics"
     ]
   },
   {
-    "objectID": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
-    "href": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
-    "title": "MLOps",
+    "objectID": "contents/unsupervised-cluster-metrics.html#k-means-and-cluster-metrics",
+    "href": "contents/unsupervised-cluster-metrics.html#k-means-and-cluster-metrics",
+    "title": "K-Means and Cluster Metrics",
     "section": "",
-    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
+    "text": "K-Means is probably the first algorithm that comes to mind when someone mentions unsupervised learning or clustering.\nOne of the downsides of k-Means is that you need to determine how many clusters there should be. One way to do this is to run k-Mean multiple times, with different numbers of clusters, and use one of several metrics to determine which is the best clustering.\nThis post goes through 4 different techniques / metrics for determining the number of clusters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "MLOps",
-      "MLOps"
+      "Unsupervised Learning",
+      "K-Means and Cluster Metrics"
     ]
   },
   {
-    "objectID": "contents/supervised-tree-models.html",
-    "href": "contents/supervised-tree-models.html",
-    "title": "Tree-Based ML Models",
+    "objectID": "contents/supervised-neural-networks.html",
+    "href": "contents/supervised-neural-networks.html",
+    "title": "Neural Networks",
     "section": "",
-    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
+    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
       "Supervised Learning",
-      "Tree-Based ML Models"
+      "Neural Networks"
     ]
   },
   {
-    "objectID": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
-    "href": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
-    "title": "Tree-Based ML Models",
+    "objectID": "contents/supervised-neural-networks.html#neural-networks",
+    "href": "contents/supervised-neural-networks.html#neural-networks",
+    "title": "Neural Networks",
     "section": "",
-    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
+    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
       "Supervised Learning",
-      "Tree-Based ML Models"
+      "Neural Networks"
+    ]
+  },
+  {
+    "objectID": "contents/unsupervised-cluster-dbscan-hdbscan.html",
+    "href": "contents/unsupervised-cluster-dbscan-hdbscan.html",
+    "title": "Density-Based Clustering",
+    "section": "",
+    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Unsupervised Learning",
+      "Density-Based Clustering"
+    ]
+  },
+  {
+    "objectID": "contents/unsupervised-cluster-dbscan-hdbscan.html#density-based-clustering-dbscan-hdbscan",
+    "href": "contents/unsupervised-cluster-dbscan-hdbscan.html#density-based-clustering-dbscan-hdbscan",
+    "title": "Density-Based Clustering",
+    "section": "",
+    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Unsupervised Learning",
+      "Density-Based Clustering"
     ]
   },
   {
@@ -226,70 +245,84 @@
     ]
   },
   {
-    "objectID": "contents/supervised-neural-networks.html",
-    "href": "contents/supervised-neural-networks.html",
-    "title": "Neural Networks",
+    "objectID": "contents/supervised-tree-models.html",
+    "href": "contents/supervised-tree-models.html",
+    "title": "Tree-Based ML Models",
     "section": "",
-    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
       "Supervised Learning",
-      "Neural Networks"
+      "Tree-Based ML Models"
     ]
   },
   {
-    "objectID": "contents/supervised-neural-networks.html#neural-networks",
-    "href": "contents/supervised-neural-networks.html#neural-networks",
-    "title": "Neural Networks",
+    "objectID": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
+    "href": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
+    "title": "Tree-Based ML Models",
     "section": "",
-    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
       "Supervised Learning",
-      "Neural Networks"
+      "Tree-Based ML Models"
     ]
   },
   {
-    "objectID": "contents/unsupervised-cluster-metrics.html",
-    "href": "contents/unsupervised-cluster-metrics.html",
-    "title": "K-Means and Cluster Metrics",
+    "objectID": "contents/mlops.html",
+    "href": "contents/mlops.html",
+    "title": "MLOps",
     "section": "",
-    "text": "K-Means is probably the first algorithm that comes to mind when someone mentions unsupervised learning or clustering.\nOne of the downsides of k-Means is that you need to determine how many clusters there should be. One way to do this is to run k-Mean multiple times, with different numbers of clusters, and use one of several metrics to determine which is the best clustering.\nThis post goes through 4 different techniques / metrics for determining the number of clusters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "Unsupervised Learning",
-      "K-Means and Cluster Metrics"
+      "MLOps",
+      "MLOps"
     ]
   },
   {
-    "objectID": "contents/unsupervised-cluster-metrics.html#k-means-and-cluster-metrics",
-    "href": "contents/unsupervised-cluster-metrics.html#k-means-and-cluster-metrics",
-    "title": "K-Means and Cluster Metrics",
+    "objectID": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
+    "href": "contents/mlops.html#mlops-fundamentals-for-data-scientists",
+    "title": "MLOps",
     "section": "",
-    "text": "K-Means is probably the first algorithm that comes to mind when someone mentions unsupervised learning or clustering.\nOne of the downsides of k-Means is that you need to determine how many clusters there should be. One way to do this is to run k-Mean multiple times, with different numbers of clusters, and use one of several metrics to determine which is the best clustering.\nThis post goes through 4 different techniques / metrics for determining the number of clusters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "MLOps is the practice of putting machine learning models into production. At some companies, especially at small startups, this responsibility falls onto the data scientist who created the model. In other, larger companies, there are dedicated engineers who are responsible for this.\nEither way, data scientists who are creating models that will end up in production should be aware of some fundamentals of MLOps, and that is the focus of this section.",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "Unsupervised Learning",
-      "K-Means and Cluster Metrics"
+      "MLOps",
+      "MLOps"
     ]
   },
   {
-    "objectID": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
-    "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
-    "title": "LinkedIn Post on PCA on Non-Linear Data",
+    "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
+    "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
+    "title": "Beware Default Random Forest Importances",
     "section": "",
-    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n\n\n\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment\n\n\n\n\n\nLinkedIn Comment"
+    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\n\n\n\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
   },
   {
-    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
-    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
-    "title": "What Data Scientists Need to Know about MLOps Principles",
+    "objectID": "posts/2024-06-11-guinness-student-t-test/index.html",
+    "href": "posts/2024-06-11-guinness-student-t-test/index.html",
+    "title": "How the Guinness Brewery Invented the Most Important Statistical Method in Science",
     "section": "",
-    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\n\n\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
+    "text": "Original Blog Post: How the Guinness Brewery Invented the Most Important Statistical Method in Science  Authors: Jack Murtagh (from Scientific American)  Published: 2024-05-25\n\n\n\n\n\nMy summary:\nWhat does beer have to do with statistical significance?\nIn this article from Scientific American, Jack Murtagh discusses the origins of one of the most common tests of statistical significance, the t-test.\nAround the start of the 20th century, Guinness wanted to improve the consistency of their products as they continued to expand worldwide. So, they hired a team to experiment and research how to improve their products.\nOne issue that kept coming up was small sample sizes. In other words, if they are assessing the quality of hops, instead of testing every flower in a crop, they wanted to test a small, random sample.\n\n\nTherefore, the head experimental brewer at Guinness, William Sealy Gosset, invented the t-test.\n\n\nIf you need a review of the t-test and P-values, with some illustrations, take a look at the article.\nFun fact: Gosset published under the pseudonym “Student”, and therefore, the t-test is often referred to as the Student’s t-test, even today.\nHere is the link again to the article for more details: How the Guinness Brewery Invented the Most Important Statistical Method in Science"
+  },
+  {
+    "objectID": "posts/2024-06-02-doordash-time-series-holidays/index.html",
+    "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
+    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
+    "section": "",
+    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\n\n\n\n\n\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
+  },
+  {
+    "objectID": "posts/2024-06-10-history-data-science/index.html",
+    "href": "posts/2024-06-10-history-data-science/index.html",
+    "title": "A Brief History of Data Science",
+    "section": "",
+    "text": "Original Blog Post: A Brief History of Data Science  Authors: Daniel Capellupo, PhD  Published: 2020-11-17\n\n\nMy summary:\nThis is one of the few posts on this website that is from myself, the head curator.\nThis post goes through the history of data science, from the beginnings of statistics centuries ago, through today, where:\n\nStatistics, Data Analysis, and Coding converge to form a new career for the 21st century\n\nWhile many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nHere is the link again to their blog post for more details: A Brief History of Data Science"
   },
   {
     "objectID": "posts/2024-06-10-classification-metrics/index.html",

@@ -1,0 +1,34 @@
+---
+title: "Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison"
+description: 'Introduction to HDBSCAN with examples and code from Daniel Capellupo, PhD'
+categories: ['unsupervised learning', 'clustering']
+date: "2021-02-25"
+date-modified: "2024-06-14"
+image: "https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa511b156-94c5-4434-8e24-7331943a1fa4_1792x1344.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison](https://featuringdata.substack.com/p/12-clustering-deep-dive-part-2)** <br>
+Authors: Daniel Capellupo, PhD <br>
+Published: 2021-02-10
+:::
+::: {.hero-image}
+![](https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fa511b156-94c5-4434-8e24-7331943a1fa4_1792x1344.png)
+:::
+:::
+
+**My summary:**
+
+This post gives examples of different shaped clusters and looks at how k-Means
+handles these. It then compares how the HDBSCAN algorithm handles these
+different clustering scenarios. In general, HDBSCAN does quite well, even with
+the default hyperparameters.
+
+There is also [a Jupyter notebook](https://github.com/dancapellupo/featuring_data_blog/blob/master/clustering/clustering_part2_kmeans_hdbscan.ipynb)
+available with all the code used for generating the examples in this blog post.
+
+Here is the link again to their blog post for more details:
+[Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison](https://featuringdata.substack.com/p/12-clustering-deep-dive-part-2)

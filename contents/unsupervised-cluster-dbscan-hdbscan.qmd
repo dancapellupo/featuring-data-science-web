@@ -1,0 +1,25 @@
+---
+title: "Density-Based Clustering"
+listing:
+  - id: kmeans-hdbscan
+    contents: '../posts/2024-06-14-kmeans-clustering-metrics/index.qmd'
+    type: default
+page-layout: article
+---
+
+## Density-Based Clustering: DBSCAN, HDBSCAN
+
+### Comparing k-Means and HDBSCAN
+
+This post gives examples of different shaped clusters and looks at how k-Means
+handles these. It then compares how the HDBSCAN algorithm handles these
+different clustering scenarios. In general, HDBSCAN does quite well, even with
+the default hyperparameters.
+
+*Again, this is one of just a few posts on this site that is authored by
+myself.*
+<br>
+<br>
+
+:::{#kmeans-hdbscan}
+:::

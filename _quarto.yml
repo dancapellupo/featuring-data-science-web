@@ -44,6 +44,7 @@ website:
           - section: "Unsupervised Learning"
             contents:
               - contents/unsupervised-cluster-metrics.qmd
+              - contents/unsupervised-cluster-dbscan-hdbscan.qmd
           - section: "MLOps"
             contents:
               - contents/mlops.qmd
