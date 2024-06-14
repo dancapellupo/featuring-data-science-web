@@ -1,0 +1,59 @@
+---
+title: "How the Guinness Brewery Invented the Most Important Statistical Method in Science"
+description: 'A story of the invention of the t-test from Jack Murtagh of Scientific American'
+categories: ['statistics']
+date: "2024-05-25"
+date-modified: "2024-06-11"
+image: "https://static.scientificamerican.com/dam/m/160d9452d3384cc0/original/guinness_graphic1_desktop.png?w=2000"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[How the Guinness Brewery Invented the Most Important Statistical Method in Science](https://www.scientificamerican.com/article/how-the-guinness-brewery-invented-the-most-important-statistical-method-in/)** <br>
+Authors: Jack Murtagh (from Scientific American) <br>
+Published: 2024-05-25
+:::
+::: {.hero-image}
+![](https://static.scientificamerican.com/dam/m/160d9452d3384cc0/original/guinness_graphic1_desktop.png?w=2000)
+:::
+:::
+
+**My summary:**
+
+What does beer have to do with statistical significance?
+
+In this article from Scientific American, Jack Murtagh discusses the origins of
+one of the most common tests of statistical significance, the t-test.
+
+Around the start of the 20th century, Guinness wanted to improve the
+consistency of their products as they continued to expand worldwide. So, they
+hired a team to experiment and research how to improve their products.
+
+One issue that kept coming up was small sample sizes. In other words, if they
+are assessing the quality of hops, instead of testing every flower in a crop,
+they wanted to test a small, random sample.
+
+<!-- Then, comes the question of, if their quality metric does not match the desired
+number, does this indicate that the entire crop is actually bad? Or, maybe they
+were unlucky and this random sample that they picked out is bad, but the rest
+of the crop is okay? -->
+
+<!-- In comes the t-test, invented by William Sealy Gosset, the head experimental
+brewer at Guinness. -->
+Therefore, the head experimental brewer at Guinness, William Sealy Gosset,
+invented the t-test.
+
+<!-- Say we have some quality metric for this crop of hops, and we expect the value to be 8, but our random sample comes in at 6. If we assume that the full crop is normal, what is the probability that a random sample would have a value of 6, just by chance? -->
+
+<!-- Typically, if this probability is less than 5%, we identify the difference between the desired metric of 8 and the measured value of 6 as being statistically significant. -->
+
+If you need a review of the t-test and P-values, with some illustrations, take
+a look at the article.
+
+**Fun fact:** Gosset published under the pseudonym "Student", and therefore,
+the t-test is often referred to as the Student's t-test, even today.
+
+Here is the link again to the article for more details:
+[Title](Link)

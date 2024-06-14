@@ -2,8 +2,8 @@
 title: "Title"
 description: ''
 categories: ['']
-date: "2024-03-04"
-date-modified: "2024-06-02"
+date: "202X-00-00"
+date-modified: "2024-06-XX"
 image: "image_file_or_link.png"
 title-block-banner: false
 draft: true
@@ -14,7 +14,7 @@ draft: true
 **Original Blog Post:**
 **[Title](Link)** <br>
 Authors: NAMES (from COMPANY) <br>
-Published: 2023-08-31
+Published: 202X-00-00
 :::
 ::: {.hero-image}
 ![](image_file_or_link.png)

@@ -2,6 +2,7 @@
   {
     "listing": "/catalog.html",
     "items": [
+      "/posts/2024-06-11-guinness-student-t-test/index.html",
       "/posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
       "/posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
       "/posts/2024-06-02-doordash-time-series-holidays/index.html",
@@ -17,21 +18,28 @@
     ]
   },
   {
-    "listing": "/contents/supervised-neural-networks.html",
+    "listing": "/contents/mlops.html",
     "items": [
-      "/posts/2024-06-02-netflix-data-platform-autoremediation/index.html"
+      "/posts/2024-06-03-data-scientist-show-mlops/index.html"
     ]
   },
   {
-    "listing": "/contents/supervised-classification.html",
+    "listing": "/contents/supervised-tree-models.html",
     "items": [
-      "/posts/2024-06-10-classification-metrics/index.html"
+      "/posts/2024-06-05-beware-rf-feature-importance/index.html",
+      "/posts/2024-06-03-xgboost-resources/index.html",
+      "/posts/2024-06-02-doordash-time-series-holidays/index.html"
     ]
   },
   {
-    "listing": "/contents/dimensionality-reduction.html",
+    "listing": "/contents/index.html",
+    "items": []
+  },
+  {
+    "listing": "/contents/data-science-statistics.html",
     "items": [
-      "/posts/2024-06-02-LinkedIn-pca-nonlinear/index.html"
+      "/posts/2024-06-11-guinness-student-t-test/index.html",
+      "/posts/2024-06-11-most-important-statistics-50-years/index.html"
     ]
   },
   {
@@ -44,27 +52,21 @@
     ]
   },
   {
-    "listing": "/contents/data-science-statistics.html",
+    "listing": "/contents/dimensionality-reduction.html",
     "items": [
-      "/posts/2024-06-11-most-important-statistics-50-years/index.html"
+      "/posts/2024-06-02-LinkedIn-pca-nonlinear/index.html"
     ]
   },
   {
-    "listing": "/contents/index.html",
-    "items": []
-  },
-  {
-    "listing": "/contents/supervised-tree-models.html",
+    "listing": "/contents/supervised-classification.html",
     "items": [
-      "/posts/2024-06-05-beware-rf-feature-importance/index.html",
-      "/posts/2024-06-03-xgboost-resources/index.html",
-      "/posts/2024-06-02-doordash-time-series-holidays/index.html"
+      "/posts/2024-06-10-classification-metrics/index.html"
     ]
   },
   {
-    "listing": "/contents/mlops.html",
+    "listing": "/contents/supervised-neural-networks.html",
     "items": [
-      "/posts/2024-06-03-data-scientist-show-mlops/index.html"
+      "/posts/2024-06-02-netflix-data-platform-autoremediation/index.html"
     ]
   }
 ]

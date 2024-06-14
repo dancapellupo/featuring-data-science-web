@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-04-02">
-<meta name="description" content="Some thoughts about PCA from Shai Nisan, PhD and Prof.&nbsp;Hamid Karimi">
+<meta name="dcterms.date" content="2024-05-25">
+<meta name="description" content="A story of the invention of the t-test from Jack Murtagh of Scientific American">
 
-<title>Featuring Data Science - LinkedIn Post on PCA on Non-Linear Data</title>
+<title>Featuring Data Science - How the Guinness Brewery Invented the Most Important Statistical Method in Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,18 +131,15 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">LinkedIn Post on PCA on Non-Linear Data</h1>
+<h1 class="title">How the Guinness Brewery Invented the Most Important Statistical Method in Science</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">dimensionality reduction</div>
-    <div class="quarto-category">feature selection</div>
-    <div class="quarto-category">data visualization</div>
-    <div class="quarto-category">content:social</div>
+    <div class="quarto-category">statistics</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Some thoughts about PCA from Shai Nisan, PhD and Prof.&nbsp;Hamid Karimi
+    A story of the invention of the t-test from Jack Murtagh of Scientific American
   </div>
 </div>
 
@@ -153,14 +150,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">April 2, 2024</p>
+      <p class="date">May 25, 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 2, 2024</p>
+      <p class="date-modified">June 11, 2024</p>
     </div>
   </div>
     
@@ -173,26 +170,31 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="hero-banner">
 <div class="hero-text">
-<p><strong>Original LinkedIn Post:</strong> <br> Authors: <a href="https://www.linkedin.com/in/shainis/">Shai Nisan, PhD</a> <br> Published: ~2024-04-02</p>
+<p><strong>Original Blog Post:</strong> <strong><a href="https://www.scientificamerican.com/article/how-the-guinness-brewery-invented-the-most-important-statistical-method-in/">How the Guinness Brewery Invented the Most Important Statistical Method in Science</a></strong> <br> Authors: Jack Murtagh (from Scientific American) <br> Published: 2024-05-25</p>
 </div>
 <div class="hero-image">
-<p><a href="Screenshot-2024-06-02-Post.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Screenshot-2024-06-02-Post.png" class="img-fluid"></a></p>
+<p><a href="https://static.scientificamerican.com/dam/m/160d9452d3384cc0/original/guinness_graphic1_desktop.png?w=2000" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="https://static.scientificamerican.com/dam/m/160d9452d3384cc0/original/guinness_graphic1_desktop.png?w=2000" class="img-fluid"></a></p>
 </div>
 </div>
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7175235785850249216" height="738" width="504" frameborder="0" allowfullscreen="" title="Embedded post">
-</iframe>
-<p><br> <strong>There are some interesting comments, including this one:</strong></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="Screenshot-2024-06-02-Top-Comment.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2" title="LinkedIn Comment"><img src="Screenshot-2024-06-02-Top-Comment.png" class="img-fluid figure-img" alt="LinkedIn Comment"></a></p>
-<figcaption>LinkedIn Comment</figcaption>
-</figure>
-</div>
+<p><strong>My summary:</strong></p>
+<p>What does beer have to do with statistical significance?</p>
+<p>In this article from Scientific American, Jack Murtagh discusses the origins of one of the most common tests of statistical significance, the t-test.</p>
+<p>Around the start of the 20th century, Guinness wanted to improve the consistency of their products as they continued to expand worldwide. So, they hired a team to experiment and research how to improve their products.</p>
+<p>One issue that kept coming up was small sample sizes. In other words, if they are assessing the quality of hops, instead of testing every flower in a crop, they wanted to test a small, random sample.</p>
+<!-- Then, comes the question of, if their quality metric does not match the desired
+number, does this indicate that the entire crop is actually bad? Or, maybe they
+were unlucky and this random sample that they picked out is bad, but the rest
+of the crop is okay? -->
+<!-- In comes the t-test, invented by William Sealy Gosset, the head experimental
+brewer at Guinness. -->
+<p>Therefore, the head experimental brewer at Guinness, William Sealy Gosset, invented the t-test.</p>
+<!-- Say we have some quality metric for this crop of hops, and we expect the value to be 8, but our random sample comes in at 6. If we assume that the full crop is normal, what is the probability that a random sample would have a value of 6, just by chance? -->
+<!-- Typically, if this probability is less than 5%, we identify the difference between the desired metric of 8 and the measured value of 6 as being statistically significant. -->
+<p>If you need a review of the t-test and P-values, with some illustrations, take a look at the article.</p>
+<p><strong>Fun fact:</strong> Gosset published under the pseudonym “Student”, and therefore, the t-test is often referred to as the Student’s t-test, even today.</p>
+<p>Here is the link again to the article for more details: <a href="Link">Title</a></p>
 
 
-<div class="hidden" aria-hidden="true">
-<span class="glightbox-desc lightbox-desc-2">LinkedIn Comment</span>
-</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -605,7 +607,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;

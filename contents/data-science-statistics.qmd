@@ -1,6 +1,9 @@
 ---
 title: "Statistics"
 listing:
+  - id: stat-sig
+    contents: '../posts/2024-06-11-guinness-student-t-test/index.qmd'
+    type: default
   - id: top-8
     contents:
     - '../posts/2024-06-11-most-important-statistics-50-years/index.qmd'
@@ -9,6 +12,20 @@ page-layout: article
 ---
 
 ## Statistics Topics for Data Scientists
+
+### Statistical Significance
+
+As data scientists, sometimes are analysis requires assessing statistical
+significance. Maybe it is an A/B test, and we need to determine if one option
+is actually better at achieving whatever KPI we might be after.
+
+Perhaps the most common test for statistical significance is the Student's
+t-test, and it all started at Guinness:
+<br>
+<br>
+
+:::{#top-8}
+:::
 
 ### General Topics
 
