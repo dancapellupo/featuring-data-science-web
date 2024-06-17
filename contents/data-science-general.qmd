@@ -6,8 +6,13 @@ listing:
     - '../posts/2024-06-10-history-data-science/index.qmd'
     - '../posts/2024-06-10-ml-versus-statistics/index.qmd'
     type: default
+  - id: intuition
+    contents:
+    - '../posts/2024-06-16-data-intuition/index.qmd'
+    type: default
+    fields: [date, title, description]
   - id: rules
-    contents: 
+    contents:
     - '../posts/2024-06-05-capital-one-rules-vs-ml/index.qmd'
     - '../posts/2024-06-03-rules-and-ml/index.qmd'
     type: default
@@ -42,6 +47,22 @@ the way a machine learning practitioner will approach that same problem.
 :::{#history}
 :::
 
+### Approaching Data Science Problems
+
+While it may seem strange to discuss this when *data* and *science* are in the
+name, there is some amount of *intuition* that comes into play in data science,
+and certainly when analyses and results are handed over to people / teams who
+are more on the business side of things.
+
+Here below, I summarize three blog posts that try to tackle this idea of
+*intuition* in data science. It is important to think about where intuition
+most often is relied upon and how much practitioners rely on it.
+<br>
+<br>
+
+:::{#intuition}
+:::
+
 ### Rules-Based Engines to Machine Learning
 
 Two articles below describe considerations when considering whether to
@@ -53,6 +74,7 @@ learning, or a combination of the two.
 :::{#rules}
 :::
 
-You can read about a recent, real-life use case from Netflix in the
+You can read about a recent, real-life use case of combining rules with ML from
+Netflix in the
 [section on neural networks](supervised-neural-networks.qmd#real-life-use-cases-of-neural-networks).
 

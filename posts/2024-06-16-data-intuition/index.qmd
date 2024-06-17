@@ -1,0 +1,70 @@
+---
+title: "Defining Data Intuition"
+description: 'Two blog posts on data intuition from Ryan Harter and Harvard Business'
+categories: ['data science:general']
+date: "2023-01-06"
+date-modified: "2024-06-16"
+# image: "image_file_or_link.png"
+title-block-banner: false
+# draft: true
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[Defining Data Intuition](https://blog.harterrt.com/data_intuition.html)** <br>
+Authors: Ryan T. Harter (from Shopify) <br>
+Published: 2020-10-20
+
+**Original Blog Post:**
+**[Data and Intuition: Good Decisions Need Both](https://www.harvardbusiness.org/data-and-intuition-good-decisions-need-both/)** <br>
+Authors: Marcy Farrell (from Harvard Business Publishing) <br>
+Published: 2023-01-06
+:::
+<!-- ::: {.hero-image}
+![](image_file_or_link.png)
+::: -->
+:::
+
+**My summary:**
+
+For a field that has both 'data' and 'science' in its name, it may seem
+out-of-place to bring in 'intuition'. But, as these blog posts point out, there
+are times when intuition inevitably comes into play. So, it's important to
+think about where we rely on intuition and how much we (should) rely on
+intuition and in which contexts.
+
+The [blog post from Harvard Business](https://www.harvardbusiness.org/data-and-intuition-good-decisions-need-both/)
+is looking, not surprisingly, from the business side of things and how to make
+decisions when the data is not always clear-cut or does not point clearly in
+one direction or another.
+
+The [post from Ryan Harter](https://blog.harterrt.com/data_intuition.html) is
+focused more specifically on how to look at the results of a specific analysis.
+He gives the following definition for *data intuition*:
+
+> Data Intuition is a resilience to misleading data and analyses.
+
+Essentially, we perform a certain analysis, but based on experience, have a
+sense of whether something does not seem right and then double-check the steps
+of, or the logic behind, the analysis.
+
+To bring these ideas together, here is a bonus third
+[blog post from Brandon Cosley](https://towardsdatascience.com/a-case-for-intuition-in-data-science-e1241e968a1e).
+He breaks down intuition in different ways. For example, while data scientists
+do not necessarily know how to derive from scratch all the algorthms that they
+work with, they still have an *intuition* into how they work.
+
+To recap, intuition comes into play throughout the data science process:
+
+1. At the beginning of an analysis / project, one cannot realistically try
+every statistical test or every ML model, so one must rely on some *intuition*
+to decide where to start and to focus one's efforts.
+
+2. Once you have results of an analysis or ML model, how do you determine when
+you are done and have reliable results?
+
+3. While the decision-making on the business side might come from a level above
+the data science team, in any case, some intuition is likely to be relied upon
+alongside the data analysis performed.
+

@@ -101,6 +101,34 @@ ul.task-list li input[type="checkbox"] {
   
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-intuition .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-intuition'] = new List('listing-intuition', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-rules .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
@@ -371,6 +399,7 @@ window.Quarto = {
   <li><a href="#history-approaching-data-science-problems-and-other-general-topics" id="toc-history-approaching-data-science-problems-and-other-general-topics" class="nav-link active" data-scroll-target="#history-approaching-data-science-problems-and-other-general-topics">History, Approaching Data Science Problems, and Other General Topics</a>
   <ul class="collapse">
   <li><a href="#history-of-data-science" id="toc-history-of-data-science" class="nav-link" data-scroll-target="#history-of-data-science">History of Data Science</a></li>
+  <li><a href="#approaching-data-science-problems" id="toc-approaching-data-science-problems" class="nav-link" data-scroll-target="#approaching-data-science-problems">Approaching Data Science Problems</a></li>
   <li><a href="#rules-based-engines-to-machine-learning" id="toc-rules-based-engines-to-machine-learning" class="nav-link" data-scroll-target="#rules-based-engines-to-machine-learning">Rules-Based Engines to Machine Learning</a></li>
   </ul></li>
   </ul>
@@ -464,6 +493,38 @@ No matching items
 </div>
 </div>
 </section>
+<section id="approaching-data-science-problems" class="level3">
+<h3 class="anchored" data-anchor-id="approaching-data-science-problems">Approaching Data Science Problems</h3>
+<p>While it may seem strange to discuss this when <em>data</em> and <em>science</em> are in the name, there is some amount of <em>intuition</em> that comes into play in data science, and certainly when analyses and results are handed over to people / teams who are more on the business side of things.</p>
+<p>Here below, I summarize three blog posts that try to tackle this idea of <em>intuition</em> in data science. It is important to think about where intuition most often is relied upon and how much practitioners rely on it. <br> <br></p>
+<div id="listing-intuition" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="data science:general" data-listing-date-sort="1672981200000" data-listing-file-modified-sort="1718590222789" data-listing-date-modified-sort="1718510400000" data-listing-reading-time-sort="2" data-listing-word-count-sort="331">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-06-16-data-intuition/index.html" class="no-external">Defining Data Intuition</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-06-16-data-intuition/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-06-16-data-intuition/index.html" class="no-external">Two blog posts on data intuition from Ryan Harter and Harvard Business</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2024-06-16-data-intuition/index.html" class="no-external">
+<div class="listing-date">
+Jan 6, 2023
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
 <section id="rules-based-engines-to-machine-learning" class="level3">
 <h3 class="anchored" data-anchor-id="rules-based-engines-to-machine-learning">Rules-Based Engines to Machine Learning</h3>
 <p>Two articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two. <br> <br></p>
@@ -514,7 +575,7 @@ Oct 9, 2020
 No matching items
 </div>
 </div>
-<p>You can read about a recent, real-life use case from Netflix in the <a href="../contents/supervised-neural-networks.html#real-life-use-cases-of-neural-networks">section on neural networks</a>.</p>
+<p>You can read about a recent, real-life use case of combining rules with ML from Netflix in the <a href="../contents/supervised-neural-networks.html#real-life-use-cases-of-neural-networks">section on neural networks</a>.</p>
 
 
 
