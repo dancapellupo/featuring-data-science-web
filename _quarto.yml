@@ -59,5 +59,6 @@ format:
     css: styles.css
     toc: true
     lightbox: true
+    include-after-body: analytics/count.html
 
 
