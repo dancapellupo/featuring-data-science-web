@@ -1,0 +1,37 @@
+---
+title: "SHAP Is Not All You Need"
+description: 'Three blog posts about SHAP and alternatives to consider from ... and ...'
+categories: ['supervised learning', 'model explainability']
+date: "2024-06-18"
+date-modified: "2024-06-XX"
+image: "image_file_or_link.png"
+title-block-banner: false
+draft: true
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[Title](Link)** <br>
+Authors: NAMES (from COMPANY) <br>
+Published: 202X-00-00
+:::
+::: {.hero-image}
+![](image_file_or_link.png)
+:::
+:::
+
+**My summary:**
+
+The bottom line from these posts is that it is important to first understand
+what it is you are looking to obtain in terms of model explainability / 
+interpretability. In some scenarios, SHAP may be useful and give the insight
+you are looking for, whereas in other scenarios it will fall short.
+
+From 
+
+
+
+
+Here is the link again to their blog post for more details:
+[Title](Link)

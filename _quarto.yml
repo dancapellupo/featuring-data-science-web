@@ -48,6 +48,9 @@ website:
           - section: "MLOps"
             contents:
               - contents/mlops.qmd
+          - section: "News"
+            contents:
+              - contents/news.qmd
           # - section: "Index"
           #   href: catalog.qmd
           - catalog.qmd

@@ -74,5 +74,10 @@
 # - title: Responsible AI and Explainability
 #   subtitle: Considerations for Fairness in Models
 
+- title: Recent News
+  subtitle: News and Announcements in Data
+  links:
+    - text: Latest News Updates
+      href: news.qmd
 
 

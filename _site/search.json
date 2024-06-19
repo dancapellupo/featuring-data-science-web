@@ -151,42 +151,42 @@
     ]
   },
   {
-    "objectID": "contents/supervised-classification.html",
-    "href": "contents/supervised-classification.html",
-    "title": "Supervised Learning: Classification",
+    "objectID": "contents/news.html",
+    "href": "contents/news.html",
+    "title": "Latest News Updates",
     "section": "",
-    "text": "[Work in Progress]\n[Some content about Supervised Learning.]  \n\n\nMetrics\n \n\n\n\n\n\n\n\n\n\n\nMetrics for Multi-Class Classification: an Overview\n\n\n\n\n\n\nsupervised learning\n\n\nclassification\n\n\nstatistics\n\n\narXiv\n\n\n\nFrom accuracy to Cohen-Kappa from Margherita Grandini et al. at CRIF\n\n\n\n\n\nAug 14, 2020\n\n\n\n\n\n\nNo matching items",
+    "text": "Snowflake and Databricks Summits (June 2024)\n\n\n\n\n\n\nnews\n\n\ndata engineering\n\n\ncontent:social\n\n\n\nThe main takeaways and major announcements from Tristan Handy\n\n\n\n\n\nJun 16, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "Supervised Learning",
-      "Supervised Learning: Classification"
+      "News",
+      "Latest News Updates"
     ]
   },
   {
-    "objectID": "contents/dimensionality-reduction.html",
-    "href": "contents/dimensionality-reduction.html",
-    "title": "Dimensionality Reduction",
+    "objectID": "contents/data-science-statistics.html",
+    "href": "contents/data-science-statistics.html",
+    "title": "Statistics",
     "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "As data scientists, sometimes our analysis requires assessing statistical significance. Maybe it is an A/B test, and we need to determine if one option is actually better at achieving whatever KPI we might be after.\nPerhaps the most common test for statistical significance is the Student’s t-test, and it all started at Guinness:  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA story of the invention of the t-test from Jack Murtagh of Scientific American\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThis first article is a paper by a statistics professor and a computer science professor about what they consider to be the most important ideas in statistics from the past half-century. Some of these topics will look familiar to data scientists, like regularization. This follows nicely from the previous page, continuing to look at the connections between statistics and machine learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari\n\n\n\n\n\nJun 3, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
+      "General Data Science",
+      "Statistics"
     ]
   },
   {
-    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "title": "Dimensionality Reduction",
+    "objectID": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
+    "href": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
+    "title": "Statistics",
     "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "As data scientists, sometimes our analysis requires assessing statistical significance. Maybe it is an A/B test, and we need to determine if one option is actually better at achieving whatever KPI we might be after.\nPerhaps the most common test for statistical significance is the Student’s t-test, and it all started at Guinness:  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA story of the invention of the t-test from Jack Murtagh of Scientific American\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThis first article is a paper by a statistics professor and a computer science professor about what they consider to be the most important ideas in statistics from the past half-century. Some of these topics will look familiar to data scientists, like regularization. This follows nicely from the previous page, continuing to look at the connections between statistics and machine learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari\n\n\n\n\n\nJun 3, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
+      "General Data Science",
+      "Statistics"
     ]
   },
   {
@@ -216,29 +216,42 @@
     ]
   },
   {
-    "objectID": "contents/data-science-statistics.html",
-    "href": "contents/data-science-statistics.html",
-    "title": "Statistics",
+    "objectID": "contents/dimensionality-reduction.html",
+    "href": "contents/dimensionality-reduction.html",
+    "title": "Dimensionality Reduction",
     "section": "",
-    "text": "As data scientists, sometimes our analysis requires assessing statistical significance. Maybe it is an A/B test, and we need to determine if one option is actually better at achieving whatever KPI we might be after.\nPerhaps the most common test for statistical significance is the Student’s t-test, and it all started at Guinness:  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA story of the invention of the t-test from Jack Murtagh of Scientific American\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThis first article is a paper by a statistics professor and a computer science professor about what they consider to be the most important ideas in statistics from the past half-century. Some of these topics will look familiar to data scientists, like regularization. This follows nicely from the previous page, continuing to look at the connections between statistics and machine learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari\n\n\n\n\n\nJun 3, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "General Data Science",
-      "Statistics"
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
     ]
   },
   {
-    "objectID": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
-    "href": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
-    "title": "Statistics",
+    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "title": "Dimensionality Reduction",
     "section": "",
-    "text": "As data scientists, sometimes our analysis requires assessing statistical significance. Maybe it is an A/B test, and we need to determine if one option is actually better at achieving whatever KPI we might be after.\nPerhaps the most common test for statistical significance is the Student’s t-test, and it all started at Guinness:  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA story of the invention of the t-test from Jack Murtagh of Scientific American\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThis first article is a paper by a statistics professor and a computer science professor about what they consider to be the most important ideas in statistics from the past half-century. Some of these topics will look familiar to data scientists, like regularization. This follows nicely from the previous page, continuing to look at the connections between statistics and machine learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari\n\n\n\n\n\nJun 3, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "General Data Science",
-      "Statistics"
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
+    ]
+  },
+  {
+    "objectID": "contents/supervised-classification.html",
+    "href": "contents/supervised-classification.html",
+    "title": "Supervised Learning: Classification",
+    "section": "",
+    "text": "[Work in Progress]\n[Some content about Supervised Learning.]  \n\n\nMetrics\n \n\n\n\n\n\n\n\n\n\n\nMetrics for Multi-Class Classification: an Overview\n\n\n\n\n\n\nsupervised learning\n\n\nclassification\n\n\nstatistics\n\n\narXiv\n\n\n\nFrom accuracy to Cohen-Kappa from Margherita Grandini et al. at CRIF\n\n\n\n\n\nAug 14, 2020\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Supervised Learning",
+      "Supervised Learning: Classification"
     ]
   },
   {

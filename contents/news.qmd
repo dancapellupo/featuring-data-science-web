@@ -1,0 +1,12 @@
+---
+title: "Latest News Updates"
+listing:
+  contents: "../posts/*/*.qmd"
+  type: default
+  sort: "date desc"
+  categories: true
+  include:
+    categories: "{news}*"
+page-layout: article
+---
+
