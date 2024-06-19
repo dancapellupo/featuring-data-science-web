@@ -1,282 +1,88 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Featuring Data Science",
     "section": "",
-    "text": "This website was created by and is actively maintained by Dan Capellupo. I am a former PhD astronomer, and I have now been a data scientist for over 6 years.\nI will be happy to hear any feedback you have. If you have any comments on any of the articles I post about on this site, please let me know and I can add them to the articles.\nIf you know of any articles appropriate for an experienced DS audience, also please send those my way!"
-  },
-  {
-    "objectID": "posts/2024-06-05-capital-one-rules-vs-ml/index.html",
-    "href": "posts/2024-06-05-capital-one-rules-vs-ml/index.html",
-    "title": "A Modern Dilemma: When to Use Rules vs. Machine Learning",
-    "section": "",
-    "text": "Original Blog Post: A Modern Dilemma: When to Use Rules vs. Machine Learning  Authors: Andrew Bonham (from Capital One)  Published: 2023-08-31\n\n\nMy summary:\nThe post begins with some discussion of the principles of business logic.\nAbout halfway down the page is a section entitled Guidance for When to Use a Rules Engine vs. Machine Learning, which gives some of the general points to consider for this question.\nThe next section, Patterns for Using Machine Learning and Rules Engines Together gives some concrete ideas of how one might combine the two:\n\nPattern 1: Leverage machine learning outputs as an input into rules\n\n\nPattern 2: Leverage rule outputs as a feature input into machine learning models\n\n\nPattern 3: Leverage both rule and machine learning outputs as inputs\n\nAs of 2024-06-05, this post has 122 “claps” on Medium.\nHere is the link again to their blog post for more details: A Modern Dilemma: When to Use Rules vs. Machine Learning"
-  },
-  {
-    "objectID": "posts/2024-06-11-most-important-statistics-50-years/index.html",
-    "href": "posts/2024-06-11-most-important-statistics-50-years/index.html",
-    "title": "What are the most important statistical ideas of the past 50 years?",
-    "section": "",
-    "text": "Original Paper: What are the most important statistical ideas of the past 50 years?  Authors: Andrew Gelman and Aki Vehtari  Published: 2021-06-03\n\n\n\nMy summary:\nA statistics professor, Andrew Gelman, from Columbia University, and a computer science professor, Aki Vehtari, from Aalto University, look at the top statistical ideas of the past half-century.\nHere is their list:\n\nCounterfactual Causal Inference\nBootstrapping and Simulation-Based Inference\nOverparameterized Models and Regularization\nMultilevel, or Hierarchical, Models\nGeneric Computation Algorithms\nAdaptive Decision Analysis\nRobust Inference\nExploratory Data Analysis\n\nConnection to Machine Learning and Deep Learning\nOne common thread among many of these ideas is how they take advantage of the advances in computing over the past 50 years. Iterative algorithms, like bootstrapping, become practical when a computer can relatively quickly run multiple iterations of the same experiment.\nA lot of the statistics ideas here have found applications in machine learning. Number 3 on the list above, overparameterized models and regularization, is central to machine learning and deep learning. According to Gelman and Vehtari, “a major change in statistics since the 1970s, coming from many different directions, is the idea of fitting a model with a large number of parameters — sometimes more parameters than data points — using some regularization procedure to get stable estimates and good predictions.” One of the biggest challenges in machine learning and deep learning is overfitting, where we train a model that performs amazingly well on our training dataset, but performs poorly on our unseen holdout dataset. Regularization, of different varieties, is used widely by data scientists to address overfitting.\nFurthermore, bootstrapping, which is number 2 on Gelman and Vehtari’s list, is an important component of random forest models. In random forest, an ensemble of trees is built, where each tree uses a bootstrap sample from the original training set. This helps to control overfitting, as each tree in the ensemble is trained on a slightly different version of the original dataset.\nIn terms of number 6 on the list, a relatively famous example of adaptive decision analysis these days is reinforcement learning.\nInteresting to see exploratory data analysis on Gelman and Vehtari’s list (coming in at number 8), but it certainly falls within the realm of statistics, and again, advances in computing, and the proliferation of personal computers, allows the average researcher or analyst to generate a range of plots, much more easily than if one is creating plots with pen and paper. The ease with which plots can be made with various tools means there is little excuse not to perform a rigorous EDA on your dataset before going to the modeling phase.\nOther Statistical Methods\nThe first item on Gelman and Vehtari’s list is counterfactual causal inference. According to the Stanford Encyclopedia of Philosophy, “the basic idea of counterfactual theories of causation is that the meaning of causal claims can be explained in terms of counterfactual conditionals of the form ‘If A had not occurred, C would not have occurred’”.\nHere is the link again to their paper for more details: What are the most important statistical ideas of the past 50 years?"
-  },
-  {
-    "objectID": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
-    "href": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
-    "title": "Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform",
-    "section": "",
-    "text": "Original Blog Post: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform  Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Ristow, Haoyuan Wang, Snehal Chennuru, Pawan Dixit (from Netflix)  Published: 2023-08-31\n\n\n\n\n\nMy summary:\nThis blog post from Netflix, where they are using ML to supplement a rules-based approach to identifying errors as they occur in their data platforms and sometimes handle those errors automatically (“auto remediation”).\n\nAt Netflix, hundreds of thousands of workflows and millions of jobs are running per day across multiple layers of the big data platform.\n\nWith such a high level of activity in their data platform, even a small percentage of errors can increase costs and require considerable human effort to diagnosis and address errors.\nNetflix started addressing this already with a rules-based engine they call Pensive, which classifies errors, helps determine whether to retry the job, and provides insights to human engineers who might need to remediate the job failure.\nThe rules-based engine however requires domain experts to create and test new rules as new errors and scenarios appear. Even with over 300 rules, half of all errors are still unclassified by this algorithm.\nTherefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:\n\nleverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…\n\nIn practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.\nWith about 600 memory configuration errors occurring every month in their system, manually corrected these errors can be quite time-consuming, especially since it is not always straightforward what the correct configuration should be. Too little memory causes a “Out-of-Memory” error, and too much memory is not an efficient usage of cluster resources.\nTherefore, they train a standard neural network (in other words, a feedforward multilayer perceptron - MLP), with two heads. Two heads means that the model has two outputs, so that they can simultaneously predict both the probability of failure and computation cost of retrying the job with a certain memory configuration.\nFinally, they use a Bayesian optimization where the neural network is run multiple times with features based on the specific error and different options for the Spark run configuration, and the best combination of failure probability and computation cost is determined.\nSo far, this ML algorithm has automatically solved 56% of memory configuration errors and substantially reduced costs related to these errors.\nHere is the link again to their blog post for more details: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform"
-  },
-  {
-    "objectID": "posts/2024-06-14-kmeans-clustering-metrics/index.html",
-    "href": "posts/2024-06-14-kmeans-clustering-metrics/index.html",
-    "title": "Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters",
-    "section": "",
-    "text": "Original Blog Post: Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters  Authors: Daniel Capellupo, PhD  Published: 2021-02-10\n\n\n\n\n\nMy summary:\nThis post goes through several examples of using k-Means clustering, and four different clustering metrics / techniques that can aide in choosing the best / ideal number of clusters.\nThere is also a Jupyter notebook available with all the code used for generating the examples in this blog post.\nHere is the link again to their blog post for more details: Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters"
-  },
-  {
-    "objectID": "posts/2024-06-03-xgboost-resources/index.html",
-    "href": "posts/2024-06-03-xgboost-resources/index.html",
-    "title": "XGBoost Resources",
-    "section": "",
-    "text": "XGBoost Resources  Author: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\n\n\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
-  },
-  {
-    "objectID": "posts/2024-06-14-hdbscan-clustering/index.html",
-    "href": "posts/2024-06-14-hdbscan-clustering/index.html",
-    "title": "Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison",
-    "section": "",
-    "text": "Original Blog Post: Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison  Authors: Daniel Capellupo, PhD  Published: 2021-02-10\n\n\n\n\n\nMy summary:\nThis post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nThere is also a Jupyter notebook available with all the code used for generating the examples in this blog post.\nHere is the link again to their blog post for more details: Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison"
-  },
-  {
-    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
-    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
-    "title": "What Data Scientists Need to Know about MLOps Principles",
-    "section": "",
-    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\n\n\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
-  },
-  {
-    "objectID": "posts/2024-06-14-beautiful-data-visualization-matplotlib/index.html",
-    "href": "posts/2024-06-14-beautiful-data-visualization-matplotlib/index.html",
-    "title": "How to make beautiful data visualizations in Python with matplotlib",
-    "section": "",
-    "text": "Original Blog Post: How to make beautiful data visualizations in Python with matplotlib  Authors: Dr. Randal Olson  Published: 2014-06-28\n\n\n\n\n\nMy summary:\nWhat qualifies as a “beautiful” data visualization is certainly subjective. And, some may disagree with certain decisions made by the author of this post, like avoiding grid lines that could help guide the eye.\nBut, it is always helpful to have real coding examples of different plotting styles to use as inspiration or to incorporate into one’s own visualization code.\nHere is the link again to their blog post for more details: How to make beautiful data visualizations in Python with matplotlib"
-  },
-  {
-    "objectID": "posts/2024-06-11-guinness-student-t-test/index.html",
-    "href": "posts/2024-06-11-guinness-student-t-test/index.html",
-    "title": "How the Guinness Brewery Invented the Most Important Statistical Method in Science",
-    "section": "",
-    "text": "Original Blog Post: How the Guinness Brewery Invented the Most Important Statistical Method in Science  Authors: Jack Murtagh (from Scientific American)  Published: 2024-05-25\n\n\n\n\n\nMy summary:\nWhat does beer have to do with statistical significance?\nIn this article from Scientific American, Jack Murtagh discusses the origins of one of the most common tests of statistical significance, the t-test.\nAround the start of the 20th century, Guinness wanted to improve the consistency of their products as they continued to expand worldwide. So, they hired a team to experiment and research how to improve their products.\nOne issue that kept coming up was small sample sizes. In other words, if they are assessing the quality of hops, instead of testing every flower in a crop, they wanted to test a small, random sample.\n\n\nTherefore, the head experimental brewer at Guinness, William Sealy Gosset, invented the t-test.\n\n\nIf you need a review of the t-test and P-values, with some illustrations, take a look at the article.\nFun fact: Gosset published under the pseudonym “Student”, and therefore, the t-test is often referred to as the Student’s t-test, even today.\nHere is the link again to the article for more details: How the Guinness Brewery Invented the Most Important Statistical Method in Science"
-  },
-  {
-    "objectID": "posts/2024-06-14-visualize-change-with-time/index.html",
-    "href": "posts/2024-06-14-visualize-change-with-time/index.html",
-    "title": "Awesome Strategies to Visualize Change with Time",
-    "section": "",
-    "text": "Original Blog Post: Awesome Strategies to Visualize Change with Time  Authors: Bo Yuan, PhD  Published: 2024-05-07\n\n\n\n\n\nMy summary:\nIn this blog post, the author presents some professional-looking plots, created in R, some of them inspired by sources like the Wall Street Journal. The author includes links to the R code for each plot.\nWhile this post is on Medium, the author also points to their website, DataBrewer.co, with even more code and examples.\nHere is the link again to their blog post for more details: Awesome Strategies to Visualize Change with Time"
-  },
-  {
-    "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
-    "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
-    "title": "Beware Default Random Forest Importances",
-    "section": "",
-    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\n\n\n\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
-  },
-  {
-    "objectID": "contents/data-visualization-code.html",
-    "href": "contents/data-visualization-code.html",
-    "title": "Data Visualization Code and Packages",
-    "section": "",
-    "text": "What makes a good plot is certainly subjective, but there are considerations that can make plots look more professional, as well as making them easier to read. All posts in this section include real code examples.\nThe first post here promotes the idea of “less is more” in creating visualizations, and even includes a gif that illustrates the effect of simplifying a standard bar chart. This post has Python/matplotlib code.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSome examples, with code, of color schemes and simplifying the plot display from Dr. Randal Olson\n\n\n\n\n\nJun 28, 2014\n\n\n\n\n\n\nNo matching items\n\n\nThis next example uses R code to produce visualizations of data that changes with time. Some compare some metrics between two different time periods, while there is also an example of a traditional time series line graph.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProfessional plots with links to R code from Bo Yuan, PhD\n\n\n\n\n\nMay 7, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "contents/data-visualization-code.html#data-visualization-code-and-packages",
-    "href": "contents/data-visualization-code.html#data-visualization-code-and-packages",
-    "title": "Data Visualization Code and Packages",
-    "section": "",
-    "text": "What makes a good plot is certainly subjective, but there are considerations that can make plots look more professional, as well as making them easier to read. All posts in this section include real code examples.\nThe first post here promotes the idea of “less is more” in creating visualizations, and even includes a gif that illustrates the effect of simplifying a standard bar chart. This post has Python/matplotlib code.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSome examples, with code, of color schemes and simplifying the plot display from Dr. Randal Olson\n\n\n\n\n\nJun 28, 2014\n\n\n\n\n\n\nNo matching items\n\n\nThis next example uses R code to produce visualizations of data that changes with time. Some compare some metrics between two different time periods, while there is also an example of a traditional time series line graph.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProfessional plots with links to R code from Bo Yuan, PhD\n\n\n\n\n\nMay 7, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "contents/supervised-neural-networks.html",
-    "href": "contents/supervised-neural-networks.html",
-    "title": "Neural Networks",
-    "section": "",
-    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "Featuring Data Science\n\nA Curated Catalog of Data Science Content\n\n\n\n\n\nPurpose of this Website\nThere are many data science newsletters, courses, podcasts, videos, conferences, etc. There’s discussions on social media. It’s hard to keep up with it all.\nThis website is intended to showcase content across a range of data science topics, that provides insight beyond or goes deeper into topics than what is typically found in online courses.\n\n\nIntended Audience\nThe goal is that anyone who has at least taken an introductory course in data science, as well as those with years of experience, will find this website useful.\n\n\nHow to use this Website\nThis website is made up of links to curated content from across the internet. A short summary of each piece of content appears here that outlines the main points of the content and what insights this content brings to the table.\nThere are two ways to navigate this site. At the top menu bar, there is the Table of Contents which organizes the content on this site like a book. It is organized by different topics/categories. Of course, there is some content that crosses categories, so some content may be linked to in different categories.\nThe other way is to go to the Full Catalog.\nThere is also a bonus third option, which is the search button at the top right, which gives a nice, convenient full-site search.",
     "crumbs": [
       "Table of Contents",
-      "Featuring Data Science",
-      "Supervised Learning",
-      "Neural Networks"
+      "Featuring Data Science"
     ]
   },
   {
-    "objectID": "contents/supervised-neural-networks.html#neural-networks",
-    "href": "contents/supervised-neural-networks.html#neural-networks",
-    "title": "Neural Networks",
+    "objectID": "posts/2024-06-10-ml-versus-statistics/index.html",
+    "href": "posts/2024-06-10-ml-versus-statistics/index.html",
+    "title": "Machine Learning vs. Statistics",
     "section": "",
-    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "Supervised Learning",
-      "Neural Networks"
-    ]
+    "text": "Original Blog Post: Machine Learning vs. Statistics  Authors: Tom Fawcett and Drew Hardin  Published: 2018-02-05\n\n\n\n\n\nMy summary:\nThis post is authored by a machine learning practitioner (Tom Fawcett) and a statistician (Drew Hardin), so they bring their unique perspectives and draw parallels and highlight differences between how ML practitioners and statisticians approach problems.\nHere are some highlights.\nStatistics\n\nIn statistics, the goal of modeling is approximating and then understanding the data-generating process, with the goal of answering the question you actually care about.\n\n\n[T]he Statistician is concerned primarily with model validity, accurate estimation of model parameters, and inference from the model. However, prediction of unseen data points, a major concern of Machine Learning, is less of a concern to the statistician. Statisticians have the techniques to do prediction, but these are just special cases of inference in general.\n\nMachine Learning\n\nIn Machine Learning, the predominant task is predictive modeling: the creation of models for the purpose of predicting labels of new examples.\n\n\nThe model does not represent a belief about or a commitment to the data generation process. Its purpose is purely functional.\n\n\nML practitioners are freed from worrying about difficult cases where assumptions are violated, yet the model may work anyway.\n\nHere is the link again to their blog post for more details: Machine Learning vs. Statistics"
   },
   {
-    "objectID": "contents/unsupervised-cluster-dbscan-hdbscan.html",
-    "href": "contents/unsupervised-cluster-dbscan-hdbscan.html",
-    "title": "Density-Based Clustering",
+    "objectID": "posts/2024-06-03-rules-and-ml/index.html",
+    "href": "posts/2024-06-03-rules-and-ml/index.html",
+    "title": "Combining Rule Engines and Machine Learning",
     "section": "",
-    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to HDBSCAN with examples and code from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 25, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "Original Blog Post: Combining Rule Engines and Machine Learning  Author: Neal Lathia  Published: 2020-10-09\n\n\nMy summary:\nThis blog post was written by Neal Lathia, who was Director of Machine Learning at Monzo at the time this was posted, and also has a PhD in recommender systems. He makes the point that instead of narrowly focusing on replacing all rules-based systems with ML, one needs to focus on how ML can “improve the outcomes of the entire system.”\n\nIf you can write a rule set that captures everything you need, then you don’t need machine learning!\n\nThere are cases where ML can actually enhance, instead of fully replace, rules-based systems. First, ML can be used to help design the rules. For example, an ML algorithm can be trained to predict a particular outcome, using whichever features are available. Then, one can look at which features were given the most weight by the model and use this information to design a rule, or set of rules.\n\nIn these cases, you don’t need to ship a model–you ship the insight that you got from that model, by writing rules.\n\nAlternatively, one can use ML in conjunction with rules as part of the same system. For example, if there is a case that does not fit any of the hard-coded rules, then this case can be sent to an ML algorithm that will make a decision instead.\nI recommend reading the whole post, but the main takeaway here is that while ML can be immensely useful in many cases, there are still times that hard-coded human decisions are needed and, perhaps more interestingly, there are really useful ways that ML and rules set by humans can be used together to achieve the best result for a given system.\nHere is the link again to their blog post for more details: Combining Rule Engines and Machine Learning"
+  },
+  {
+    "objectID": "posts/2024-06-10-classification-metrics/index.html",
+    "href": "posts/2024-06-10-classification-metrics/index.html",
+    "title": "Metrics for Multi-Class Classification: an Overview",
+    "section": "",
+    "text": "Original Blog Post: Metrics for Multi-Class Classification: an Overview  Authors: Margherita Grandini, Enrico Bagli, Giorgio Visani (from CRIF)  Published: 2020-08-14\n\n\n\n\n\nMy summary:\nThis paper is a must for anyone working on supervised, classification machine learning problems.\nThe paper goes into detail on classification metrics. The title specifies multi-class classification, but the text is relevant to binary classification as well.\nMany data scientists are likely aware of the F1-score and the confusion matrix, but probably fewer are familiar with the Cohen-Kappa score. This paper goes through many classification metrics and discusses the pros and cons of each, with concrete examples.\nHere is the link again to their paper for more details: Metrics for Multi-Class Classification: an Overview"
+  },
+  {
+    "objectID": "posts/2024-06-10-history-data-science/index.html",
+    "href": "posts/2024-06-10-history-data-science/index.html",
+    "title": "A Brief History of Data Science",
+    "section": "",
+    "text": "Original Blog Post: A Brief History of Data Science  Authors: Daniel Capellupo, PhD  Published: 2020-11-17\n\n\nMy summary:\nThis is one of the few posts on this website that is from myself, the head curator.\nThis post goes through the history of data science, from the beginnings of statistics centuries ago, through today, where:\n\nStatistics, Data Analysis, and Coding converge to form a new career for the 21st century\n\nWhile many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nHere is the link again to their blog post for more details: A Brief History of Data Science"
+  },
+  {
+    "objectID": "posts/2024-06-02-doordash-time-series-holidays/index.html",
+    "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
+    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
+    "section": "",
+    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\n\n\n\n\n\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
+  },
+  {
+    "objectID": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
+    "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
+    "title": "LinkedIn Post on PCA on Non-Linear Data",
+    "section": "",
+    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n\n\n\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment\n\n\n\n\n\nLinkedIn Comment"
+  },
+  {
+    "objectID": "posts/2024-06-16-data-intuition/index.html",
+    "href": "posts/2024-06-16-data-intuition/index.html",
+    "title": "Defining Data Intuition",
+    "section": "",
+    "text": "Original Blog Post: Defining Data Intuition  Authors: Ryan T. Harter (from Shopify)  Published: 2020-10-20\nOriginal Blog Post: Data and Intuition: Good Decisions Need Both  Authors: Marcy Farrell (from Harvard Business Publishing)  Published: 2023-01-06\n\n\n\nMy summary:\nFor a field that has both ‘data’ and ‘science’ in its name, it may seem out-of-place to bring in ‘intuition’. But, as these blog posts point out, there are times when intuition inevitably comes into play. So, it’s important to think about where we rely on intuition and how much we (should) rely on intuition and in which contexts.\nThe blog post from Harvard Business is looking, not surprisingly, from the business side of things and how to make decisions when the data is not always clear-cut or does not point clearly in one direction or another.\nThe post from Ryan Harter is focused more specifically on how to look at the results of a specific analysis. He gives the following definition for data intuition:\n\nData Intuition is a resilience to misleading data and analyses.\n\nEssentially, we perform a certain analysis, but based on experience, have a sense of whether something does not seem right and then double-check the steps of, or the logic behind, the analysis.\nTo bring these ideas together, here is a bonus third blog post from Brandon Cosley. He breaks down intuition in different ways. For example, while data scientists do not necessarily know how to derive from scratch all the algorthms that they work with, they still have an intuition into how they work.\nTo recap, intuition comes into play throughout the data science process:\n\nAt the beginning of an analysis / project, one cannot realistically try every statistical test or every ML model, so one must rely on some intuition to decide where to start and to focus one’s efforts.\nOnce you have results of an analysis or ML model, how do you determine when you are done and have reliable results?\nWhile the decision-making on the business side might come from a level above the data science team, in any case, some intuition is likely to be relied upon alongside the data analysis performed."
+  },
+  {
+    "objectID": "contents/unsupervised-cluster-metrics.html",
+    "href": "contents/unsupervised-cluster-metrics.html",
+    "title": "K-Means and Cluster Metrics",
+    "section": "",
+    "text": "K-Means is probably the first algorithm that comes to mind when someone mentions unsupervised learning or clustering.\nOne of the downsides of k-Means is that you need to determine how many clusters there should be. One way to do this is to run k-Mean multiple times, with different numbers of clusters, and use one of several metrics to determine which is the best clustering.\nThis post goes through 4 different techniques / metrics for determining the number of clusters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
       "Unsupervised Learning",
-      "Density-Based Clustering"
+      "K-Means and Cluster Metrics"
     ]
   },
   {
-    "objectID": "contents/unsupervised-cluster-dbscan-hdbscan.html#density-based-clustering-dbscan-hdbscan",
-    "href": "contents/unsupervised-cluster-dbscan-hdbscan.html#density-based-clustering-dbscan-hdbscan",
-    "title": "Density-Based Clustering",
+    "objectID": "contents/unsupervised-cluster-metrics.html#k-means-and-cluster-metrics",
+    "href": "contents/unsupervised-cluster-metrics.html#k-means-and-cluster-metrics",
+    "title": "K-Means and Cluster Metrics",
     "section": "",
-    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to HDBSCAN with examples and code from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 25, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "K-Means is probably the first algorithm that comes to mind when someone mentions unsupervised learning or clustering.\nOne of the downsides of k-Means is that you need to determine how many clusters there should be. One way to do this is to run k-Mean multiple times, with different numbers of clusters, and use one of several metrics to determine which is the best clustering.\nThis post goes through 4 different techniques / metrics for determining the number of clusters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
       "Unsupervised Learning",
-      "Density-Based Clustering"
-    ]
-  },
-  {
-    "objectID": "contents/data-science-statistics.html",
-    "href": "contents/data-science-statistics.html",
-    "title": "Statistics",
-    "section": "",
-    "text": "As data scientists, sometimes our analysis requires assessing statistical significance. Maybe it is an A/B test, and we need to determine if one option is actually better at achieving whatever KPI we might be after.\nPerhaps the most common test for statistical significance is the Student’s t-test, and it all started at Guinness:  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA story of the invention of the t-test from Jack Murtagh of Scientific American\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThis first article is a paper by a statistics professor and a computer science professor about what they consider to be the most important ideas in statistics from the past half-century. Some of these topics will look familiar to data scientists, like regularization. This follows nicely from the previous page, continuing to look at the connections between statistics and machine learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari\n\n\n\n\n\nJun 3, 2021\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "General Data Science",
-      "Statistics"
-    ]
-  },
-  {
-    "objectID": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
-    "href": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
-    "title": "Statistics",
-    "section": "",
-    "text": "As data scientists, sometimes our analysis requires assessing statistical significance. Maybe it is an A/B test, and we need to determine if one option is actually better at achieving whatever KPI we might be after.\nPerhaps the most common test for statistical significance is the Student’s t-test, and it all started at Guinness:  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA story of the invention of the t-test from Jack Murtagh of Scientific American\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThis first article is a paper by a statistics professor and a computer science professor about what they consider to be the most important ideas in statistics from the past half-century. Some of these topics will look familiar to data scientists, like regularization. This follows nicely from the previous page, continuing to look at the connections between statistics and machine learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari\n\n\n\n\n\nJun 3, 2021\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "General Data Science",
-      "Statistics"
-    ]
-  },
-  {
-    "objectID": "contents/data-science-general.html",
-    "href": "contents/data-science-general.html",
-    "title": "General Topics in Data Science",
-    "section": "",
-    "text": "While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nThis first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.\nAs a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post authored by myself.\nWith two big components of modern data science being statistics and machine learning, it is useful to think about the differences between the two, especially to understand different peoples’ approach to a problem. The way a statistician-by-training might approach a problem will likely be different than the way a machine learning practitioner will approach that same problem.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD\n\n\n\n\n\nNov 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifferent approaches to similar problems from Tom Fawcett and Drew Hardin\n\n\n\n\n\nFeb 5, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nWhile it may seem strange to discuss this when data and science are in the name, there is some amount of intuition that comes into play in data science, and certainly when analyses and results are handed over to people / teams who are more on the business side of things.\nHere below, I summarize three blog posts that try to tackle this idea of intuition in data science. It is important to think about where intuition most often is relied upon and how much practitioners rely on it.  \n\n\n\n\n\n\n\n\n\nTwo blog posts on data intuition from Ryan Harter and Harvard Business\n\n\n\n\n\nJan 6, 2023\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case of combining rules with ML from Netflix in the section on neural networks.",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "General Data Science",
-      "General Topics in Data Science"
-    ]
-  },
-  {
-    "objectID": "contents/data-science-general.html#history-approaching-data-science-problems-and-other-general-topics",
-    "href": "contents/data-science-general.html#history-approaching-data-science-problems-and-other-general-topics",
-    "title": "General Topics in Data Science",
-    "section": "",
-    "text": "While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nThis first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.\nAs a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post authored by myself.\nWith two big components of modern data science being statistics and machine learning, it is useful to think about the differences between the two, especially to understand different peoples’ approach to a problem. The way a statistician-by-training might approach a problem will likely be different than the way a machine learning practitioner will approach that same problem.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD\n\n\n\n\n\nNov 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifferent approaches to similar problems from Tom Fawcett and Drew Hardin\n\n\n\n\n\nFeb 5, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nWhile it may seem strange to discuss this when data and science are in the name, there is some amount of intuition that comes into play in data science, and certainly when analyses and results are handed over to people / teams who are more on the business side of things.\nHere below, I summarize three blog posts that try to tackle this idea of intuition in data science. It is important to think about where intuition most often is relied upon and how much practitioners rely on it.  \n\n\n\n\n\n\n\n\n\nTwo blog posts on data intuition from Ryan Harter and Harvard Business\n\n\n\n\n\nJan 6, 2023\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case of combining rules with ML from Netflix in the section on neural networks.",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "General Data Science",
-      "General Topics in Data Science"
-    ]
-  },
-  {
-    "objectID": "contents/dimensionality-reduction.html",
-    "href": "contents/dimensionality-reduction.html",
-    "title": "Dimensionality Reduction",
-    "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
-    ]
-  },
-  {
-    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "title": "Dimensionality Reduction",
-    "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
-    ]
-  },
-  {
-    "objectID": "contents/supervised-classification.html",
-    "href": "contents/supervised-classification.html",
-    "title": "Supervised Learning: Classification",
-    "section": "",
-    "text": "[Work in Progress]\n[Some content about Supervised Learning.]  \n\n\nMetrics\n \n\n\n\n\n\n\n\n\n\n\nMetrics for Multi-Class Classification: an Overview\n\n\n\n\n\n\nsupervised learning\n\n\nclassification\n\n\nstatistics\n\n\narXiv\n\n\n\nFrom accuracy to Cohen-Kappa from Margherita Grandini et al. at CRIF\n\n\n\n\n\nAug 14, 2020\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "Supervised Learning",
-      "Supervised Learning: Classification"
-    ]
-  },
-  {
-    "objectID": "contents/supervised.html",
-    "href": "contents/supervised.html",
-    "title": "General Supervised Learning Topics",
-    "section": "",
-    "text": "[Work in Progress]\n[Some content about Supervised Learning.]",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "Supervised Learning",
-      "General Supervised Learning Topics"
-    ]
-  },
-  {
-    "objectID": "contents/supervised-tree-models.html",
-    "href": "contents/supervised-tree-models.html",
-    "title": "Tree-Based ML Models",
-    "section": "",
-    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "Supervised Learning",
-      "Tree-Based ML Models"
-    ]
-  },
-  {
-    "objectID": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
-    "href": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
-    "title": "Tree-Based ML Models",
-    "section": "",
-    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Table of Contents",
-      "Featuring Data Science",
-      "Supervised Learning",
-      "Tree-Based ML Models"
+      "K-Means and Cluster Metrics"
     ]
   },
   {
@@ -306,89 +112,290 @@
     ]
   },
   {
-    "objectID": "contents/unsupervised-cluster-metrics.html",
-    "href": "contents/unsupervised-cluster-metrics.html",
-    "title": "K-Means and Cluster Metrics",
+    "objectID": "contents/supervised-tree-models.html",
+    "href": "contents/supervised-tree-models.html",
+    "title": "Tree-Based ML Models",
     "section": "",
-    "text": "K-Means is probably the first algorithm that comes to mind when someone mentions unsupervised learning or clustering.\nOne of the downsides of k-Means is that you need to determine how many clusters there should be. One way to do this is to run k-Mean multiple times, with different numbers of clusters, and use one of several metrics to determine which is the best clustering.\nThis post goes through 4 different techniques / metrics for determining the number of clusters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Supervised Learning",
+      "Tree-Based ML Models"
+    ]
+  },
+  {
+    "objectID": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
+    "href": "contents/supervised-tree-models.html#random-forest-xgboost-and-more",
+    "title": "Tree-Based ML Models",
+    "section": "",
+    "text": "The random forest algorithm has been around since the 90s, and according to Kaggle surveys, …  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThe XGBoost algorithm is slightly more recent.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSeries of four detailed videos about how XGBoost works from Josh Starmer at StatQuest\n\n\n\n\n\nMar 2, 2020\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nOther models that use an ensemble of decision trees include gradient boosting. This article below uses a gradient boosting machine (GBM) for time series prediction.\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA real example of time series forecasting from Chad Akkoyun and Zainab Danish at DoorDash\n\n\n\n\n\nAug 31, 2023\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Supervised Learning",
+      "Tree-Based ML Models"
+    ]
+  },
+  {
+    "objectID": "contents/supervised.html",
+    "href": "contents/supervised.html",
+    "title": "General Supervised Learning Topics",
+    "section": "",
+    "text": "[Work in Progress]\n[Some content about Supervised Learning.]",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Supervised Learning",
+      "General Supervised Learning Topics"
+    ]
+  },
+  {
+    "objectID": "contents/supervised-classification.html",
+    "href": "contents/supervised-classification.html",
+    "title": "Supervised Learning: Classification",
+    "section": "",
+    "text": "[Work in Progress]\n[Some content about Supervised Learning.]  \n\n\nMetrics\n \n\n\n\n\n\n\n\n\n\n\nMetrics for Multi-Class Classification: an Overview\n\n\n\n\n\n\nsupervised learning\n\n\nclassification\n\n\nstatistics\n\n\narXiv\n\n\n\nFrom accuracy to Cohen-Kappa from Margherita Grandini et al. at CRIF\n\n\n\n\n\nAug 14, 2020\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Supervised Learning",
+      "Supervised Learning: Classification"
+    ]
+  },
+  {
+    "objectID": "contents/dimensionality-reduction.html",
+    "href": "contents/dimensionality-reduction.html",
+    "title": "Dimensionality Reduction",
+    "section": "",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
+    ]
+  },
+  {
+    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "title": "Dimensionality Reduction",
+    "section": "",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
+    ]
+  },
+  {
+    "objectID": "contents/data-science-general.html",
+    "href": "contents/data-science-general.html",
+    "title": "General Topics in Data Science",
+    "section": "",
+    "text": "While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nThis first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.\nAs a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post authored by myself.\nWith two big components of modern data science being statistics and machine learning, it is useful to think about the differences between the two, especially to understand different peoples’ approach to a problem. The way a statistician-by-training might approach a problem will likely be different than the way a machine learning practitioner will approach that same problem.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD\n\n\n\n\n\nNov 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifferent approaches to similar problems from Tom Fawcett and Drew Hardin\n\n\n\n\n\nFeb 5, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nWhile it may seem strange to discuss this when data and science are in the name, there is some amount of intuition that comes into play in data science, and certainly when analyses and results are handed over to people / teams who are more on the business side of things.\nHere below, I summarize three blog posts that try to tackle this idea of intuition in data science. It is important to think about where intuition most often is relied upon and how much practitioners rely on it.  \n\n\n\n\n\n\n\n\n\nTwo blog posts on data intuition from Ryan Harter and Harvard Business\n\n\n\n\n\nJan 6, 2023\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case of combining rules with ML from Netflix in the section on neural networks.",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "General Data Science",
+      "General Topics in Data Science"
+    ]
+  },
+  {
+    "objectID": "contents/data-science-general.html#history-approaching-data-science-problems-and-other-general-topics",
+    "href": "contents/data-science-general.html#history-approaching-data-science-problems-and-other-general-topics",
+    "title": "General Topics in Data Science",
+    "section": "",
+    "text": "While many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nThis first article below goes through the history of data science, including its consituent parts - statistics, data analysis, machine learning, data science tools.\nAs a disclaimer, while most of the posts on this website are not connected to the curator of this site, this is one post authored by myself.\nWith two big components of modern data science being statistics and machine learning, it is useful to think about the differences between the two, especially to understand different peoples’ approach to a problem. The way a statistician-by-training might approach a problem will likely be different than the way a machine learning practitioner will approach that same problem.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n“Statistics, Data Analysis, and Coding converge to form a new career for the 21st century” from Daniel Capellupo, PhD\n\n\n\n\n\nNov 17, 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDifferent approaches to similar problems from Tom Fawcett and Drew Hardin\n\n\n\n\n\nFeb 5, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nWhile it may seem strange to discuss this when data and science are in the name, there is some amount of intuition that comes into play in data science, and certainly when analyses and results are handed over to people / teams who are more on the business side of things.\nHere below, I summarize three blog posts that try to tackle this idea of intuition in data science. It is important to think about where intuition most often is relied upon and how much practitioners rely on it.  \n\n\n\n\n\n\n\n\n\nTwo blog posts on data intuition from Ryan Harter and Harvard Business\n\n\n\n\n\nJan 6, 2023\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nTwo articles below describe considerations when considering whether to transition completely from a more traditional rules-based approach to machine learning, or a combination of the two.  \n\n\n\n\n\n\n\n\n\nInsights on using rules and ML together from Andrew Bonham at Capital One\n\n\n\n\n\nAug 17, 2020\n\n\n\n\n\n\n\n\n\n\n\nThoughts about rules-based algorithms and ML from Neal Lathia\n\n\n\n\n\nOct 9, 2020\n\n\n\n\n\n\nNo matching items\n\n\nYou can read about a recent, real-life use case of combining rules with ML from Netflix in the section on neural networks.",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "General Data Science",
+      "General Topics in Data Science"
+    ]
+  },
+  {
+    "objectID": "contents/data-science-statistics.html",
+    "href": "contents/data-science-statistics.html",
+    "title": "Statistics",
+    "section": "",
+    "text": "As data scientists, sometimes our analysis requires assessing statistical significance. Maybe it is an A/B test, and we need to determine if one option is actually better at achieving whatever KPI we might be after.\nPerhaps the most common test for statistical significance is the Student’s t-test, and it all started at Guinness:  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA story of the invention of the t-test from Jack Murtagh of Scientific American\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThis first article is a paper by a statistics professor and a computer science professor about what they consider to be the most important ideas in statistics from the past half-century. Some of these topics will look familiar to data scientists, like regularization. This follows nicely from the previous page, continuing to look at the connections between statistics and machine learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari\n\n\n\n\n\nJun 3, 2021\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "General Data Science",
+      "Statistics"
+    ]
+  },
+  {
+    "objectID": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
+    "href": "contents/data-science-statistics.html#statistics-topics-for-data-scientists",
+    "title": "Statistics",
+    "section": "",
+    "text": "As data scientists, sometimes our analysis requires assessing statistical significance. Maybe it is an A/B test, and we need to determine if one option is actually better at achieving whatever KPI we might be after.\nPerhaps the most common test for statistical significance is the Student’s t-test, and it all started at Guinness:  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nA story of the invention of the t-test from Jack Murtagh of Scientific American\n\n\n\n\n\nMay 25, 2024\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nThis first article is a paper by a statistics professor and a computer science professor about what they consider to be the most important ideas in statistics from the past half-century. Some of these topics will look familiar to data scientists, like regularization. This follows nicely from the previous page, continuing to look at the connections between statistics and machine learning.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCounterfactual Causal Inference, Bootstrapping, Regularization, and more from Andrew Gelman and Aki Vehtari\n\n\n\n\n\nJun 3, 2021\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "General Data Science",
+      "Statistics"
+    ]
+  },
+  {
+    "objectID": "contents/unsupervised-cluster-dbscan-hdbscan.html",
+    "href": "contents/unsupervised-cluster-dbscan-hdbscan.html",
+    "title": "Density-Based Clustering",
+    "section": "",
+    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to HDBSCAN with examples and code from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 25, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
       "Unsupervised Learning",
-      "K-Means and Cluster Metrics"
+      "Density-Based Clustering"
     ]
   },
   {
-    "objectID": "contents/unsupervised-cluster-metrics.html#k-means-and-cluster-metrics",
-    "href": "contents/unsupervised-cluster-metrics.html#k-means-and-cluster-metrics",
-    "title": "K-Means and Cluster Metrics",
+    "objectID": "contents/unsupervised-cluster-dbscan-hdbscan.html#density-based-clustering-dbscan-hdbscan",
+    "href": "contents/unsupervised-cluster-dbscan-hdbscan.html#density-based-clustering-dbscan-hdbscan",
+    "title": "Density-Based Clustering",
     "section": "",
-    "text": "K-Means is probably the first algorithm that comes to mind when someone mentions unsupervised learning or clustering.\nOne of the downsides of k-Means is that you need to determine how many clusters there should be. One way to do this is to run k-Mean multiple times, with different numbers of clusters, and use one of several metrics to determine which is the best clustering.\nThis post goes through 4 different techniques / metrics for determining the number of clusters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComparing 4 clustering metrics from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 10, 2021\n\n\n\n\n\n\nNo matching items",
+    "text": "This post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nAgain, this is one of just a few posts on this site that is authored by myself.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIntroduction to HDBSCAN with examples and code from Daniel Capellupo, PhD\n\n\n\n\n\nFeb 25, 2021\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
       "Unsupervised Learning",
-      "K-Means and Cluster Metrics"
+      "Density-Based Clustering"
     ]
   },
   {
-    "objectID": "posts/2024-06-16-data-intuition/index.html",
-    "href": "posts/2024-06-16-data-intuition/index.html",
-    "title": "Defining Data Intuition",
+    "objectID": "contents/supervised-neural-networks.html",
+    "href": "contents/supervised-neural-networks.html",
+    "title": "Neural Networks",
     "section": "",
-    "text": "Original Blog Post: Defining Data Intuition  Authors: Ryan T. Harter (from Shopify)  Published: 2020-10-20\nOriginal Blog Post: Data and Intuition: Good Decisions Need Both  Authors: Marcy Farrell (from Harvard Business Publishing)  Published: 2023-01-06\n\n\n\nMy summary:\nFor a field that has both ‘data’ and ‘science’ in its name, it may seem out-of-place to bring in ‘intuition’. But, as these blog posts point out, there are times when intuition inevitably comes into play. So, it’s important to think about where we rely on intuition and how much we (should) rely on intuition and in which contexts.\nThe blog post from Harvard Business is looking, not surprisingly, from the business side of things and how to make decisions when the data is not always clear-cut or does not point clearly in one direction or another.\nThe post from Ryan Harter is focused more specifically on how to look at the results of a specific analysis. He gives the following definition for data intuition:\n\nData Intuition is a resilience to misleading data and analyses.\n\nEssentially, we perform a certain analysis, but based on experience, have a sense of whether something does not seem right and then double-check the steps of, or the logic behind, the analysis.\nTo bring these ideas together, here is a bonus third blog post from Brandon Cosley. He breaks down intuition in different ways. For example, while data scientists do not necessarily know how to derive from scratch all the algorthms that they work with, they still have an intuition into how they work.\nTo recap, intuition comes into play throughout the data science process:\n\nAt the beginning of an analysis / project, one cannot realistically try every statistical test or every ML model, so one must rely on some intuition to decide where to start and to focus one’s efforts.\nOnce you have results of an analysis or ML model, how do you determine when you are done and have reliable results?\nWhile the decision-making on the business side might come from a level above the data science team, in any case, some intuition is likely to be relied upon alongside the data analysis performed."
-  },
-  {
-    "objectID": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
-    "href": "posts/2024-06-02-LinkedIn-pca-nonlinear/index.html",
-    "title": "LinkedIn Post on PCA on Non-Linear Data",
-    "section": "",
-    "text": "Original LinkedIn Post:  Authors: Shai Nisan, PhD  Published: ~2024-04-02\n\n\n\n\n\n\n\n There are some interesting comments, including this one:\n\n\n\nLinkedIn Comment\n\n\n\n\n\nLinkedIn Comment"
-  },
-  {
-    "objectID": "posts/2024-06-02-doordash-time-series-holidays/index.html",
-    "href": "posts/2024-06-02-doordash-time-series-holidays/index.html",
-    "title": "How DoorDash Improves Holiday Predictions via Cascade ML Approach",
-    "section": "",
-    "text": "Original Blog Post: How DoorDash Improves Holiday Predictions via Cascade ML Approach  Authors: Chad Akkoyun and Zainab Danish (from DoorDash)  Published: 2023-08-31\n\n\n\n\n\nMy summary:\nIn fields such as retail, how do you incorporate relatively rare events like holidays into your time series forecasting?\nAs this blog post describes, you have a small fraction of the days of the year that are holidays, and each holiday can show very different behavior.\nSo, if you are training, say, a tree-based model, if you have a feature that says “is today a holiday?”, that is not quite enough to get accurate results.\nDoorDash is a food delivery company, and they could see in their historical data that demand drops off significantly more on Thanksgiving, then say on July 4th, compared to non-holiday days.\nBut, Thanksgiving only happens once a year, and how many years of training data do we have to train our model on?\nAnd, the change in demand on holidays can also affect the model’s predictions in the days after.\nThe team at DoorDash therefore took a cascade modeling approach. They train a gradient boosting machine (GBM) on a time series where the holiday effect has been removed.\nThey do so by first training linear regression models on the holiday data for each holiday in various locales across the country, where the target variable is the week-over-week change in orders on those holidays. This gives the effect of each holiday, which is used to get a time series with holiday effects removed.\nThen, when making predictions, the holiday effect from the linear regression models can be applied to the results from the GBM when a holiday is happening.\nTheir results showed a decrease in the weighted mean percentage error (wMAPE) from 60-70% down to 10-20% around Christmas.\nAnother challenge is that if one wants to run an A/B test with a new model in a field like this, one would have to wait an entire year to cover each unique holiday. This team instead did A/B testing on just a couple holidays in a span of a month or so, combined with backtesting on historical data.\nOne last point is that the intuitiveness of this approach, training one model for “regular” days, and a separate one for holidays, makes it easier to convey to stakeholders and get their buy-in.\nHere is the link again to their blog post for more details and some plots: How DoorDash Improves Holiday Predictions via Cascade ML Approach"
-  },
-  {
-    "objectID": "posts/2024-06-10-history-data-science/index.html",
-    "href": "posts/2024-06-10-history-data-science/index.html",
-    "title": "A Brief History of Data Science",
-    "section": "",
-    "text": "Original Blog Post: A Brief History of Data Science  Authors: Daniel Capellupo, PhD  Published: 2020-11-17\n\n\nMy summary:\nThis is one of the few posts on this website that is from myself, the head curator.\nThis post goes through the history of data science, from the beginnings of statistics centuries ago, through today, where:\n\nStatistics, Data Analysis, and Coding converge to form a new career for the 21st century\n\nWhile many of the elements of data science have been around for a long time (even the idea of machine learning, AI, and the perceptron date back to the 1950s), the profession of data science / data scientist seems to have emerged around 2008.\nHere is the link again to their blog post for more details: A Brief History of Data Science"
-  },
-  {
-    "objectID": "posts/2024-06-10-classification-metrics/index.html",
-    "href": "posts/2024-06-10-classification-metrics/index.html",
-    "title": "Metrics for Multi-Class Classification: an Overview",
-    "section": "",
-    "text": "Original Blog Post: Metrics for Multi-Class Classification: an Overview  Authors: Margherita Grandini, Enrico Bagli, Giorgio Visani (from CRIF)  Published: 2020-08-14\n\n\n\n\n\nMy summary:\nThis paper is a must for anyone working on supervised, classification machine learning problems.\nThe paper goes into detail on classification metrics. The title specifies multi-class classification, but the text is relevant to binary classification as well.\nMany data scientists are likely aware of the F1-score and the confusion matrix, but probably fewer are familiar with the Cohen-Kappa score. This paper goes through many classification metrics and discusses the pros and cons of each, with concrete examples.\nHere is the link again to their paper for more details: Metrics for Multi-Class Classification: an Overview"
-  },
-  {
-    "objectID": "posts/2024-06-03-rules-and-ml/index.html",
-    "href": "posts/2024-06-03-rules-and-ml/index.html",
-    "title": "Combining Rule Engines and Machine Learning",
-    "section": "",
-    "text": "Original Blog Post: Combining Rule Engines and Machine Learning  Author: Neal Lathia  Published: 2020-10-09\n\n\nMy summary:\nThis blog post was written by Neal Lathia, who was Director of Machine Learning at Monzo at the time this was posted, and also has a PhD in recommender systems. He makes the point that instead of narrowly focusing on replacing all rules-based systems with ML, one needs to focus on how ML can “improve the outcomes of the entire system.”\n\nIf you can write a rule set that captures everything you need, then you don’t need machine learning!\n\nThere are cases where ML can actually enhance, instead of fully replace, rules-based systems. First, ML can be used to help design the rules. For example, an ML algorithm can be trained to predict a particular outcome, using whichever features are available. Then, one can look at which features were given the most weight by the model and use this information to design a rule, or set of rules.\n\nIn these cases, you don’t need to ship a model–you ship the insight that you got from that model, by writing rules.\n\nAlternatively, one can use ML in conjunction with rules as part of the same system. For example, if there is a case that does not fit any of the hard-coded rules, then this case can be sent to an ML algorithm that will make a decision instead.\nI recommend reading the whole post, but the main takeaway here is that while ML can be immensely useful in many cases, there are still times that hard-coded human decisions are needed and, perhaps more interestingly, there are really useful ways that ML and rules set by humans can be used together to achieve the best result for a given system.\nHere is the link again to their blog post for more details: Combining Rule Engines and Machine Learning"
-  },
-  {
-    "objectID": "posts/2024-06-10-ml-versus-statistics/index.html",
-    "href": "posts/2024-06-10-ml-versus-statistics/index.html",
-    "title": "Machine Learning vs. Statistics",
-    "section": "",
-    "text": "Original Blog Post: Machine Learning vs. Statistics  Authors: Tom Fawcett and Drew Hardin  Published: 2018-02-05\n\n\n\n\n\nMy summary:\nThis post is authored by a machine learning practitioner (Tom Fawcett) and a statistician (Drew Hardin), so they bring their unique perspectives and draw parallels and highlight differences between how ML practitioners and statisticians approach problems.\nHere are some highlights.\nStatistics\n\nIn statistics, the goal of modeling is approximating and then understanding the data-generating process, with the goal of answering the question you actually care about.\n\n\n[T]he Statistician is concerned primarily with model validity, accurate estimation of model parameters, and inference from the model. However, prediction of unseen data points, a major concern of Machine Learning, is less of a concern to the statistician. Statisticians have the techniques to do prediction, but these are just special cases of inference in general.\n\nMachine Learning\n\nIn Machine Learning, the predominant task is predictive modeling: the creation of models for the purpose of predicting labels of new examples.\n\n\nThe model does not represent a belief about or a commitment to the data generation process. Its purpose is purely functional.\n\n\nML practitioners are freed from worrying about difficult cases where assumptions are violated, yet the model may work anyway.\n\nHere is the link again to their blog post for more details: Machine Learning vs. Statistics"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Featuring Data Science",
-    "section": "",
-    "text": "Featuring Data Science\n\nA Curated Catalog of Data Science Content\n\n\n\n\n\nPurpose of this Website\nThere are many data science newsletters, courses, podcasts, videos, conferences, etc. There’s discussions on social media. It’s hard to keep up with it all.\nThis website is intended to showcase content across a range of data science topics, that provides insight beyond or goes deeper into topics than what is typically found in online courses.\n\n\nIntended Audience\nThe goal is that anyone who has at least taken an introductory course in data science, as well as those with years of experience, will find this website useful.\n\n\nHow to use this Website\nThis website is made up of links to curated content from across the internet. A short summary of each piece of content appears here that outlines the main points of the content and what insights this content brings to the table.\nThere are two ways to navigate this site. At the top menu bar, there is the Table of Contents which organizes the content on this site like a book. It is organized by different topics/categories. Of course, there is some content that crosses categories, so some content may be linked to in different categories.\nThe other way is to go to the Full Catalog.\nThere is also a bonus third option, which is the search button at the top right, which gives a nice, convenient full-site search.",
+    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
-      "Featuring Data Science"
+      "Featuring Data Science",
+      "Supervised Learning",
+      "Neural Networks"
     ]
+  },
+  {
+    "objectID": "contents/supervised-neural-networks.html#neural-networks",
+    "href": "contents/supervised-neural-networks.html#neural-networks",
+    "title": "Neural Networks",
+    "section": "",
+    "text": "Mostly drawn from blogs from various tech companies, here are some examples of neural networks used in real-life settings.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCombining a rules-based engine and a neural network to save data platform costs from Binbing Hou et al. at Netflix\n\n\n\n\n\nMar 4, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Supervised Learning",
+      "Neural Networks"
+    ]
+  },
+  {
+    "objectID": "contents/data-visualization-code.html",
+    "href": "contents/data-visualization-code.html",
+    "title": "Data Visualization Code and Packages",
+    "section": "",
+    "text": "What makes a good plot is certainly subjective, but there are considerations that can make plots look more professional, as well as making them easier to read. All posts in this section include real code examples.\nThe first post here promotes the idea of “less is more” in creating visualizations, and even includes a gif that illustrates the effect of simplifying a standard bar chart. This post has Python/matplotlib code.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSome examples, with code, of color schemes and simplifying the plot display from Dr. Randal Olson\n\n\n\n\n\nJun 28, 2014\n\n\n\n\n\n\nNo matching items\n\n\nThis next example uses R code to produce visualizations of data that changes with time. Some compare some metrics between two different time periods, while there is also an example of a traditional time series line graph.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProfessional plots with links to R code from Bo Yuan, PhD\n\n\n\n\n\nMay 7, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "contents/data-visualization-code.html#data-visualization-code-and-packages",
+    "href": "contents/data-visualization-code.html#data-visualization-code-and-packages",
+    "title": "Data Visualization Code and Packages",
+    "section": "",
+    "text": "What makes a good plot is certainly subjective, but there are considerations that can make plots look more professional, as well as making them easier to read. All posts in this section include real code examples.\nThe first post here promotes the idea of “less is more” in creating visualizations, and even includes a gif that illustrates the effect of simplifying a standard bar chart. This post has Python/matplotlib code.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSome examples, with code, of color schemes and simplifying the plot display from Dr. Randal Olson\n\n\n\n\n\nJun 28, 2014\n\n\n\n\n\n\nNo matching items\n\n\nThis next example uses R code to produce visualizations of data that changes with time. Some compare some metrics between two different time periods, while there is also an example of a traditional time series line graph.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\nProfessional plots with links to R code from Bo Yuan, PhD\n\n\n\n\n\nMay 7, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/2024-06-05-beware-rf-feature-importance/index.html",
+    "href": "posts/2024-06-05-beware-rf-feature-importance/index.html",
+    "title": "Beware Default Random Forest Importances",
+    "section": "",
+    "text": "Original Blog Post: Beware Default Random Forest Importances  Authors: Terence Parr, Kerem Turgutlu, Christopher Csiszar, Jeremy Howard  Published: 2018-10-20\n\n\n\nMy summary:\nIf there is one article on this website that I would recommend the most, it’s this one.\nI don’t know how common it is for people to use default feature importances, or coefficients from linear models, as proxies for the real impact of a feature on the target variable, but there are issues that need to be considered.\nThis article goes through those issues, and I think explains well how the default feature importance computation works. There’s also lots of helpful links sprinkled throughout the post.\nAt the very end, they mention the following:\n\nExtremely randomized trees, at least in theory, do not suffer from this problem. Better still, they’re generally faster to train that RFs, and more accurate.\n\nI wonder if anyone has looked into this last point in more depth.\nHere is the link again to their blog post for more details: Beware Default Random Forest Importances"
+  },
+  {
+    "objectID": "posts/2024-06-14-visualize-change-with-time/index.html",
+    "href": "posts/2024-06-14-visualize-change-with-time/index.html",
+    "title": "Awesome Strategies to Visualize Change with Time",
+    "section": "",
+    "text": "Original Blog Post: Awesome Strategies to Visualize Change with Time  Authors: Bo Yuan, PhD  Published: 2024-05-07\n\n\n\n\n\nMy summary:\nIn this blog post, the author presents some professional-looking plots, created in R, some of them inspired by sources like the Wall Street Journal. The author includes links to the R code for each plot.\nWhile this post is on Medium, the author also points to their website, DataBrewer.co, with even more code and examples.\nHere is the link again to their blog post for more details: Awesome Strategies to Visualize Change with Time"
+  },
+  {
+    "objectID": "posts/2024-06-11-guinness-student-t-test/index.html",
+    "href": "posts/2024-06-11-guinness-student-t-test/index.html",
+    "title": "How the Guinness Brewery Invented the Most Important Statistical Method in Science",
+    "section": "",
+    "text": "Original Blog Post: How the Guinness Brewery Invented the Most Important Statistical Method in Science  Authors: Jack Murtagh (from Scientific American)  Published: 2024-05-25\n\n\n\n\n\nMy summary:\nWhat does beer have to do with statistical significance?\nIn this article from Scientific American, Jack Murtagh discusses the origins of one of the most common tests of statistical significance, the t-test.\nAround the start of the 20th century, Guinness wanted to improve the consistency of their products as they continued to expand worldwide. So, they hired a team to experiment and research how to improve their products.\nOne issue that kept coming up was small sample sizes. In other words, if they are assessing the quality of hops, instead of testing every flower in a crop, they wanted to test a small, random sample.\n\n\nTherefore, the head experimental brewer at Guinness, William Sealy Gosset, invented the t-test.\n\n\nIf you need a review of the t-test and P-values, with some illustrations, take a look at the article.\nFun fact: Gosset published under the pseudonym “Student”, and therefore, the t-test is often referred to as the Student’s t-test, even today.\nHere is the link again to the article for more details: How the Guinness Brewery Invented the Most Important Statistical Method in Science"
+  },
+  {
+    "objectID": "posts/2024-06-14-beautiful-data-visualization-matplotlib/index.html",
+    "href": "posts/2024-06-14-beautiful-data-visualization-matplotlib/index.html",
+    "title": "How to make beautiful data visualizations in Python with matplotlib",
+    "section": "",
+    "text": "Original Blog Post: How to make beautiful data visualizations in Python with matplotlib  Authors: Dr. Randal Olson  Published: 2014-06-28\n\n\n\n\n\nMy summary:\nWhat qualifies as a “beautiful” data visualization is certainly subjective. And, some may disagree with certain decisions made by the author of this post, like avoiding grid lines that could help guide the eye.\nBut, it is always helpful to have real coding examples of different plotting styles to use as inspiration or to incorporate into one’s own visualization code.\nHere is the link again to their blog post for more details: How to make beautiful data visualizations in Python with matplotlib"
+  },
+  {
+    "objectID": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "href": "posts/2024-06-03-data-scientist-show-mlops/index.html",
+    "title": "What Data Scientists Need to Know about MLOps Principles",
+    "section": "",
+    "text": "Original Blog Post: What Data Scientists Need to Know about MLOps Principles  Authors: Daliana Liu (host) and Mikiko Baseley (guest)  Published: 2023-08-31\n\n\nMy summary:\nFirst, a definition: What is an MLOps engineer?\nIn short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.\nMikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.\nOne point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:\n\nVersion control (i.e. git)\nContainerization and packaging strategies\nBasic web technology and deployment patterns\nTesting\n\n\n\nHere is the link if the embed above doesn’t work: Link to Podcast on Spotify"
+  },
+  {
+    "objectID": "posts/2024-06-14-hdbscan-clustering/index.html",
+    "href": "posts/2024-06-14-hdbscan-clustering/index.html",
+    "title": "Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison",
+    "section": "",
+    "text": "Original Blog Post: Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison  Authors: Daniel Capellupo, PhD  Published: 2021-02-10\n\n\n\n\n\nMy summary:\nThis post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nThere is also a Jupyter notebook available with all the code used for generating the examples in this blog post.\nHere is the link again to their blog post for more details: Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison"
+  },
+  {
+    "objectID": "posts/2024-06-03-xgboost-resources/index.html",
+    "href": "posts/2024-06-03-xgboost-resources/index.html",
+    "title": "XGBoost Resources",
+    "section": "",
+    "text": "XGBoost Resources  Author: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\n\n\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
+  },
+  {
+    "objectID": "posts/2024-06-19-News-LinkedIn-snowflake-databricks-summits/index.html",
+    "href": "posts/2024-06-19-News-LinkedIn-snowflake-databricks-summits/index.html",
+    "title": "Snowflake and Databricks Summits (June 2024)",
+    "section": "",
+    "text": "Original Blog Post: Summit Season  Authors: Tristan Handy (CEO and Founder, dbt Labs)  Published: 2024-06-16\n\n\n\n\n\nMy summary:\nI wrote-up a summary on LinkedIn: \nHere’s a direct link, in case the embed does not load: LinkedIn post\nHere is the link again to their blog post for more details: Summit Season"
+  },
+  {
+    "objectID": "posts/2024-06-14-kmeans-clustering-metrics/index.html",
+    "href": "posts/2024-06-14-kmeans-clustering-metrics/index.html",
+    "title": "Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters",
+    "section": "",
+    "text": "Original Blog Post: Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters  Authors: Daniel Capellupo, PhD  Published: 2021-02-10\n\n\n\n\n\nMy summary:\nThis post goes through several examples of using k-Means clustering, and four different clustering metrics / techniques that can aide in choosing the best / ideal number of clusters.\nThere is also a Jupyter notebook available with all the code used for generating the examples in this blog post.\nHere is the link again to their blog post for more details: Deep Dive into Clustering: The k-Means algorithm and choosing the number of clusters"
+  },
+  {
+    "objectID": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
+    "href": "posts/2024-06-02-netflix-data-platform-autoremediation/index.html",
+    "title": "Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform",
+    "section": "",
+    "text": "Original Blog Post: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform  Authors: Binbing Hou, Stephanie Vezich Tamayo, Xiao Chen, Liang Tian, Troy Ristow, Haoyuan Wang, Snehal Chennuru, Pawan Dixit (from Netflix)  Published: 2023-08-31\n\n\n\n\n\nMy summary:\nThis blog post from Netflix, where they are using ML to supplement a rules-based approach to identifying errors as they occur in their data platforms and sometimes handle those errors automatically (“auto remediation”).\n\nAt Netflix, hundreds of thousands of workflows and millions of jobs are running per day across multiple layers of the big data platform.\n\nWith such a high level of activity in their data platform, even a small percentage of errors can increase costs and require considerable human effort to diagnosis and address errors.\nNetflix started addressing this already with a rules-based engine they call Pensive, which classifies errors, helps determine whether to retry the job, and provides insights to human engineers who might need to remediate the job failure.\nThe rules-based engine however requires domain experts to create and test new rules as new errors and scenarios appear. Even with over 300 rules, half of all errors are still unclassified by this algorithm.\nTherefore, they decided to supplement the rules-based algorithm with an ML approach, which allows them to:\n\nleverage the merits of both: the rule-based classifier provides static, deterministic classification results per error class, which is based on the context of domain experts; the ML service provides performance- and cost-aware recommendations per job…\n\nIn practice, all errors go through the rules-based engine, then any memory configuration errors or unclassified errors are passed to the ML model.\nWith about 600 memory configuration errors occurring every month in their system, manually corrected these errors can be quite time-consuming, especially since it is not always straightforward what the correct configuration should be. Too little memory causes a “Out-of-Memory” error, and too much memory is not an efficient usage of cluster resources.\nTherefore, they train a standard neural network (in other words, a feedforward multilayer perceptron - MLP), with two heads. Two heads means that the model has two outputs, so that they can simultaneously predict both the probability of failure and computation cost of retrying the job with a certain memory configuration.\nFinally, they use a Bayesian optimization where the neural network is run multiple times with features based on the specific error and different options for the Spark run configuration, and the best combination of failure probability and computation cost is determined.\nSo far, this ML algorithm has automatically solved 56% of memory configuration errors and substantially reduced costs related to these errors.\nHere is the link again to their blog post for more details: Evolving from Rule-based Classifier: Machine Learning Powered Auto Remediation in Netflix Data Platform"
+  },
+  {
+    "objectID": "posts/2024-06-11-most-important-statistics-50-years/index.html",
+    "href": "posts/2024-06-11-most-important-statistics-50-years/index.html",
+    "title": "What are the most important statistical ideas of the past 50 years?",
+    "section": "",
+    "text": "Original Paper: What are the most important statistical ideas of the past 50 years?  Authors: Andrew Gelman and Aki Vehtari  Published: 2021-06-03\n\n\n\nMy summary:\nA statistics professor, Andrew Gelman, from Columbia University, and a computer science professor, Aki Vehtari, from Aalto University, look at the top statistical ideas of the past half-century.\nHere is their list:\n\nCounterfactual Causal Inference\nBootstrapping and Simulation-Based Inference\nOverparameterized Models and Regularization\nMultilevel, or Hierarchical, Models\nGeneric Computation Algorithms\nAdaptive Decision Analysis\nRobust Inference\nExploratory Data Analysis\n\nConnection to Machine Learning and Deep Learning\nOne common thread among many of these ideas is how they take advantage of the advances in computing over the past 50 years. Iterative algorithms, like bootstrapping, become practical when a computer can relatively quickly run multiple iterations of the same experiment.\nA lot of the statistics ideas here have found applications in machine learning. Number 3 on the list above, overparameterized models and regularization, is central to machine learning and deep learning. According to Gelman and Vehtari, “a major change in statistics since the 1970s, coming from many different directions, is the idea of fitting a model with a large number of parameters — sometimes more parameters than data points — using some regularization procedure to get stable estimates and good predictions.” One of the biggest challenges in machine learning and deep learning is overfitting, where we train a model that performs amazingly well on our training dataset, but performs poorly on our unseen holdout dataset. Regularization, of different varieties, is used widely by data scientists to address overfitting.\nFurthermore, bootstrapping, which is number 2 on Gelman and Vehtari’s list, is an important component of random forest models. In random forest, an ensemble of trees is built, where each tree uses a bootstrap sample from the original training set. This helps to control overfitting, as each tree in the ensemble is trained on a slightly different version of the original dataset.\nIn terms of number 6 on the list, a relatively famous example of adaptive decision analysis these days is reinforcement learning.\nInteresting to see exploratory data analysis on Gelman and Vehtari’s list (coming in at number 8), but it certainly falls within the realm of statistics, and again, advances in computing, and the proliferation of personal computers, allows the average researcher or analyst to generate a range of plots, much more easily than if one is creating plots with pen and paper. The ease with which plots can be made with various tools means there is little excuse not to perform a rigorous EDA on your dataset before going to the modeling phase.\nOther Statistical Methods\nThe first item on Gelman and Vehtari’s list is counterfactual causal inference. According to the Stanford Encyclopedia of Philosophy, “the basic idea of counterfactual theories of causation is that the meaning of causal claims can be explained in terms of counterfactual conditionals of the form ‘If A had not occurred, C would not have occurred’”.\nHere is the link again to their paper for more details: What are the most important statistical ideas of the past 50 years?"
+  },
+  {
+    "objectID": "posts/2024-06-05-capital-one-rules-vs-ml/index.html",
+    "href": "posts/2024-06-05-capital-one-rules-vs-ml/index.html",
+    "title": "A Modern Dilemma: When to Use Rules vs. Machine Learning",
+    "section": "",
+    "text": "Original Blog Post: A Modern Dilemma: When to Use Rules vs. Machine Learning  Authors: Andrew Bonham (from Capital One)  Published: 2023-08-31\n\n\nMy summary:\nThe post begins with some discussion of the principles of business logic.\nAbout halfway down the page is a section entitled Guidance for When to Use a Rules Engine vs. Machine Learning, which gives some of the general points to consider for this question.\nThe next section, Patterns for Using Machine Learning and Rules Engines Together gives some concrete ideas of how one might combine the two:\n\nPattern 1: Leverage machine learning outputs as an input into rules\n\n\nPattern 2: Leverage rule outputs as a feature input into machine learning models\n\n\nPattern 3: Leverage both rule and machine learning outputs as inputs\n\nAs of 2024-06-05, this post has 122 “claps” on Medium.\nHere is the link again to their blog post for more details: A Modern Dilemma: When to Use Rules vs. Machine Learning"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This website was created by and is actively maintained by Dan Capellupo. I am a former PhD astronomer, and I have now been a data scientist for over 6 years.\nI will be happy to hear any feedback you have. If you have any comments on any of the articles I post about on this site, please let me know and I can add them to the articles.\nIf you know of any articles appropriate for an experienced DS audience, also please send those my way!"
   }
 ]

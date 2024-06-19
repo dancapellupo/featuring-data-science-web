@@ -1,0 +1,32 @@
+---
+title: "Snowflake and Databricks Summits (June 2024)"
+description: 'The main takeaways and major announcements from Tristan Handy'
+categories: ['news', 'data engineering', 'content:social']
+date: "2024-06-16"
+date-modified: "2024-06-19"
+image: "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda8326ee-5ba3-44c8-b464-b79205a71644_1024x1024.webp"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[Summit Season](https://roundup.getdbt.com/p/summit-season)** <br>
+Authors: Tristan Handy (CEO and Founder, dbt Labs) <br>
+Published: 2024-06-16
+:::
+::: {.hero-image}
+![](https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fda8326ee-5ba3-44c8-b464-b79205a71644_1024x1024.webp)
+:::
+:::
+
+**My summary:**
+
+I wrote-up a summary on LinkedIn:
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7209197253570248704" height="1595" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+Here's a direct link, in case the embed does not load:
+[LinkedIn post](https://www.linkedin.com/posts/dcapellupo_summit-season-activity-7209197256611168256-AmYL?utm_source=share&utm_medium=member_desktop)
+
+Here is the link again to their blog post for more details:
+[Summit Season](https://roundup.getdbt.com/p/summit-season)
