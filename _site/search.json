@@ -25,6 +25,20 @@
     "text": "Original Blog Post: Combining Rule Engines and Machine Learning  Author: Neal Lathia  Published: 2020-10-09\n\n\nMy summary:\nThis blog post was written by Neal Lathia, who was Director of Machine Learning at Monzo at the time this was posted, and also has a PhD in recommender systems. He makes the point that instead of narrowly focusing on replacing all rules-based systems with ML, one needs to focus on how ML can “improve the outcomes of the entire system.”\n\nIf you can write a rule set that captures everything you need, then you don’t need machine learning!\n\nThere are cases where ML can actually enhance, instead of fully replace, rules-based systems. First, ML can be used to help design the rules. For example, an ML algorithm can be trained to predict a particular outcome, using whichever features are available. Then, one can look at which features were given the most weight by the model and use this information to design a rule, or set of rules.\n\nIn these cases, you don’t need to ship a model–you ship the insight that you got from that model, by writing rules.\n\nAlternatively, one can use ML in conjunction with rules as part of the same system. For example, if there is a case that does not fit any of the hard-coded rules, then this case can be sent to an ML algorithm that will make a decision instead.\nI recommend reading the whole post, but the main takeaway here is that while ML can be immensely useful in many cases, there are still times that hard-coded human decisions are needed and, perhaps more interestingly, there are really useful ways that ML and rules set by humans can be used together to achieve the best result for a given system.\nHere is the link again to their blog post for more details: Combining Rule Engines and Machine Learning"
   },
   {
+    "objectID": "posts/2024-06-19-News-LinkedIn-snowflake-databricks-summits/index.html",
+    "href": "posts/2024-06-19-News-LinkedIn-snowflake-databricks-summits/index.html",
+    "title": "Snowflake and Databricks Summits (June 2024)",
+    "section": "",
+    "text": "Original Blog Post: Summit Season  Authors: Tristan Handy (CEO and Founder, dbt Labs)  Published: 2024-06-16\n\n\n\n\n\nMy summary:\nI wrote-up a summary on LinkedIn: \nHere’s a direct link, in case the embed does not load: LinkedIn post\nHere is the link again to their blog post for more details: Summit Season"
+  },
+  {
+    "objectID": "posts/2024-06-03-xgboost-resources/index.html",
+    "href": "posts/2024-06-03-xgboost-resources/index.html",
+    "title": "XGBoost Resources",
+    "section": "",
+    "text": "XGBoost Resources  Author: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\n\n\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
+  },
+  {
     "objectID": "posts/2024-06-10-classification-metrics/index.html",
     "href": "posts/2024-06-10-classification-metrics/index.html",
     "title": "Metrics for Multi-Class Classification: an Overview",
@@ -165,29 +179,29 @@
     ]
   },
   {
-    "objectID": "contents/dimensionality-reduction.html",
-    "href": "contents/dimensionality-reduction.html",
-    "title": "Dimensionality Reduction",
+    "objectID": "contents/responsible-ai-model-explainability.html",
+    "href": "contents/responsible-ai-model-explainability.html",
+    "title": "Model Explainability",
     "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "Tree-based models like Random Forest or XGBoost have built-in feature importance calculations, but there are important considerations to take into account when using these:  \n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nIf you do a web search for model explainability, one of the first results will likely include SHAP. If you are wondering about when to use SHAP or, even if you use it already and want to read some important discussion around it, there is a group of three posts here that provide useful food for thought:  \n\n\n\n\n\n\n\n\n\nThree blog posts about SHAP and alternatives to consider from Christoph Molnar and Giles Hooker\n\n\n\n\n\nJun 18, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
+      "Responsible AI and Explainability",
+      "Model Explainability"
     ]
   },
   {
-    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
-    "title": "Dimensionality Reduction",
+    "objectID": "contents/responsible-ai-model-explainability.html#model-explainability-techniques",
+    "href": "contents/responsible-ai-model-explainability.html#model-explainability-techniques",
+    "title": "Model Explainability",
     "section": "",
-    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "text": "Tree-based models like Random Forest or XGBoost have built-in feature importance calculations, but there are important considerations to take into account when using these:  \n\n\n\n\n\n\n\n\n\nImportant reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.\n\n\n\n\n\nOct 20, 2018\n\n\n\n\n\n\nNo matching items\n\n\n\n\n\nIf you do a web search for model explainability, one of the first results will likely include SHAP. If you are wondering about when to use SHAP or, even if you use it already and want to read some important discussion around it, there is a group of three posts here that provide useful food for thought:  \n\n\n\n\n\n\n\n\n\nThree blog posts about SHAP and alternatives to consider from Christoph Molnar and Giles Hooker\n\n\n\n\n\nJun 18, 2024\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Table of Contents",
       "Featuring Data Science",
-      "Feature Selection and Feature Engineering",
-      "Dimensionality Reduction"
+      "Responsible AI and Explainability",
+      "Model Explainability"
     ]
   },
   {
@@ -214,6 +228,32 @@
       "Featuring Data Science",
       "General Data Science",
       "General Topics in Data Science"
+    ]
+  },
+  {
+    "objectID": "contents/dimensionality-reduction.html",
+    "href": "contents/dimensionality-reduction.html",
+    "title": "Dimensionality Reduction",
+    "section": "",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
+    ]
+  },
+  {
+    "objectID": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "href": "contents/dimensionality-reduction.html#dimensionality-reduction-algorithms-pca-and-others",
+    "title": "Dimensionality Reduction",
+    "section": "",
+    "text": "The PCA algorithm is discussed perhaps the most often in the context of dimensionality reduction. As we’ll see below [to be updated], there are other options, which are perhaps less commonly discussed.  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndimensionality reduction\n\n\nfeature selection\n\n\ndata visualization\n\n\ncontent:social\n\n\n\nSome thoughts about PCA from Shai Nisan, PhD and Prof. Hamid Karimi\n\n\n\n\n\nApr 2, 2024\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Table of Contents",
+      "Featuring Data Science",
+      "Feature Selection and Feature Engineering",
+      "Dimensionality Reduction"
     ]
   },
   {
@@ -382,18 +422,11 @@
     "text": "Original Blog Post: Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison  Authors: Daniel Capellupo, PhD  Published: 2021-02-10\n\n\n\n\n\nMy summary:\nThis post gives examples of different shaped clusters and looks at how k-Means handles these. It then compares how the HDBSCAN algorithm handles these different clustering scenarios. In general, HDBSCAN does quite well, even with the default hyperparameters.\nThere is also a Jupyter notebook available with all the code used for generating the examples in this blog post.\nHere is the link again to their blog post for more details: Deep Dive into Clustering: k-Means and HDBSCAN: a detailed comparison"
   },
   {
-    "objectID": "posts/2024-06-03-xgboost-resources/index.html",
-    "href": "posts/2024-06-03-xgboost-resources/index.html",
-    "title": "XGBoost Resources",
+    "objectID": "posts/2024-06-20-shap/index.html",
+    "href": "posts/2024-06-20-shap/index.html",
+    "title": "SHAP Is Not All You Need",
     "section": "",
-    "text": "XGBoost Resources  Author: Josh Starmer (from StatQuest)  Published: Ranges from 2019-12-19 to 2020-03-02\n\n\nMy summary: Josh Starmer at StatQuest has a great series of videos on XGBoost.\nThis is a 4-part series, with all the videos linked to below: \n\n\nThis first video has over 600,000 views, as of 2024-06-03!"
-  },
-  {
-    "objectID": "posts/2024-06-19-News-LinkedIn-snowflake-databricks-summits/index.html",
-    "href": "posts/2024-06-19-News-LinkedIn-snowflake-databricks-summits/index.html",
-    "title": "Snowflake and Databricks Summits (June 2024)",
-    "section": "",
-    "text": "Original Blog Post: Summit Season  Authors: Tristan Handy (CEO and Founder, dbt Labs)  Published: 2024-06-16\n\n\n\n\n\nMy summary:\nI wrote-up a summary on LinkedIn: \nHere’s a direct link, in case the embed does not load: LinkedIn post\nHere is the link again to their blog post for more details: Summit Season"
+    "text": "Original Blog Post: SHAP is the Blockchain of xAI  Author: Giles Hooker  Published: 2022-05-12\nOriginal Blog Post: SHAP Is Not All You Need  Author: Christoph Molnar  Published: 2023-02-07\nOriginal Blog Post: Shedding light on “Impossibility Theorems for Feature Attribution”  Author: Christoph Molnar  Published: 2024-06-18\n\n\n\nMy summary:\nHere are three blog posts that give generally two different perspectives on SHAP (if you are unfamiliar with SHAP, start with the first post, which gives some background). The first two posts give some criticism of SHAP, at least in part, in response to feelings from the authors that some data science practitioners treat SHAP as the main model explainability algorithm out there and that SHAP is all you need. The third post above is written by one of the same authors as one of the critical posts, but actually comes to SHAP’s defense.\nThe bottom line from these posts is that it is important to first understand what it is you are looking to obtain in terms of model explainability / interpretability. In some scenarios, SHAP may be useful and give the insight you are looking for, whereas in other scenarios it will fall short. From the second post:\n\nSHAP importance is more about auditing how the model behaves.\n\nFrom the third post, Christoph talks about the situation where you want to know: “How does the prediction for a certain data point change when we change the features just a little bit?” He points out that SHAP is not appropriate for this situation."
   },
   {
     "objectID": "posts/2024-06-14-kmeans-clustering-metrics/index.html",

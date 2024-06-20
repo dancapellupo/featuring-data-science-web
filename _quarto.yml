@@ -48,6 +48,9 @@ website:
             contents:
               - contents/unsupervised-cluster-metrics.qmd
               - contents/unsupervised-cluster-dbscan-hdbscan.qmd
+          - section: "Responsible AI and Explainability"
+            contents:
+              - contents/responsible-ai-model-explainability.qmd
           - section: "MLOps"
             contents:
               - contents/mlops.qmd

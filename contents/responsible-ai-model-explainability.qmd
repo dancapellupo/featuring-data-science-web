@@ -1,0 +1,40 @@
+---
+title: "Model Explainability"
+listing:
+  - id: feature-imp
+    contents:
+    - '../posts/2024-06-05-beware-rf-feature-importance/index.qmd'
+    type: default
+    fields: [date, title, description]
+  - id: shap
+    contents:
+    - '../posts/2024-06-20-shap/index.qmd'
+    type: default
+    fields: [date, title, description]
+page-layout: article
+---
+
+## Model Explainability Techniques
+
+### Default Feature Importances
+
+Tree-based models like Random Forest or XGBoost have built-in feature
+importance calculations, but there are important considerations to take into
+account when using these:
+<br>
+<br>
+
+:::{#feature-imp}
+:::
+
+### SHAP
+
+If you do a web search for model explainability, one of the first results will
+likely include SHAP. If you are wondering about when to use SHAP or, even if
+you use it already and want to read some important discussion around it, there
+is a group of three posts here that provide useful food for thought:
+<br>
+<br>
+
+:::{#shap}
+:::

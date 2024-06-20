@@ -1,0 +1,57 @@
+---
+title: "SHAP Is Not All You Need"
+description: 'Three blog posts about SHAP and alternatives to consider from Christoph Molnar and Giles Hooker'
+categories: ['supervised learning', 'model explainability']
+date: "2024-06-18"
+date-modified: "2024-06-20"
+# image: "image_file_or_link.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[SHAP is the Blockchain of xAI](https://modelmeanings.wordpress.com/2022/05/12/shap-is-the-blockchain-of-xai/)** <br>
+Author: Giles Hooker <br>
+Published: 2022-05-12
+
+**Original Blog Post:**
+**[SHAP Is Not All You Need](https://mindfulmodeler.substack.com/p/shap-is-not-all-you-need)** <br>
+Author: Christoph Molnar <br>
+Published: 2023-02-07
+
+**Original Blog Post:**
+**[Shedding light on "Impossibility Theorems for Feature Attribution"](https://mindfulmodeler.substack.com/p/shedding-light-on-impossibility-theorems)** <br>
+Author: Christoph Molnar <br>
+Published: 2024-06-18
+:::
+<!-- ::: {.hero-image}
+![](image_file_or_link.png)
+::: -->
+:::
+
+**My summary:**
+
+Here are three blog posts that give generally two different perspectives on
+SHAP (if you are unfamiliar with SHAP, start with [the first post](https://modelmeanings.wordpress.com/2022/05/12/shap-is-the-blockchain-of-xai/),
+which gives some background). The first two posts give some criticism of SHAP,
+at least in part, in response to feelings from the authors that some data
+science practitioners treat SHAP as the main model explainability algorithm out
+there and that SHAP is all you need. The third post above is written by one of
+the same authors as one of the critical posts, but actually comes to SHAP's
+defense.
+
+The bottom line from these posts is that it is important to first understand
+what it is you are looking to obtain in terms of model explainability / 
+interpretability. In some scenarios, SHAP may be useful and give the insight
+you are looking for, whereas in other scenarios it will fall short. From
+[the second post](https://mindfulmodeler.substack.com/p/shap-is-not-all-you-need):
+
+> SHAP importance is more about auditing how the model behaves.
+
+From [the third post](https://mindfulmodeler.substack.com/p/shedding-light-on-impossibility-theorems),
+Christoph talks about the situation where you want to know: "How does the
+prediction for a certain data point change when we change the features just a
+little bit?" He points out that SHAP is not appropriate for this situation.
+
+

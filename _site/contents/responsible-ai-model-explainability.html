@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Featuring Data Science - Supervised Learning: Classification</title>
+<title>Featuring Data Science - Model Explainability</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../contents/supervised-tree-models.html" rel="next">
-<link href="../contents/supervised.html" rel="prev">
+<link href="../contents/mlops.html" rel="next">
+<link href="../contents/unsupervised-cluster-dbscan-hdbscan.html" rel="prev">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -73,20 +73,48 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-metrics .list');
+    const listingTargetEl = window.document.querySelector('#listing-feature-imp .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-categories','listing-description','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-metrics'] = new List('listing-metrics', options);
+    window['quarto-listings']['listing-feature-imp'] = new List('listing-feature-imp', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-shap .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-shap'] = new List('listing-shap', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -180,7 +208,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Featuring Data Science</a></li><li class="breadcrumb-item"><a href="../contents/supervised.html">Supervised Learning</a></li><li class="breadcrumb-item"><a href="../contents/supervised-classification.html">Supervised Learning: Classification</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Featuring Data Science</a></li><li class="breadcrumb-item"><a href="../contents/responsible-ai-model-explainability.html">Responsible AI and Explainability</a></li><li class="breadcrumb-item"><a href="../contents/responsible-ai-model-explainability.html">Model Explainability</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -266,13 +294,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
  <span class="menu-text">Supervised Learning</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../contents/supervised.html" class="sidebar-item-text sidebar-link">
@@ -281,7 +309,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contents/supervised-classification.html" class="sidebar-item-text sidebar-link active">
+  <a href="../contents/supervised-classification.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Supervised Learning: Classification</span></a>
   </div>
 </li>
@@ -324,16 +352,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
  <span class="menu-text">Responsible AI and Explainability</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../contents/responsible-ai-model-explainability.html" class="sidebar-item-text sidebar-link">
+  <a href="../contents/responsible-ai-model-explainability.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Model Explainability</span></a>
   </div>
 </li>
@@ -391,17 +419,20 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#work-in-progress" id="toc-work-in-progress" class="nav-link active" data-scroll-target="#work-in-progress">[Work in Progress]</a></li>
-  <li><a href="#metrics" id="toc-metrics" class="nav-link" data-scroll-target="#metrics">Metrics</a></li>
+  <li><a href="#model-explainability-techniques" id="toc-model-explainability-techniques" class="nav-link active" data-scroll-target="#model-explainability-techniques">Model Explainability Techniques</a>
+  <ul class="collapse">
+  <li><a href="#default-feature-importances" id="toc-default-feature-importances" class="nav-link" data-scroll-target="#default-feature-importances">Default Feature Importances</a></li>
+  <li><a href="#shap" id="toc-shap" class="nav-link" data-scroll-target="#shap">SHAP</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Featuring Data Science</a></li><li class="breadcrumb-item"><a href="../contents/supervised.html">Supervised Learning</a></li><li class="breadcrumb-item"><a href="../contents/supervised-classification.html">Supervised Learning: Classification</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../index.html">Featuring Data Science</a></li><li class="breadcrumb-item"><a href="../contents/responsible-ai-model-explainability.html">Responsible AI and Explainability</a></li><li class="breadcrumb-item"><a href="../contents/responsible-ai-model-explainability.html">Model Explainability</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Supervised Learning: Classification</h1>
+<h1 class="title">Model Explainability</h1>
 </div>
 
 
@@ -418,50 +449,60 @@ window.Quarto = {
 </header>
 
 
-<section id="work-in-progress" class="level3">
-<h3 class="anchored" data-anchor-id="work-in-progress">[Work in Progress]</h3>
-<p>[Some content about Supervised Learning.] <br> <br></p>
-</section>
-<section id="metrics" class="level3">
-<h3 class="anchored" data-anchor-id="metrics">Metrics</h3>
-<p><br> <br></p>
-<div id="listing-metrics" class="quarto-listing quarto-listing-container-default">
+<section id="model-explainability-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="model-explainability-techniques">Model Explainability Techniques</h2>
+<section id="default-feature-importances" class="level3">
+<h3 class="anchored" data-anchor-id="default-feature-importances">Default Feature Importances</h3>
+<p>Tree-based models like Random Forest or XGBoost have built-in feature importance calculations, but there are important considerations to take into account when using these: <br> <br></p>
+<div id="listing-feature-imp" class="quarto-listing quarto-listing-container-default">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="supervised learning,classification,statistics,arXiv" data-listing-date-sort="1597377600000" data-listing-file-modified-sort="1718044165002" data-listing-date-modified-sort="1717992000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="107">
-<div class="thumbnail">
-<p><a href="../posts/2024-06-10-classification-metrics/index.html" class="no-external"></a></p><a href="../posts/2024-06-10-classification-metrics/index.html" class="no-external">
-<p><img src="../posts/2024-06-10-classification-metrics/Screenshot 2024-06-10-confusion-matrix.png" class="thumbnail-image"></p>
-</a><p><a href="../posts/2024-06-10-classification-metrics/index.html" class="no-external"></a></p>
-</div>
+<div class="quarto-post image-right" data-index="0" data-categories="explainability,supervised learning,random forest" data-listing-date-sort="1540008000000" data-listing-file-modified-sort="1717780969340" data-listing-date-modified-sort="1717560000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="161">
 <div class="body">
 <h3 class="no-anchor listing-title">
-<a href="../posts/2024-06-10-classification-metrics/index.html" class="no-external">Metrics for Multi-Class Classification: an Overview</a>
+<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">Beware Default Random Forest Importances</a>
 </h3>
 <div class="listing-subtitle">
-<a href="../posts/2024-06-10-classification-metrics/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('supervised learning'); return false;">
-supervised learning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('classification'); return false;">
-classification
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('statistics'); return false;">
-statistics
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('arXiv'); return false;">
-arXiv
-</div>
+<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external"></a>
 </div>
 <div class="listing-description">
-<a href="../posts/2024-06-10-classification-metrics/index.html" class="no-external">From accuracy to Cohen-Kappa from Margherita Grandini et al.&nbsp;at CRIF</a>
+<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">Important reading for anyone using linear model coefficients or tree-based feature importance from Terence Parr et al.</a>
 </div>
 </div>
 <div class="metadata">
-<a href="../posts/2024-06-10-classification-metrics/index.html" class="no-external">
+<a href="../posts/2024-06-05-beware-rf-feature-importance/index.html" class="no-external">
 <div class="listing-date">
-Aug 14, 2020
+Oct 20, 2018
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+</section>
+<section id="shap" class="level3">
+<h3 class="anchored" data-anchor-id="shap">SHAP</h3>
+<p>If you do a web search for model explainability, one of the first results will likely include SHAP. If you are wondering about when to use SHAP or, even if you use it already and want to read some important discussion around it, there is a group of three posts here that provide useful food for thought: <br> <br></p>
+<div id="listing-shap" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="supervised learning,model explainability" data-listing-date-sort="1718683200000" data-listing-file-modified-sort="1718921330427" data-listing-date-modified-sort="1718856000000" data-listing-reading-time-sort="2" data-listing-word-count-sort="233">
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../posts/2024-06-20-shap/index.html" class="no-external">SHAP Is Not All You Need</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../posts/2024-06-20-shap/index.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="../posts/2024-06-20-shap/index.html" class="no-external">Three blog posts about SHAP and alternatives to consider from Christoph Molnar and Giles Hooker</a>
+</div>
+</div>
+<div class="metadata">
+<a href="../posts/2024-06-20-shap/index.html" class="no-external">
+<div class="listing-date">
+Jun 18, 2024
 </div>
 </a>
 </div>
@@ -474,6 +515,7 @@ No matching items
 
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -889,13 +931,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../contents/supervised.html" class="pagination-link" aria-label="General Supervised Learning Topics">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">General Supervised Learning Topics</span>
+      <a href="../contents/unsupervised-cluster-dbscan-hdbscan.html" class="pagination-link" aria-label="Density-Based Clustering">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Density-Based Clustering</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../contents/supervised-tree-models.html" class="pagination-link" aria-label="Tree-Based ML Models">
-        <span class="nav-page-text">Tree-Based ML Models</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../contents/mlops.html" class="pagination-link" aria-label="MLOps">
+        <span class="nav-page-text">MLOps</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

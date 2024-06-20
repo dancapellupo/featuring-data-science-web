@@ -62,17 +62,20 @@
     # - text: Outlier Detection
     #   href: special-topics-outlier-detection.qmd
 
+# - title: Data Governance  [combine with Resp AI?]
+#   subtitle: Policies around Responsible Use of Data
+
+- title: Responsible AI and Explainability
+  subtitle: Considerations for Fairness in Models
+  links:
+    - text: Model Explainability
+      href: responsible-ai-model-explainability.qmd
+
 - title: MLOps
   subtitle: Putting ML Models into Production
   links:
     - text: MLOps
-    - href: mlops.qmd
-
-# - title: Data Governance
-#   subtitle: Policies around Responsible Use of Data
-
-# - title: Responsible AI and Explainability
-#   subtitle: Considerations for Fairness in Models
+      href: mlops.qmd
 
 - title: Recent News
   subtitle: News and Announcements in Data
