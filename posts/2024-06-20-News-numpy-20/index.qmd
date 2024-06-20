@@ -1,0 +1,30 @@
+---
+title: "NumPy 2.0 - New Major Release"
+description: 'First major release of NumPy since 2006'
+categories: ['news', 'python', 'mlops']
+date: "2024-06-16"
+date-modified: "2024-06-20"
+image: "https://numpy.org/doc/stable/_static/numpylogo.svg"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original Blog Post:**
+**[NumPy 2.0.0 Release Notes](https://numpy.org/doc/stable/release/2.0.0-notes.html)** <br>
+Authors: NumPy <br>
+Published: 2024-06-16
+:::
+::: {.hero-image}
+![](https://numpy.org/doc/stable/_static/numpylogo.svg)
+:::
+:::
+
+**My summary:**
+
+I am posting this here to bring attention to this major new release of NumPy.
+If you have code / packages / deployments that rely on NumPy, it might be worth
+reviewing the release notes and testing with this updated version.
+
+<!-- Here is the link again to their blog post for more details:
+[Title](Link) -->

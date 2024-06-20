@@ -32,6 +32,9 @@ website:
             contents:
               - contents/data-science-general.qmd
               - contents/data-science-statistics.qmd
+          - section: "Data Visualization"
+            contents:
+              - contents/data-visualization-code.qmd
           - section: "Feature Selection and Feature Engineering"
             contents:
               - contents/dimensionality-reduction.qmd
