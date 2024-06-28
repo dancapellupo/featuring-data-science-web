@@ -1,0 +1,28 @@
+---
+title: "LinkedIn Post - Sixteen MLOps Terms"
+description: 'MLOps terms to know from Raphael Hoogvliets'
+categories: ['mlops', 'content:social']
+date: "2024-06-23"
+date-modified: "2024-06-28"
+image: "Screenshot-2024-06-27-Post.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original LinkedIn Post:**
+**[Link to Post](https://www.linkedin.com/posts/hoogvliets_mlops-datascience-activity-7210610576215977985-10CC)** <br>
+Authors: Raphael Hoogvliets <br>
+Published: 2024-06-23
+:::
+::: {.hero-image}
+![](Screenshot-2024-06-27-Post.png)
+:::
+:::
+
+**The Post:**
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7210610575725244416" height="1040" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+Here's a direct link, in case the embed does not load:
+[LinkedIn post](https://www.linkedin.com/posts/hoogvliets_mlops-datascience-activity-7210610576215977985-10CC)

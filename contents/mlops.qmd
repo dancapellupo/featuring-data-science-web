@@ -1,12 +1,12 @@
 ---
 title: "MLOps"
 listing:
-    contents: "../posts/*/*.qmd"
+    contents:
+    - '../posts/2024-06-03-data-scientist-show-mlops/index.qmd'
+    - '../posts/2024-06-28-LinkedIn-mlops-sixteen-terms/index.qmd'
     type: default
     sort: "date asc"
     # categories: false
-    include:
-      categories: "{MLOps}*"
 page-layout: article
 ---
 

@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2022-09-01">
-<meta name="description" content="Podcast interview of MLOps engineer Mikiko Baseley hosted by Daliana Liu">
+<meta name="dcterms.date" content="2024-06-23">
+<meta name="description" content="MLOps terms to know from Raphael Hoogvliets">
 
-<title>Featuring Data Science - What Data Scientists Need to Know about MLOps Principles</title>
+<title>Featuring Data Science - LinkedIn Post - Sixteen MLOps Terms</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -41,6 +41,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -128,16 +131,16 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">What Data Scientists Need to Know about MLOps Principles</h1>
+<h1 class="title">LinkedIn Post - Sixteen MLOps Terms</h1>
   <div class="quarto-categories">
     <div class="quarto-category">mlops</div>
-    <div class="quarto-category">content:audio</div>
+    <div class="quarto-category">content:social</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Podcast interview of MLOps engineer Mikiko Baseley hosted by Daliana Liu
+    MLOps terms to know from Raphael Hoogvliets
   </div>
 </div>
 
@@ -148,14 +151,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 1, 2022</p>
+      <p class="date">June 23, 2024</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">June 3, 2024</p>
+      <p class="date-modified">June 28, 2024</p>
     </div>
   </div>
     
@@ -168,23 +171,16 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="hero-banner">
 <div class="hero-text">
-<p><strong>Original Blog Post:</strong> <strong><a href="https://open.spotify.com/episode/0hD9mUmVOLl2vFxBxY9ggN?si=f70b9d2498d843f5">What Data Scientists Need to Know about MLOps Principles</a></strong> <br> Authors: Daliana Liu (host) and Mikiko Baseley (guest) <br> Published: 2023-08-31</p>
+<p><strong>Original LinkedIn Post:</strong> <strong><a href="https://www.linkedin.com/posts/hoogvliets_mlops-datascience-activity-7210610576215977985-10CC">Link to Post</a></strong> <br> Authors: Raphael Hoogvliets <br> Published: 2024-06-23</p>
+</div>
+<div class="hero-image">
+<p><a href="Screenshot-2024-06-27-Post.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="Screenshot-2024-06-27-Post.png" class="img-fluid"></a></p>
 </div>
 </div>
-<p><strong>My summary:</strong></p>
-<p>First, a definition: What is an MLOps engineer?</p>
-<p>In short, an MLOps engineer is responsible for making data science / ML models work in production, and maintaining and monitoring these production models.</p>
-<p>Mikiko Baseley transitioned from data scientist to MLOps engineer, so I think her perspective is really useful for data scientists to hear, especially if we have models that we want to move into production.</p>
-<p>One point I want to highlight is from her point of view as an MLOps Engineer, Mikiko lists 4 things that all data scientists should try to know and understand [at 29:49]:</p>
-<ol type="1">
-<li>Version control (i.e.&nbsp;git)</li>
-<li>Containerization and packaging strategies</li>
-<li>Basic web technology and deployment patterns</li>
-<li>Testing</li>
-</ol>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/0hD9mUmVOLl2vFxBxY9ggN/video?utm_source=generator&amp;theme=0" width="496" height="279" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+<p><strong>The Post:</strong></p>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7210610575725244416" height="1040" width="504" frameborder="0" allowfullscreen="" title="Embedded post">
 </iframe>
-<p>Here is the link if the embed above doesn’t work: <a href="https://open.spotify.com/episode/0hD9mUmVOLl2vFxBxY9ggN?si=f70b9d2498d843f5">Link to Podcast on Spotify</a></p>
+<p>Here’s a direct link, in case the embed does not load: <a href="https://www.linkedin.com/posts/hoogvliets_mlops-datascience-activity-7210610576215977985-10CC">LinkedIn post</a></p>
 
 
 
@@ -600,6 +596,31 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
 
 
 
