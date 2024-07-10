@@ -1,0 +1,38 @@
+---
+title: "LinkedIn Post - Random Forest Hyperparameters"
+description: "A note of caution about scikit-learn's default settings"
+categories: ["random forest", "content:social"]
+date: "2024-06-30"
+date-modified: "2024-07-09"
+image: "Screenshot-2024-07-09-Post.png"
+title-block-banner: false
+---
+
+::: {.hero-banner}
+::: {.hero-text}
+**Original LinkedIn Post:**
+**[Link to Post](https://www.linkedin.com/posts/dcapellupo_to-follow-up-on-my-earlier-post-about-random-activity-7213149281975709696-qdeA)** <br>
+Authors: Daniel Capellupo <br>
+Published: 2024-06-30
+:::
+::: {.hero-image}
+![](Screenshot-2024-07-09-Post.png)
+:::
+:::
+
+**The Post:**
+
+Here's a direct link, due to an issue with embedding this post:
+[LinkedIn post](https://www.linkedin.com/posts/dcapellupo_to-follow-up-on-my-earlier-post-about-random-activity-7213149281975709696-qdeA)
+
+Here are screenshots for the post if the above link doesn't work:
+
+![Post Part 1](Screenshot-2024-07-09-Post.png)
+
+![Post Part 2](Screenshot-2024-07-09-Post-part2.png)
+
+![Post Part 3](Screenshot-2024-07-09-Post-part3.png)
+
+A comment with more details:
+
+![LinkedIn Comment](Screenshot-2024-07-09-Comment.png)
